@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "untyped",
+  "version": "1.0.1",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean && rimraf node_modules",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "format": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
+    "lint": "turbo run lint",
+    "postbuild": "turbo run postbuild",
+    "start": "turbo run start",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "rimraf": "^4.4.0",
+    "tsx": "^3.12.5",
+    "turbo": "^1.8.3"
+  }
+}
