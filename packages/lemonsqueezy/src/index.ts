@@ -1,6 +1,12 @@
 import { initUntypeable } from "untypeable";
 
 import type {
+  LicenseKey,
+  LicenseKeyParams,
+  LicenseKeys,
+  LicenseKeysParams,
+} from "./licenseKey";
+import type {
   LicenseKeyInstance,
   LicenseKeyInstanceParams,
   LicenseKeyInstances,
@@ -26,6 +32,8 @@ import type { Variant, VariantParams, Variants } from "./variant";
 const u = initUntypeable();
 
 const router = u.router({
+  "/license-keys": u.input<LicenseKeysParams>().output<LicenseKeys>(),
+  "/license-keys/:id": u.input<LicenseKeyParams>().output<LicenseKey>(),
   "/license-key-instances": u
     .input<LicenseKeyInstancesParams>()
     .output<LicenseKeyInstances>(),
