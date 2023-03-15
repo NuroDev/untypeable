@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "scripts": {
+    "example:lemonsqueezy": "tsx examples/lemonsqueezy.ts",
     "format": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "test": "vitest run",
     "test:watch": "vitest watch",
