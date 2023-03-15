@@ -1,9 +1,9 @@
-import type { LemonsqueezyDataType, LemonSqueezyResponse } from "./_shared";
+import type { DataType, LemonSqueezyResponse } from "./_shared";
 
 /**
  * @docs https://docs.lemonsqueezy.com/api/users#the-user-object
  */
-export type LemonSqueezyUser = LemonSqueezyResponse<{
+export type User = LemonSqueezyResponse<{
   attributes: {
     /**
      * A URL to the avatar image for this user. If the user has not uploaded a custom avatar, this will point to their Gravatar URL.
@@ -42,5 +42,5 @@ export type LemonSqueezyUser = LemonSqueezyResponse<{
   links: {
     self: string;
   };
-  type: LemonsqueezyDataType.users;
+  type: DataType.users;
 }>;

@@ -1,4 +1,4 @@
-export enum LemonsqueezyDataType {
+export enum DataType {
   checkouts = "checkouts",
   discounts = "discounts",
   files = "files",

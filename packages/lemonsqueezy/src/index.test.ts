@@ -2,7 +2,7 @@ import { createTypeLevelClient } from "untypeable";
 import { describe, it, expect, beforeAll } from "vitest";
 import { join } from "node:path";
 
-import { LemonsqueezyDataType, type LemonSqueezyRouter } from ".";
+import { DataType, type LemonSqueezyRouter } from ".";
 
 describe.concurrent("Lemon Squeezy", () => {
   const apiKey = process.env.LEMON_SQUEEZY_API_KEY as string;
@@ -36,7 +36,7 @@ describe.concurrent("Lemon Squeezy", () => {
 
     expect(user).toBeDefined();
     expect(user.data).toBeDefined();
-    expect(user.data.type).toBe(LemonsqueezyDataType.users);
+    expect(user.data.type).toBe(DataType.users);
     expect(user.errors).toBeUndefined();
   });
 });
