@@ -42,4 +42,27 @@ describe.concurrent("Lemon Squeezy", () => {
     expect(user.data.type).toBe(DataType.users);
     expect(user.errors).toBeUndefined();
   });
+
+  it("/variants", async () => {
+    const variants = await client("/variants");
+
+    expect(variants).toBeDefined();
+    expect(variants.data).toBeDefined();
+    expect(variants.data.length).toBeGreaterThanOrEqual(1);
+    expect(variants.data.at(0)).toBeDefined();
+    expect(variants.data.at(0)?.type).toBe(DataType.variants);
+    expect(variants.errors).toBeUndefined();
+  });
+
+  it("/variants/:id", async () => {
+    const variants = await client("/variants");
+    const variant = await client(`/variants/:id`, {
+      id: variants.data.at(0)?.id,
+    });
+
+    expect(variant).toBeDefined();
+    expect(variant.data).toBeDefined();
+    expect(variant.data.type).toBe(DataType.variants);
+    expect(variant.errors).toBeUndefined();
+  });
 });
