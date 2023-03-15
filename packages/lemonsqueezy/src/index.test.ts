@@ -34,6 +34,29 @@ describe.concurrent("Lemon Squeezy", () => {
     if (!client) throw "Failed to initialise untypeable client instance.";
   });
 
+  it("/stores", async () => {
+    const stores = await client("/stores");
+
+    expect(stores).toBeDefined();
+    expect(stores.data).toBeDefined();
+    expect(stores.data.length).toBeGreaterThanOrEqual(1);
+    expect(stores.data.at(0)).toBeDefined();
+    expect(stores.data.at(0)?.type).toBe(DataType.stores);
+    expect(stores.errors).toBeUndefined();
+  });
+
+  it("/stores/:id", async () => {
+    const stores = await client("/stores");
+    const store = await client(`/stores/:id`, {
+      id: stores.data.at(0)!.id,
+    });
+
+    expect(store).toBeDefined();
+    expect(store.data).toBeDefined();
+    expect(store.data.type).toBe(DataType.stores);
+    expect(store.errors).toBeUndefined();
+  });
+
   it("/users/me", async () => {
     const user = await client("/users/me");
 
