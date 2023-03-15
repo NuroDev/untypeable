@@ -13,7 +13,7 @@
     "test:ui": "vitest watch --ui"
   },
   "dependencies": {
-    "untypeable": "^0.1.0"
+    "untypeable": "^0.2.1"
   },
   "devDependencies": {
     "@types/node": "^18.15.3",
