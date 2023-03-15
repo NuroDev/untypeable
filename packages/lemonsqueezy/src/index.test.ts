@@ -34,6 +34,31 @@ describe.concurrent("Lemon Squeezy", () => {
     if (!client) throw "Failed to initialise untypeable client instance.";
   });
 
+  it("/discounts", async () => {
+    // TODO: Find a way to not require an empty object.
+    const discounts = await client("/discounts", {});
+
+    expect(discounts).toBeDefined();
+    expect(discounts.data).toBeDefined();
+    expect(discounts.data.length).toBeGreaterThanOrEqual(1);
+    expect(discounts.data.at(0)).toBeDefined();
+    expect(discounts.data.at(0)?.type).toBe(DataType.discounts);
+    expect(discounts.errors).toBeUndefined();
+  });
+
+  it("/discounts/:id", async () => {
+    // TODO: Find a way to not require an empty object.
+    const discounts = await client("/discounts", {});
+    const discount = await client(`/discounts/:id`, {
+      id: discounts.data.at(0)!.id,
+    });
+
+    expect(discount).toBeDefined();
+    expect(discount.data).toBeDefined();
+    expect(discount.data.type).toBe(DataType.discounts);
+    expect(discount.errors).toBeUndefined();
+  });
+
   it("/files", async () => {
     // TODO: Find a way to not require an empty object.
     const files = await client("/files", {});

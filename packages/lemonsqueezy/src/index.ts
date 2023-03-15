@@ -1,5 +1,11 @@
 import { initUntypeable } from "untypeable";
 
+import type {
+  Discount,
+  DiscountParams,
+  Discounts,
+  DiscountsParams,
+} from "./discount";
 import type { File, FileParams, Files, FilesParams } from "./file";
 import type {
   LicenseKey,
@@ -33,6 +39,8 @@ import type { Variant, VariantParams, Variants } from "./variant";
 const u = initUntypeable();
 
 const router = u.router({
+  "/discounts": u.input<DiscountsParams>().output<Discounts>(),
+  "/discounts/:id": u.input<DiscountParams>().output<Discount>(),
   "/files": u.input<FilesParams>().output<Files>(),
   "/files/:id": u.input<FileParams>().output<File>(),
   "/license-keys": u.input<LicenseKeysParams>().output<LicenseKeys>(),
