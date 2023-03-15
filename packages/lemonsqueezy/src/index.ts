@@ -1,5 +1,11 @@
 import { initUntypeable } from "untypeable";
 
+import type {
+  Product,
+  ProductParams,
+  Products,
+  ProductsParams,
+} from "./product";
 import type { Store, Stores, StoreParams } from "./store";
 import type { User } from "./user";
 import type { Variant, VariantParams, Variants } from "./variant";
@@ -7,6 +13,8 @@ import type { Variant, VariantParams, Variants } from "./variant";
 const u = initUntypeable();
 
 const router = u.router({
+  "/products": u.input<ProductsParams>().output<Products>(),
+  "/products/:id": u.input<ProductParams>().output<Product>(),
   "/stores": u.output<Stores>(),
   "/stores/:id": u.input<StoreParams>().output<Store>(),
   "/users/me": u.output<User>(),
