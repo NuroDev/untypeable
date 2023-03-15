@@ -8,13 +8,16 @@ describe.concurrent("Lemon Squeezy", () => {
   const apiKey = process.env.LEMON_SQUEEZY_API_KEY as string;
 
   const client = createTypeLevelClient<LemonSqueezyRouter>(
-    async (path, input) => {
-      const url = new URL(join("v1", path), "https://api.lemonsqueezy.com");
+    async (path, input = {}) => {
+      const pathWithParams = path.replace(
+        /:([a-zA-Z0-9_]+)/g,
+        (_, key) => input[key]
+      );
 
-      if (input)
-        Object.entries(input).forEach(([key, value]) =>
-          url.searchParams.set(key, value as string)
-        );
+      const url = new URL(
+        join("v1", pathWithParams),
+        "https://api.lemonsqueezy.com"
+      );
 
       const response = await fetch(url.href, {
         headers: {
