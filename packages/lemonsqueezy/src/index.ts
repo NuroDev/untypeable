@@ -1,5 +1,11 @@
 import { initUntypeable } from "untypeable";
 
+import type {
+  LicenseKeyInstance,
+  LicenseKeyInstanceParams,
+  LicenseKeyInstances,
+  LicenseKeyInstancesParams,
+} from "./licenseKeyInstance";
 import type { Order, OrderParams, Orders, OrdersParams } from "./order";
 import type {
   OrderItem,
@@ -20,6 +26,12 @@ import type { Variant, VariantParams, Variants } from "./variant";
 const u = initUntypeable();
 
 const router = u.router({
+  "/license-key-instances": u
+    .input<LicenseKeyInstancesParams>()
+    .output<LicenseKeyInstances>(),
+  "/license-key-instances/:id": u
+    .input<LicenseKeyInstanceParams>()
+    .output<LicenseKeyInstance>(),
   "/orders": u.input<OrdersParams>().output<Orders>(),
   "/orders/:id": u.input<OrderParams>().output<Order>(),
   "/order-items": u.input<OrderItemParams>().output<OrderItems>(),

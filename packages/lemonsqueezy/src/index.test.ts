@@ -34,6 +34,33 @@ describe.concurrent("Lemon Squeezy", () => {
     if (!client) throw "Failed to initialise untypeable client instance.";
   });
 
+  it("/license-key-instances", async () => {
+    // TODO: Find a way to not require an empty object.
+    const licenseKeyInstances = await client("/license-key-instances", {});
+
+    expect(licenseKeyInstances).toBeDefined();
+    expect(licenseKeyInstances.data).toBeDefined();
+    expect(licenseKeyInstances.data.length).toBeGreaterThanOrEqual(1);
+    expect(licenseKeyInstances.data.at(0)).toBeDefined();
+    expect(licenseKeyInstances.data.at(0)?.type).toBe(
+      DataType.license_key_instances
+    );
+    expect(licenseKeyInstances.errors).toBeUndefined();
+  });
+
+  it("/license-key-instances/:id", async () => {
+    // TODO: Find a way to not require an empty object.
+    const licenseKeyInstances = await client("/license-key-instances", {});
+    const licenseKeyInstance = await client(`/license-key-instances/:id`, {
+      id: licenseKeyInstances.data.at(0)!.id,
+    });
+
+    expect(licenseKeyInstance).toBeDefined();
+    expect(licenseKeyInstance.data).toBeDefined();
+    expect(licenseKeyInstance.data.type).toBe(DataType.license_key_instances);
+    expect(licenseKeyInstance.errors).toBeUndefined();
+  });
+
   it("/orders", async () => {
     // TODO: Find a way to not require an empty object.
     const orderItems = await client("/orders", {});
