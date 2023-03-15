@@ -1,9 +1,9 @@
 import { join } from "node:path";
 import { createTypeLevelClient } from "untypeable";
 
-import type { LemonSqueezyRouter } from "../packages/lemonsqueezy";
+import "dotenv/config";
 
-const YOUR_LEMON_SQUEEZY_API_KEY = "ABC_123";
+import type { LemonSqueezyRouter } from "../packages/lemonsqueezy";
 
 async function main() {
   const client = createTypeLevelClient<LemonSqueezyRouter>(
@@ -24,7 +24,7 @@ async function main() {
         body: hasBody ? JSON.stringify(input) : undefined,
         method,
         headers: {
-          Authorization: `Bearer ${YOUR_LEMON_SQUEEZY_API_KEY}`,
+          Authorization: `Bearer ${process.env.LEMON_SQUEEZY_API_KEY}`,
         },
       });
 
@@ -33,10 +33,10 @@ async function main() {
   );
 
   const stores = await client("/stores", "GET");
-  console.log({ stores });
+  console.log(stores);
 
   const me = await client("/users/me", "GET");
-  console.log({ me });
+  console.log(me);
 }
 
 main();
