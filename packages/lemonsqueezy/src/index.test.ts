@@ -1,6 +1,9 @@
 import { createTypeLevelClient } from "untypeable";
 import { describe, it, expect, beforeAll } from "vitest";
+import { email, firstName, name, zipCode } from "minifaker";
 import { join } from "node:path";
+
+import "minifaker/locales/en";
 
 import { DataType, type LemonSqueezyRouter } from ".";
 
@@ -36,6 +39,64 @@ describe.concurrent("Lemon Squeezy", () => {
   beforeAll(() => {
     if (!apiKey) throw "No LEMON_SQUEEZY_API_KEY environment variable found.";
     if (!client) throw "Failed to initialise untypeable client instance.";
+  });
+
+  it("/checkouts", async () => {
+    // TODO: Find a way to not require an empty object.
+    const checkouts = await client("/checkouts", "GET", {});
+
+    expect(checkouts).toBeDefined();
+    expect(checkouts.data).toBeDefined();
+    expect(checkouts.data.length).toBeGreaterThanOrEqual(1);
+    expect(checkouts.data.at(0)).toBeDefined();
+    expect(checkouts.data.at(0)?.type).toBe(DataType.checkouts);
+    expect(checkouts.errors).toBeUndefined();
+  });
+
+  it("/checkouts/:id", async () => {
+    // TODO: Find a way to not require an empty object.
+    const checkouts = await client("/checkouts", "GET", {});
+
+    let firstCheckoutId = checkouts.data.at(0)?.id;
+    if (!firstCheckoutId) {
+      const [stores, variants] = await Promise.all([
+        client("/stores", "GET"),
+        client("/variants", "GET"),
+      ]);
+
+      const newCheckout = await client("/checkouts", "POST", {
+        checkout_data: {
+          billing_address: {
+            country: "US",
+            zip: zipCode(),
+          },
+          email: email(),
+          name: name(),
+        },
+        custom_price: 100000,
+        product_options: {
+          description: "Hello World",
+          name: firstName(),
+          receipt_button_text: "Buy now",
+          receipt_link_url: "https://lemonsqueezy.com",
+          receipt_thank_you_note: "Thank you for your purchase",
+          redirect_url: "https://lemonsqueezy.com",
+        },
+        store: stores.data.at(0)!.id,
+        variant: variants.data.at(0)!.id,
+      });
+
+      firstCheckoutId = newCheckout.data.id;
+    }
+
+    const checkout = await client(`/checkouts/:id`, "GET", {
+      id: firstCheckoutId,
+    });
+
+    expect(checkout).toBeDefined();
+    expect(checkout.data).toBeDefined();
+    expect(checkout.data.type).toBe(DataType.checkouts);
+    expect(checkout.errors).toBeUndefined();
   });
 
   it("/discounts", async () => {

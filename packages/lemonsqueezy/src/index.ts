@@ -1,6 +1,13 @@
 import { initUntypeable } from "untypeable";
 
 import type {
+  Checkout,
+  CheckoutParams,
+  Checkouts,
+  CheckoutsParams,
+  CreateCheckoutParams,
+} from "./checkout";
+import type {
   Discount,
   DiscountParams,
   Discounts,
@@ -39,6 +46,11 @@ import type { Variant, VariantParams, Variants } from "./variant";
 const u = initUntypeable().pushArg<"GET" | "POST">();
 
 const router = u.router({
+  "/checkouts": {
+    GET: u.input<CheckoutsParams>().output<Checkouts>(),
+    POST: u.input<CreateCheckoutParams>().output<Checkout>(),
+  },
+  "/checkouts/:id": { GET: u.input<CheckoutParams>().output<Checkout>() },
   "/discounts": { GET: u.input<DiscountsParams>().output<Discounts>() },
   "/discounts/:id": { GET: u.input<DiscountParams>().output<Discount>() },
   "/files": { GET: u.input<FilesParams>().output<Files>() },
@@ -68,5 +80,11 @@ const router = u.router({
 
 export type LemonSqueezyRouter = typeof router;
 
+export type {
+  BillingAddress,
+  CheckoutData,
+  CheckoutOptions,
+  CheckoutPreview,
+} from "./checkout";
 export { DataType } from "./_shared";
 export type { Interval } from "./variant";
