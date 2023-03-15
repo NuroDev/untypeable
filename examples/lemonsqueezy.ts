@@ -7,7 +7,7 @@ const YOUR_LEMON_SQUEEZY_API_KEY = "ABC_123";
 
 async function main() {
   const client = createTypeLevelClient<LemonSqueezyRouter>(
-    async (path, input = {}) => {
+    async (path, method, input = {}) => {
       const pathWithParams = path.replace(
         /:([a-zA-Z0-9_]+)/g,
         (_, key) => input[key]
@@ -18,7 +18,11 @@ async function main() {
         "https://api.lemonsqueezy.com"
       );
 
+      const hasBody = ["DELETE", "POST", "PUT"].includes(method);
+
       const response = await fetch(url.href, {
+        body: hasBody ? JSON.stringify(input) : undefined,
+        method,
         headers: {
           Authorization: `Bearer ${YOUR_LEMON_SQUEEZY_API_KEY}`,
         },
@@ -28,10 +32,10 @@ async function main() {
     }
   );
 
-  const stores = await client("/stores");
+  const stores = await client("/stores", "GET");
   console.log({ stores });
 
-  const me = await client("/users/me");
+  const me = await client("/users/me", "GET");
   console.log({ me });
 }
 
