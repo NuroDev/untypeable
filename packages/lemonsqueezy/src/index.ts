@@ -36,32 +36,34 @@ import type { Store, Stores, StoreParams } from "./store";
 import type { User } from "./user";
 import type { Variant, VariantParams, Variants } from "./variant";
 
-const u = initUntypeable();
+const u = initUntypeable().pushArg<"GET" | "POST">();
 
 const router = u.router({
-  "/discounts": u.input<DiscountsParams>().output<Discounts>(),
-  "/discounts/:id": u.input<DiscountParams>().output<Discount>(),
-  "/files": u.input<FilesParams>().output<Files>(),
-  "/files/:id": u.input<FileParams>().output<File>(),
-  "/license-keys": u.input<LicenseKeysParams>().output<LicenseKeys>(),
-  "/license-keys/:id": u.input<LicenseKeyParams>().output<LicenseKey>(),
-  "/license-key-instances": u
-    .input<LicenseKeyInstancesParams>()
-    .output<LicenseKeyInstances>(),
-  "/license-key-instances/:id": u
-    .input<LicenseKeyInstanceParams>()
-    .output<LicenseKeyInstance>(),
-  "/orders": u.input<OrdersParams>().output<Orders>(),
-  "/orders/:id": u.input<OrderParams>().output<Order>(),
-  "/order-items": u.input<OrderItemParams>().output<OrderItems>(),
-  "/order-items/:id": u.input<OrderItemsParams>().output<OrderItem>(),
-  "/products": u.input<ProductsParams>().output<Products>(),
-  "/products/:id": u.input<ProductParams>().output<Product>(),
-  "/stores": u.output<Stores>(),
-  "/stores/:id": u.input<StoreParams>().output<Store>(),
-  "/users/me": u.output<User>(),
-  "/variants": u.output<Variants>(),
-  "/variants/:id": u.input<VariantParams>().output<Variant>(),
+  "/discounts": { GET: u.input<DiscountsParams>().output<Discounts>() },
+  "/discounts/:id": { GET: u.input<DiscountParams>().output<Discount>() },
+  "/files": { GET: u.input<FilesParams>().output<Files>() },
+  "/files/:id": { GET: u.input<FileParams>().output<File>() },
+  "/license-keys": { GET: u.input<LicenseKeysParams>().output<LicenseKeys>() },
+  "/license-keys/:id": {
+    GET: u.input<LicenseKeyParams>().output<LicenseKey>(),
+  },
+  "/license-key-instances": {
+    GET: u.input<LicenseKeyInstancesParams>().output<LicenseKeyInstances>(),
+  },
+  "/license-key-instances/:id": {
+    GET: u.input<LicenseKeyInstanceParams>().output<LicenseKeyInstance>(),
+  },
+  "/orders": { GET: u.input<OrdersParams>().output<Orders>() },
+  "/orders/:id": { GET: u.input<OrderParams>().output<Order>() },
+  "/order-items": { GET: u.input<OrderItemParams>().output<OrderItems>() },
+  "/order-items/:id": { GET: u.input<OrderItemsParams>().output<OrderItem>() },
+  "/products": { GET: u.input<ProductsParams>().output<Products>() },
+  "/products/:id": { GET: u.input<ProductParams>().output<Product>() },
+  "/stores": { GET: u.output<Stores>() },
+  "/stores/:id": { GET: u.input<StoreParams>().output<Store>() },
+  "/users/me": { GET: u.output<User>() },
+  "/variants": { GET: u.output<Variants>() },
+  "/variants/:id": { GET: u.input<VariantParams>().output<Variant>() },
 });
 
 export type LemonSqueezyRouter = typeof router;
