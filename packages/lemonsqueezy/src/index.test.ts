@@ -334,6 +334,11 @@ describe.concurrent("Lemon Squeezy", () => {
     expect(subscription.errors).toBeUndefined();
   });
 
+  it("DELETE - /subscriptions/:id", async () => {
+    // TODO: Create a subscription & then cancel it.
+    expect(true).toBe(true);
+  });
+
   it("/subscription-invoices", async () => {
     const subscriptionInvoices = await client("/subscription-invoices", "GET");
 

@@ -41,6 +41,7 @@ import type {
 } from "./product";
 import type { Store, Stores, StoreParams } from "./store";
 import type {
+  DeleteSubscriptionParams,
   Subscription,
   SubscriptionParams,
   Subscriptions,
@@ -55,7 +56,7 @@ import type {
 import type { User } from "./user";
 import type { Variant, VariantParams, Variants } from "./variant";
 
-const u = initUntypeable().pushArg<"GET" | "POST">();
+const u = initUntypeable().pushArg<"GET" | "POST" | "PATCH" | "DELETE">();
 
 const router = u.router({
   "/checkouts": {
@@ -89,6 +90,7 @@ const router = u.router({
     GET: u.input<SubscriptionsParams>().output<Subscriptions>(),
   },
   "/subscriptions/:id": {
+    DELETE: u.input<DeleteSubscriptionParams>().output<Subscription>(),
     GET: u.input<SubscriptionParams>().output<Subscription>(),
   },
   "/subscription-invoices": {

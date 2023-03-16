@@ -168,3 +168,7 @@ export interface SubscriptionsParams {
 export interface SubscriptionParams {
   id: string;
 }
+
+export interface DeleteSubscriptionParams {
+  id: string;
+}
