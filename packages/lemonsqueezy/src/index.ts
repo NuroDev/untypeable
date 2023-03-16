@@ -41,6 +41,12 @@ import type {
 } from "./product";
 import type { Store, Stores, StoreParams } from "./store";
 import type {
+  Subscription,
+  SubscriptionParams,
+  Subscriptions,
+  SubscriptionsParams,
+} from "./subscription";
+import type {
   SubscriptionInvoice,
   SubscriptionInvoiceParams,
   SubscriptionInvoices,
@@ -79,6 +85,12 @@ const router = u.router({
   "/products/:id": { GET: u.input<ProductParams>().output<Product>() },
   "/stores": { GET: u.output<Stores>() },
   "/stores/:id": { GET: u.input<StoreParams>().output<Store>() },
+  "/subscriptions": {
+    GET: u.input<SubscriptionsParams>().output<Subscriptions>(),
+  },
+  "/subscriptions/:id": {
+    GET: u.input<SubscriptionParams>().output<Subscription>(),
+  },
   "/subscription-invoices": {
     GET: u.input<SubscriptionInvoicesParams>().output<SubscriptionInvoices>(),
   },
