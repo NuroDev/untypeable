@@ -1,9 +1,9 @@
 {
-  "name": "@untyped/lil",
+  "name": "@untyped/lil.apis",
   "version": "1.0.1",
   "description": "Untyped API for all lil API's",
   "repository": {
-    "directory": "packages/lil",
+    "directory": "packages/lil.apis",
     "type": "git",
     "url": "https://github.com/nurodev/untyped.git"
   },

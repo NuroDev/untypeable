@@ -1,4 +1,4 @@
-# ☀️ @untyped/lil
+# ☀️ @untyped/lil.apis
 
 Untyped API for all lil API's
 
@@ -8,13 +8,13 @@ Install it locally in your project
 
 ```bash
 # npm
-npm install @untyped/lil
+npm install @untyped/lil.apis
 
 # yarn
-yarn add @untyped/lil
+yarn add @untyped/lil.apis
 
 # pnpm
-pnpm install @untyped/lil
+pnpm install @untyped/lil.apis
 ```
 
 ## 🦄 Usage
@@ -22,7 +22,7 @@ pnpm install @untyped/lil
 Create a new client instance with the `LilRouter` & your desired fetch handler
 
 ```typescript
-import type { LilRouter } from "@untyped/lil";
+import type { LilRouter } from "@untyped/lil.apis";
 
 const client = createTypeLevelClient<LilWeatherRouter>((path, input = {}) =>
   fetch(`https://api.lil.software/${path}?${new URLSearchParams(input)}`).then(
