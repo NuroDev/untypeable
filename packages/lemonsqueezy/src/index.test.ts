@@ -42,8 +42,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /checkouts", async () => {
-    // TODO: Find a way to not require an empty object.
-    const checkouts = await client("/checkouts", "GET", {});
+    const checkouts = await client("/checkouts", "GET");
 
     expect(checkouts).toBeDefined();
     expect(checkouts.data).toBeDefined();
@@ -59,7 +58,6 @@ describe.concurrent("Lemon Squeezy", () => {
       client("/variants", "GET"),
     ]);
 
-    // TODO: Find a way to not require an empty object.
     const newCheckout = await client("/checkouts", "POST", {
       checkout_data: {
         billing_address: {
@@ -89,8 +87,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /checkouts/:id", async () => {
-    // TODO: Find a way to not require an empty object.
-    const checkouts = await client("/checkouts", "GET", {});
+    const checkouts = await client("/checkouts", "GET");
 
     let firstCheckoutId = checkouts.data.at(0)?.id;
     if (!firstCheckoutId) {
@@ -135,8 +132,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /discounts", async () => {
-    // TODO: Find a way to not require an empty object.
-    const discounts = await client("/discounts", "GET", {});
+    const discounts = await client("/discounts", "GET");
 
     expect(discounts).toBeDefined();
     expect(discounts.data).toBeDefined();
@@ -147,8 +143,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /discounts/:id", async () => {
-    // TODO: Find a way to not require an empty object.
-    const discounts = await client("/discounts", "GET", {});
+    const discounts = await client("/discounts", "GET");
     const discount = await client(`/discounts/:id`, "GET", {
       id: discounts.data.at(0)!.id,
     });
@@ -160,8 +155,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /files", async () => {
-    // TODO: Find a way to not require an empty object.
-    const files = await client("/files", "GET", {});
+    const files = await client("/files", "GET");
 
     expect(files).toBeDefined();
     expect(files.data).toBeDefined();
@@ -172,8 +166,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /files/:id", async () => {
-    // TODO: Find a way to not require an empty object.
-    const files = await client("/files", "GET", {});
+    const files = await client("/files", "GET");
     const file = await client(`/files/:id`, "GET", {
       id: files.data.at(0)!.id,
     });
@@ -185,8 +178,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /license-keys", async () => {
-    // TODO: Find a way to not require an empty object.
-    const licenseKeys = await client("/license-keys", "GET", {});
+    const licenseKeys = await client("/license-keys", "GET");
 
     expect(licenseKeys).toBeDefined();
     expect(licenseKeys.data).toBeDefined();
@@ -197,8 +189,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /license-keys/:id", async () => {
-    // TODO: Find a way to not require an empty object.
-    const licenseKeys = await client("/license-keys", "GET", {});
+    const licenseKeys = await client("/license-keys", "GET");
     const licenseKey = await client(`/license-keys/:id`, "GET", {
       id: licenseKeys.data.at(0)!.id,
     });
@@ -210,12 +201,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /license-key-instances", async () => {
-    // TODO: Find a way to not require an empty object.
-    const licenseKeyInstances = await client(
-      "/license-key-instances",
-      "GET",
-      {}
-    );
+    const licenseKeyInstances = await client("/license-key-instances", "GET");
 
     expect(licenseKeyInstances).toBeDefined();
     expect(licenseKeyInstances.data).toBeDefined();
@@ -228,12 +214,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /license-key-instances/:id", async () => {
-    // TODO: Find a way to not require an empty object.
-    const licenseKeyInstances = await client(
-      "/license-key-instances",
-      "GET",
-      {}
-    );
+    const licenseKeyInstances = await client("/license-key-instances", "GET");
     const licenseKeyInstance = await client(
       `/license-key-instances/:id`,
       "GET",
@@ -249,8 +230,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /orders", async () => {
-    // TODO: Find a way to not require an empty object.
-    const orderItems = await client("/orders", "GET", {});
+    const orderItems = await client("/orders", "GET");
 
     expect(orderItems).toBeDefined();
     expect(orderItems.data).toBeDefined();
@@ -261,8 +241,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /orders/:id", async () => {
-    // TODO: Find a way to not require an empty object.
-    const orderItems = await client("/orders", "GET", {});
+    const orderItems = await client("/orders", "GET");
     const orderItem = await client(`/orders/:id`, "GET", {
       id: orderItems.data.at(0)!.id,
     });
@@ -274,8 +253,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /order-items", async () => {
-    // TODO: Find a way to not require an empty object.
-    const orderItems = await client("/order-items", "GET", {});
+    const orderItems = await client("/order-items", "GET");
 
     expect(orderItems).toBeDefined();
     expect(orderItems.data).toBeDefined();
@@ -286,8 +264,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /order-items/:id", async () => {
-    // TODO: Find a way to not require an empty object.
-    const orderItems = await client("/order-items", "GET", {});
+    const orderItems = await client("/order-items", "GET");
     const orderItem = await client(`/order-items/:id`, "GET", {
       id: orderItems.data.at(0)!.id,
     });
@@ -299,8 +276,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /products", async () => {
-    // TODO: Find a way to not require an empty object.
-    const products = await client("/products", "GET", {});
+    const products = await client("/products", "GET");
 
     expect(products).toBeDefined();
     expect(products.data).toBeDefined();
@@ -311,8 +287,7 @@ describe.concurrent("Lemon Squeezy", () => {
   });
 
   it("GET - /products/:id", async () => {
-    // TODO: Find a way to not require an empty object.
-    const products = await client("/products", "GET", {});
+    const products = await client("/products", "GET");
     const product = await client(`/products/:id`, "GET", {
       id: products.data.at(0)!.id,
     });
