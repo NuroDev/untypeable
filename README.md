@@ -34,3 +34,4 @@ In this case we are doing the heavy lifting by creating type definitions for all
 The following are all currently supported untyped packages. Click on one below to view it & read more on how to install & use it.
 
 - [🍋 Lemon Squeezy](packages/lemonsqueezy)
+- [🤏 lil APIs](packages/lil.apis)
