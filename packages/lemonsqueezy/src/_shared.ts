@@ -9,6 +9,7 @@ export enum DataType {
   products = "products",
   stores = "stores",
   subscriptions = "subscriptions",
+  subscription_invoices = "subscription-invoices",
   users = "users",
   variants = "variants",
 }

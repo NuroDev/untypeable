@@ -40,6 +40,12 @@ import type {
   ProductsParams,
 } from "./product";
 import type { Store, Stores, StoreParams } from "./store";
+import type {
+  SubscriptionInvoice,
+  SubscriptionInvoiceParams,
+  SubscriptionInvoices,
+  SubscriptionInvoicesParams,
+} from "./subscriptionInvoice";
 import type { User } from "./user";
 import type { Variant, VariantParams, Variants } from "./variant";
 
@@ -73,6 +79,12 @@ const router = u.router({
   "/products/:id": { GET: u.input<ProductParams>().output<Product>() },
   "/stores": { GET: u.output<Stores>() },
   "/stores/:id": { GET: u.input<StoreParams>().output<Store>() },
+  "/subscription-invoices": {
+    GET: u.input<SubscriptionInvoicesParams>().output<SubscriptionInvoices>(),
+  },
+  "/subscription-invoices/:id": {
+    GET: u.input<SubscriptionInvoiceParams>().output<SubscriptionInvoice>(),
+  },
   "/users/me": { GET: u.output<User>() },
   "/variants": { GET: u.output<Variants>() },
   "/variants/:id": { GET: u.input<VariantParams>().output<Variant>() },
