@@ -5,7 +5,7 @@ import "dotenv/config";
 
 import type { LemonSqueezyRouter } from "../packages/lemonsqueezy";
 
-async function main() {
+export default async function main() {
   const client = createTypeLevelClient<LemonSqueezyRouter>(
     async (path, method, input = {}) => {
       const pathWithParams = path.replace(
@@ -38,5 +38,3 @@ async function main() {
   const me = await client("/users/me", "GET");
   console.log(me);
 }
-
-main();
