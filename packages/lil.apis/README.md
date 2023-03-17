@@ -22,6 +22,8 @@ pnpm install @untyped/lil.apis
 Create a new client instance with the `LilRouter` & your desired fetch handler
 
 ```typescript
+import { createTypeLevelClient } from "untypeable";
+
 import type { LilRouter } from "@untyped/lil.apis";
 
 const client = createTypeLevelClient<LilWeatherRouter>((path, input = {}) =>
