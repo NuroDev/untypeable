@@ -22,6 +22,8 @@ pnpm install @untyped/lemonsqueezy
 Create a new client instance with your API key
 
 ```typescript
+import { createTypeLevelClient } from "untypeable";
+
 import type { LemonSqueezyRouter } from "@untyped/lemonsqueezy";
 
 const client = createTypeLevelClient<LemonSqueezyRouter>(
