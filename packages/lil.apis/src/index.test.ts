@@ -71,12 +71,10 @@ describe.concurrent("lil APIs", () => {
 
   it("GET - /weather", async () => {
     const [successfulWeather, failedWeather] = await Promise.all([
-      // New York
       client("/weather", {
         latitude: 40.709335,
         longitude: -73.956558,
       }),
-      //
       client("/weather", {
         latitude: 0,
         longitude: 0,
