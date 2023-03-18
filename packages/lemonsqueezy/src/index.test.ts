@@ -7,7 +7,7 @@ import { join } from "node:path";
 import "minifaker/locales/en";
 
 import { DataType } from ".";
-import { CheckoutsSchema } from "./zod";
+import { CheckoutsSchema, DiscountSchema, DiscountsSchema } from "./zod";
 
 import type { LemonSqueezyRouter } from ".";
 
@@ -146,6 +146,8 @@ describe.concurrent("Lemon Squeezy", () => {
     expect(discounts.data.at(0)).toBeDefined();
     expect(discounts.data.at(0)?.type).toBe(DataType.discounts);
     expect(discounts.errors).toBeUndefined();
+
+    expect(DiscountsSchema.safeParse(discounts).success).toBe(true);
   });
 
   it("GET - /discounts/:id", async () => {
@@ -158,6 +160,9 @@ describe.concurrent("Lemon Squeezy", () => {
     expect(discount.data).toBeDefined();
     expect(discount.data.type).toBe(DataType.discounts);
     expect(discount.errors).toBeUndefined();
+
+    expect(DiscountsSchema.safeParse(discounts).success).toBe(true);
+    expect(DiscountSchema.safeParse(discount).success).toBe(true);
   });
 
   it("GET - /files", async () => {
