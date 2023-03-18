@@ -3,15 +3,7 @@ import { describe, it, expect, beforeAll } from "vitest";
 
 import "minifaker/locales/en";
 
-import {
-  ArticleSchema,
-  ForecastSchema,
-  NewsSchema,
-  StockSchema,
-  StocksParamsSchema,
-  WeatherParamsSchema,
-  WeatherSchema,
-} from "./zod";
+import { NewsSchema, StockSchema, WeatherSchema } from "./zod";
 
 import type { LilRouter } from ".";
 
