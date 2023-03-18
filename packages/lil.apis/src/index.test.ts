@@ -3,6 +3,16 @@ import { describe, it, expect, beforeAll } from "vitest";
 
 import "minifaker/locales/en";
 
+import {
+  ArticleSchema,
+  ForecastSchema,
+  NewsSchema,
+  StockSchema,
+  StocksParamsSchema,
+  WeatherParamsSchema,
+  WeatherSchema,
+} from "./zod";
+
 import type { LilRouter } from ".";
 
 describe.concurrent("lil APIs", () => {
@@ -34,6 +44,8 @@ describe.concurrent("lil APIs", () => {
     expect(news.articles.at(0)?.title).toBeTypeOf("string");
     expect(news.articles.at(0)?.url).toBeDefined();
     expect(news.articles.at(0)?.url).toBeTypeOf("string");
+
+    expect(NewsSchema.safeParse(news).success).toBe(true);
   });
 
   it("GET - /stocks", async () => {
@@ -67,6 +79,9 @@ describe.concurrent("lil APIs", () => {
     expect(failedStock.name).toBe(null);
     expect(failedStock.open).toBe(0);
     expect(failedStock.previous_close).toBe(0);
+
+    expect(StockSchema.safeParse(successfulStock).success).toBe(true);
+    expect(StockSchema.safeParse(failedStock).success).toBe(true);
   });
 
   it("GET - /weather", async () => {
@@ -98,5 +113,8 @@ describe.concurrent("lil APIs", () => {
     expect(failedWeather.error).toBeDefined();
     expect(failedWeather.error).toBeTruthy();
     expect(failedWeather.forecast).toBeUndefined();
+
+    expect(WeatherSchema.safeParse(successfulWeather).success).toBe(true);
+    expect(WeatherSchema.safeParse(failedWeather).success).toBe(true);
   });
 });
