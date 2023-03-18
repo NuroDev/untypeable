@@ -32,5 +32,16 @@
     "src/index.ts",
     "LICENSE",
     "README.md"
-  ]
+  ],
+  "devDependencies": {
+    "zod": "^3.21.4"
+  },
+  "peerDependencies": {
+    "zod": "^3.21.4"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
+  }
 }
