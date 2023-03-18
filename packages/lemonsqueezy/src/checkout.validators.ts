@@ -231,7 +231,7 @@ export const CreateCheckoutParamsSchema = z.object({
    *
    * @see https://en.wikipedia.org/wiki/ISO_8601
    */
-  expires_at: z.string().datetime().nullable(),
+  expires_at: z.string().datetime().nullish(),
   /**
    * A boolean indicating whether to return a preview of the checkout.
    *
