@@ -1,4 +1,4 @@
-import type { DataType, LemonSqueezyResponse } from "./_shared";
+import type { DataType, LemonSqueezyResponse } from "./_shared.types";
 
 /**
  * @docs https://docs.lemonsqueezy.com/api/subscriptions#the-subscription-object

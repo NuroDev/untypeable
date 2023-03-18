@@ -1,4 +1,4 @@
-import type { DataType, LemonSqueezyResponse } from "./_shared";
+import type { DataType, LemonSqueezyResponse } from "./_shared.types";
 
 export type Interval = "day" | "week" | "month" | "year";
 

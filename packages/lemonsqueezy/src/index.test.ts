@@ -5,7 +5,10 @@ import { join } from "node:path";
 
 import "minifaker/locales/en";
 
-import { DataType, type LemonSqueezyRouter } from ".";
+import { DataType } from ".";
+import { CheckoutsSchema } from "./zod";
+
+import type { LemonSqueezyRouter } from ".";
 
 describe.concurrent("Lemon Squeezy", () => {
   const apiKey = process.env.LEMON_SQUEEZY_API_KEY as string;
@@ -50,6 +53,8 @@ describe.concurrent("Lemon Squeezy", () => {
     expect(checkouts.data.at(0)).toBeDefined();
     expect(checkouts.data.at(0)?.type).toBe(DataType.checkouts);
     expect(checkouts.errors).toBeUndefined();
+
+    expect(CheckoutsSchema.safeParse(checkouts).success).toBe(true);
   });
 
   it("POST - /checkouts", async () => {
