@@ -25,7 +25,7 @@
 
 ## ❓ What is `untyped`?
 
-`untyped` is a collection of packages built around the `untypeable` package, which allows you get type-safe access to any API.
+`untyped` is a collection of packages built around the [`untypeable`](https://github.com/total-typescript/untypeable) package, which allows you get type-safe access to any API.
 
 In this case we are doing the heavy lifting by creating type definitions for all the most popular API's out there. This way you are able to use your favourite RESTful API's with complete type safety.
 
