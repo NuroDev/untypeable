@@ -1,6 +1,7 @@
 import { createTypeLevelClient } from "untypeable";
 import { describe, it, expect, beforeAll } from "vitest";
 import { email, firstName, name, zipCode } from "minifaker";
+import { fetch } from "undici";
 import { join } from "node:path";
 
 import "minifaker/locales/en";
