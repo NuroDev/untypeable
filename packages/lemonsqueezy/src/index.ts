@@ -6,55 +6,55 @@ import type {
   Checkouts,
   CheckoutsParams,
   CreateCheckoutParams,
-} from "./checkout";
+} from "./checkout.types";
 import type {
   Discount,
   DiscountParams,
   Discounts,
   DiscountsParams,
-} from "./discount";
-import type { File, FileParams, Files, FilesParams } from "./file";
+} from "./discount.types";
+import type { File, FileParams, Files, FilesParams } from "./file.types";
 import type {
   LicenseKey,
   LicenseKeyParams,
   LicenseKeys,
   LicenseKeysParams,
-} from "./licenseKey";
+} from "./licenseKey.types";
 import type {
   LicenseKeyInstance,
   LicenseKeyInstanceParams,
   LicenseKeyInstances,
   LicenseKeyInstancesParams,
-} from "./licenseKeyInstance";
-import type { Order, OrderParams, Orders, OrdersParams } from "./order";
+} from "./licenseKeyInstance.types";
+import type { Order, OrderParams, Orders, OrdersParams } from "./order.types";
 import type {
   OrderItem,
   OrderItemParams,
   OrderItems,
   OrderItemsParams,
-} from "./orderItem";
+} from "./orderItem.types";
 import type {
   Product,
   ProductParams,
   Products,
   ProductsParams,
-} from "./product";
-import type { Store, Stores, StoreParams } from "./store";
+} from "./product.types";
+import type { Store, Stores, StoreParams } from "./store.types";
 import type {
   DeleteSubscriptionParams,
   Subscription,
   SubscriptionParams,
   Subscriptions,
   SubscriptionsParams,
-} from "./subscription";
+} from "./subscription.types";
 import type {
   SubscriptionInvoice,
   SubscriptionInvoiceParams,
   SubscriptionInvoices,
   SubscriptionInvoicesParams,
-} from "./subscriptionInvoice";
-import type { User } from "./user";
-import type { Variant, VariantParams, Variants } from "./variant";
+} from "./subscriptionInvoice.types";
+import type { User } from "./user.types";
+import type { Variant, VariantParams, Variants } from "./variant.types";
 
 const u = initUntypeable().pushArg<"GET" | "POST" | "PATCH" | "DELETE">();
 
@@ -111,6 +111,6 @@ export type {
   CheckoutData,
   CheckoutOptions,
   CheckoutPreview,
-} from "./checkout";
+} from "./checkout.types";
 export { DataType } from "./_shared";
-export type { Interval } from "./variant";
+export type { Interval } from "./variant.types";
