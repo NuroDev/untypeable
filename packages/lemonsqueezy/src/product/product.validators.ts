@@ -14,7 +14,7 @@ export const ProductSchema = defineLemonSqueezySchema(
       /**
        * A URL to purchase this product using the Lemon Squeezy checkout
        */
-      buy_now_url: z.string(),
+      buy_now_url: z.string().url(),
       /**
        * An ISO-8601 formatted date-time string indicating when the object was created
        *
@@ -36,7 +36,7 @@ export const ProductSchema = defineLemonSqueezySchema(
        *
        * The image will be 1000x1000px in size
        */
-      large_thumb_url: z.string(),
+      large_thumb_url: z.string().url().nullable(),
       /**
        * The name of the product
        */
@@ -74,7 +74,7 @@ export const ProductSchema = defineLemonSqueezySchema(
        *
        * The image will be 100x100px in size
        */
-      thumb_url: z.string(),
+      thumb_url: z.string().url().nullable(),
       /**
        * If this product has multiple variants, this will be a positive integer in cents representing the price of the most expensive variant.
        *
