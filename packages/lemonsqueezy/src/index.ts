@@ -13,7 +13,7 @@ import type {
   Discounts,
   DiscountsParams,
 } from "./discount/discount.types";
-import type { File, FileParams, Files, FilesParams } from "~/file/file.types";
+import type { File, FileParams, Files, FilesParams } from "./file/file.types";
 import type {
   LicenseKey,
   LicenseKeyParams,

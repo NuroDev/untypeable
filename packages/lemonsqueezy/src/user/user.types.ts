@@ -1,6 +1,6 @@
 import type { z } from "zod";
 
-import type { UserSchema } from "~/user/user.validators";
+import type { UserSchema } from "./user.validators";
 
 /**
  * @docs https://docs.lemonsqueezy.com/api/users#the-user-object

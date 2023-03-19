@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "esModuleInterop": true,
     "lib": ["ESNext"],
     "module": "ESNext",
@@ -8,9 +7,6 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "paths": {
-      "~/*": ["./src/*"]
-    },
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
