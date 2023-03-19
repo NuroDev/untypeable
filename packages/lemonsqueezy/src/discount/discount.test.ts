@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.types";
+import { DataType } from "../_shared/_shared.validators";
 import { DiscountSchema, DiscountsSchema } from "../zod";
 import { useTestClient } from "../_shared/_shared.util";
 
@@ -14,7 +14,7 @@ describe.concurrent("Lemon Squeezy - Discount", () => {
     expect(discounts.data).toBeDefined();
     expect(discounts.data.length).toBeGreaterThanOrEqual(1);
     expect(discounts.data.at(0)).toBeDefined();
-    expect(discounts.data.at(0)?.type).toBe(DataType.discounts);
+    expect(discounts.data.at(0)?.type).toBe(DataType.enum.discounts);
     expect(discounts.errors).toBeUndefined();
 
     expect(DiscountsSchema.safeParse(discounts).success).toBe(true);
@@ -28,7 +28,7 @@ describe.concurrent("Lemon Squeezy - Discount", () => {
 
     expect(discount).toBeDefined();
     expect(discount.data).toBeDefined();
-    expect(discount.data.type).toBe(DataType.discounts);
+    expect(discount.data.type).toBe(DataType.enum.discounts);
     expect(discount.errors).toBeUndefined();
 
     expect(DiscountsSchema.safeParse(discounts).success).toBe(true);

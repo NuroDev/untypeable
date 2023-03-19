@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.types";
+import { DataType } from "../_shared/_shared.validators";
 import { UserSchema } from "./user.validators";
 import { useTestClient } from "../_shared/_shared.util";
 
@@ -12,7 +12,7 @@ describe.concurrent("Lemon Squeezy - User", () => {
 
     expect(user).toBeDefined();
     expect(user.data).toBeDefined();
-    expect(user.data.type).toBe(DataType.users);
+    expect(user.data.type).toBe(DataType.enum.users);
     expect(user.errors).toBeUndefined();
 
     expect(UserSchema.safeParse(user).success).toBe(true);

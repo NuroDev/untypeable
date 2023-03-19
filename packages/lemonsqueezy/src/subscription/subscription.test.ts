@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.types";
+import { DataType } from "../_shared/_shared.validators";
 import {
   SubscriptionSchema,
   SubscriptionsSchema,
@@ -17,7 +17,7 @@ describe.concurrent("Lemon Squeezy - Subscription", () => {
     // expect(subscriptions.data).toBeDefined();
     // expect(subscriptions.data.length).toBeGreaterThanOrEqual(1);
     // expect(subscriptions.data.at(0)).toBeDefined();
-    // expect(subscriptions.data.at(0)?.type).toBe(DataType.subscriptions);
+    // expect(subscriptions.data.at(0)?.type).toBe(DataType.enum.subscriptions);
     // expect(subscriptions.errors).toBeUndefined();
 
     // expect(SubscriptionsSchema.safeParse(subscriptions).success).toBe(true);
@@ -33,7 +33,7 @@ describe.concurrent("Lemon Squeezy - Subscription", () => {
 
     // expect(subscription).toBeDefined();
     // expect(subscription.data).toBeDefined();
-    // expect(subscription.data.type).toBe(DataType.subscriptions);
+    // expect(subscription.data.type).toBe(DataType.enum.subscriptions);
     // expect(subscription.errors).toBeUndefined();
 
     // expect(SubscriptionsSchema.safeParse(subscriptions).success).toBe(true);

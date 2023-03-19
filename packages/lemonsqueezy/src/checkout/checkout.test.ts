@@ -3,8 +3,8 @@ import { email, firstName, name, zipCode } from "minifaker";
 
 import "minifaker/locales/en";
 
-import { DataType } from "../_shared/_shared.types";
 import { CheckoutsSchema } from "../zod";
+import { DataType } from "../_shared/_shared.validators";
 import { useTestClient } from "../_shared/_shared.util";
 
 describe.concurrent("Lemon Squeezy - Checkout", () => {
@@ -17,7 +17,7 @@ describe.concurrent("Lemon Squeezy - Checkout", () => {
     expect(checkouts.data).toBeDefined();
     expect(checkouts.data.length).toBeGreaterThanOrEqual(1);
     expect(checkouts.data.at(0)).toBeDefined();
-    expect(checkouts.data.at(0)?.type).toBe(DataType.checkouts);
+    expect(checkouts.data.at(0)?.type).toBe(DataType.enum.checkouts);
     expect(checkouts.errors).toBeUndefined();
 
     expect(CheckoutsSchema.safeParse(checkouts).success).toBe(true);
@@ -53,7 +53,7 @@ describe.concurrent("Lemon Squeezy - Checkout", () => {
 
   //   expect(newCheckout).toBeDefined();
   //   expect(newCheckout.data).toBeDefined();
-  //   expect(newCheckout.data.type).toBe(DataType.checkouts);
+  //   expect(newCheckout.data.type).toBe(DataType.enum.checkouts);
   //   expect(newCheckout.errors).toBeUndefined();
   // });
 
@@ -98,7 +98,7 @@ describe.concurrent("Lemon Squeezy - Checkout", () => {
 
     expect(checkout).toBeDefined();
     expect(checkout.data).toBeDefined();
-    expect(checkout.data.type).toBe(DataType.checkouts);
+    expect(checkout.data.type).toBe(DataType.enum.checkouts);
     expect(checkout.errors).toBeUndefined();
   });
 });

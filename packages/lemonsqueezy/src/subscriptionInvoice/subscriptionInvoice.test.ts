@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.types";
+import { DataType } from "../_shared/_shared.validators";
 import {
   SubscriptionInvoiceSchema,
   SubscriptionInvoicesSchema,
@@ -18,7 +18,7 @@ describe.concurrent("Lemon Squeezy - Subscription Invoice", () => {
     // expect(subscriptionInvoices.data.length).toBeGreaterThanOrEqual(1);
     // expect(subscriptionInvoices.data.at(0)).toBeDefined();
     // expect(subscriptionInvoices.data.at(0)?.type).toBe(
-    //   DataType.subscription_invoices
+    //   DataType.enum.subscription_invoices
     // );
     // expect(subscriptionInvoices.errors).toBeUndefined();
 
@@ -39,7 +39,7 @@ describe.concurrent("Lemon Squeezy - Subscription Invoice", () => {
 
     // expect(subscriptionInvoice).toBeDefined();
     // expect(subscriptionInvoice.data).toBeDefined();
-    // expect(subscriptionInvoice.data.type).toBe(DataType.subscription_invoices);
+    // expect(subscriptionInvoice.data.type).toBe(DataType.enum.subscription_invoices);
     // expect(subscriptionInvoice.errors).toBeUndefined();
 
     // expect(SubscriptionInvoicesSchema.safeParse(subscriptionInvoices).success).toBe(true);

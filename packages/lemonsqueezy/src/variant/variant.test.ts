@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.types";
+import { DataType } from "../_shared/_shared.validators";
 import { useTestClient } from "../_shared/_shared.util";
 import { VariantSchema, VariantsSchema } from "./variant.validators";
 
@@ -14,7 +14,7 @@ describe.concurrent("Lemon Squeezy - Variant", () => {
     expect(variants.data).toBeDefined();
     expect(variants.data.length).toBeGreaterThanOrEqual(1);
     expect(variants.data.at(0)).toBeDefined();
-    expect(variants.data.at(0)?.type).toBe(DataType.variants);
+    expect(variants.data.at(0)?.type).toBe(DataType.enum.variants);
     expect(variants.errors).toBeUndefined();
 
     expect(VariantsSchema.safeParse(variants).success).toBe(true);
@@ -28,7 +28,7 @@ describe.concurrent("Lemon Squeezy - Variant", () => {
 
     expect(variant).toBeDefined();
     expect(variant.data).toBeDefined();
-    expect(variant.data.type).toBe(DataType.variants);
+    expect(variant.data.type).toBe(DataType.enum.variants);
     expect(variant.errors).toBeUndefined();
 
     expect(VariantsSchema.safeParse(variants).success).toBe(true);

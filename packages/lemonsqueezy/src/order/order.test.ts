@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.types";
+import { DataType } from "../_shared/_shared.validators";
 import { OrderSchema, OrdersSchema } from "./order.validators";
 import { useTestClient } from "../_shared/_shared.util";
 
@@ -14,7 +14,7 @@ describe.concurrent("Lemon Squeezy - Order", () => {
     // expect(orders.data).toBeDefined();
     // expect(orders.data.length).toBeGreaterThanOrEqual(1);
     // expect(orders.data.at(0)).toBeDefined();
-    // expect(orders.data.at(0)?.type).toBe(DataType.orders);
+    // expect(orders.data.at(0)?.type).toBe(DataType.enum.orders);
     // expect(orders.errors).toBeUndefined();
 
     // expect(OrdersSchema.safeParse(orders).success).toBe(true);
@@ -30,7 +30,7 @@ describe.concurrent("Lemon Squeezy - Order", () => {
 
     // expect(order).toBeDefined();
     // expect(order.data).toBeDefined();
-    // expect(order.data.type).toBe(DataType.orders);
+    // expect(order.data.type).toBe(DataType.enum.orders);
     // expect(order.errors).toBeUndefined();
 
     // expect(OrdersSchema.safeParse(orders).success).toBe(true);
