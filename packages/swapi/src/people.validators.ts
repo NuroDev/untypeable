@@ -82,7 +82,7 @@ export const PersonSchema = z.object({
 /**
  * @docs https://swapi.dev/documentation#people
  */
-export const PaginatedPersonSchema = defineSWAPIPaginatedSchema(PersonSchema);
+export const PeopleSchema = defineSWAPIPaginatedSchema(PersonSchema);
 
 export const PersonParamsSchema = z.object({
   id: z.number(),

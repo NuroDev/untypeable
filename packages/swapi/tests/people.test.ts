@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { PaginatedPersonSchema, PersonSchema } from "../src/zod";
+import { PeopleSchema, PersonSchema } from "../src/zod";
 import { useTestClient } from "../src/_shared/_shared.util";
 
 describe.concurrent("SWAPI - People", () => {
@@ -18,7 +18,7 @@ describe.concurrent("SWAPI - People", () => {
     expect(people.results.length).toBeGreaterThan(0);
     expect(people.results.at(0)).toBeDefined();
 
-    expect(PaginatedPersonSchema.safeParse(people).success).toBe(true);
+    expect(PeopleSchema.safeParse(people).success).toBe(true);
   });
 
   it("GET - /people/:id", async () => {
