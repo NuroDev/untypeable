@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SWAPI - Vehicles > GET - /vehicles/:id 1`] = `
+{
+  "cargo_capacity": "50000",
+  "consumables": "2 months",
+  "cost_in_credits": "150000",
+  "created": "2014-12-10T15:36:25.724000Z",
+  "crew": "46",
+  "edited": "2014-12-20T21:30:21.661000Z",
+  "films": [
+    "https://swapi.dev/api/films/1/",
+    "https://swapi.dev/api/films/5/",
+  ],
+  "length": "36.8 ",
+  "manufacturer": "Corellia Mining Corporation",
+  "max_atmosphering_speed": "30",
+  "model": "Digger Crawler",
+  "name": "Sand Crawler",
+  "passengers": "30",
+  "pilots": [],
+  "url": "https://swapi.dev/api/vehicles/4/",
+  "vehicle_class": "wheeled",
+}
+`;

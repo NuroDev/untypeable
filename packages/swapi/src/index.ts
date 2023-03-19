@@ -4,6 +4,7 @@ import type { Film, FilmParams, Films } from "./films.types";
 import type { People, Person, PersonParams } from "./people.types";
 import type { Root } from "./root.types";
 import type { Starship, StarshipParams, Starships } from "./starships.types";
+import type { Vehicle, VehicleParams, Vehicles } from "./vehicles.types";
 
 const u = initUntypeable();
 
@@ -21,6 +22,10 @@ const router = u.router({
   "/starships": u.output<Starships>(),
   /** Get a specific starship resource */
   "/starships/:id": u.input<StarshipParams>().output<Starship>(),
+  /** Get all the vehicle resources */
+  "/vehicles": u.output<Vehicles>(),
+  /** Get a specific vehicle resource */
+  "/vehicles/:id": u.input<VehicleParams>().output<Vehicle>(),
 });
 
 export type SwapiRouter = typeof router;
