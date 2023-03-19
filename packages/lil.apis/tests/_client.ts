@@ -12,10 +12,9 @@ export function useTestClient() {
     );
 
     const response = await fetch(url.href);
-    if (!response.ok)
-      throw new Error(response.statusText, {
-        cause: response.status,
-      });
+
+    // Note: We don't check if `response.ok` is true here because we want to
+    // test the error handling of the API.
 
     return await response.json();
   });
