@@ -6,55 +6,60 @@ import type {
   Checkouts,
   CheckoutsParams,
   CreateCheckoutParams,
-} from "./checkout.types";
+} from "./checkout/checkout.types";
 import type {
   Discount,
   DiscountParams,
   Discounts,
   DiscountsParams,
-} from "./discount.types";
-import type { File, FileParams, Files, FilesParams } from "./file.types";
+} from "./discount/discount.types";
+import type { File, FileParams, Files, FilesParams } from "~/file/file.types";
 import type {
   LicenseKey,
   LicenseKeyParams,
   LicenseKeys,
   LicenseKeysParams,
-} from "./licenseKey.types";
+} from "./licenseKey/licenseKey.types";
 import type {
   LicenseKeyInstance,
   LicenseKeyInstanceParams,
   LicenseKeyInstances,
   LicenseKeyInstancesParams,
-} from "./licenseKeyInstance.types";
-import type { Order, OrderParams, Orders, OrdersParams } from "./order.types";
+} from "./licenseKeyInstance/licenseKeyInstance.types";
+import type {
+  Order,
+  OrderParams,
+  Orders,
+  OrdersParams,
+} from "./order/order.types";
 import type {
   OrderItem,
   OrderItemParams,
   OrderItems,
   OrderItemsParams,
-} from "./orderItem.types";
+} from "./orderItem/orderItem.types";
 import type {
   Product,
   ProductParams,
   Products,
   ProductsParams,
-} from "./product.types";
-import type { Store, Stores, StoreParams } from "./store.types";
+} from "./product/product.types";
+import type { Store, Stores, StoreParams } from "./store/store.types";
 import type {
   DeleteSubscriptionParams,
   Subscription,
   SubscriptionParams,
   Subscriptions,
   SubscriptionsParams,
-} from "./subscription.types";
+} from "./subscription/subscription.types";
 import type {
   SubscriptionInvoice,
   SubscriptionInvoiceParams,
   SubscriptionInvoices,
   SubscriptionInvoicesParams,
-} from "./subscriptionInvoice.types";
-import type { User } from "./user.types";
-import type { Variant, VariantParams, Variants } from "./variant.types";
+} from "./subscriptionInvoice/subscriptionInvoice.types";
+import type { User } from "./user/user.types";
+import type { Variant, VariantParams, Variants } from "./variant/variant.types";
 
 const u = initUntypeable().pushArg<"GET" | "POST" | "PATCH" | "DELETE">();
 
@@ -111,6 +116,6 @@ export type {
   CheckoutData,
   CheckoutOptions,
   CheckoutPreview,
-} from "./checkout.types";
-export { DataType } from "./_shared.types";
-export type { Interval } from "./variant.types";
+} from "~/checkout/checkout.types";
+export { DataType } from "~/_shared/_shared.types";
+export type { Interval } from "~/variant/variant.types";
