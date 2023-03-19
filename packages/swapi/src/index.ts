@@ -1,12 +1,17 @@
 import { initUntypeable } from "untypeable";
 
 import type { PaginatedPerson, Person, PersonParams } from "./people.types";
+import type { Film, FilmParams, Films } from "./films.types";
 import type { Root } from "./root.types";
 
 const u = initUntypeable();
 
 const router = u.router({
   "/": u.output<Root>(),
+  /** Get all the film resources */
+  "/films": u.output<Films>(),
+  /** Get a specific film resource */
+  "/films/:id": u.input<FilmParams>().output<Film>(),
   /** Get all the people resources */
   "/people": u.output<PaginatedPerson>(),
   /** Get a specific people resource */
