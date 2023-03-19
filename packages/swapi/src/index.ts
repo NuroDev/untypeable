@@ -2,6 +2,7 @@ import { initUntypeable } from "untypeable";
 
 import type { Film, FilmParams, Films } from "./films.types";
 import type { People, Person, PersonParams } from "./people.types";
+import type { Planet, PlanetParams, Planets } from "./planets.types";
 import type { Root } from "./root.types";
 import type { AllSpecies, Species, SpeciesParams } from "./species.types";
 import type { Starship, StarshipParams, Starships } from "./starships.types";
@@ -19,6 +20,10 @@ const router = u.router({
   "/people": u.output<People>(),
   /** Get a specific people resource */
   "/people/:id": u.input<PersonParams>().output<Person>(),
+  /** Get all the planets resources */
+  "/planets": u.output<Planets>(),
+  /** Get a specific planets resource */
+  "/planets/:id": u.input<PlanetParams>().output<Planet>(),
   /** Get all the species resources */
   "/species": u.output<AllSpecies>(),
   /** Get a specific species resource */
