@@ -14,6 +14,6 @@ export type Person = z.infer<typeof PersonSchema>;
 /**
  * @docs https://swapi.dev/documentation#people
  */
-export type PaginatedPerson = z.infer<typeof PaginatedPersonSchema>;
+export type People = z.infer<typeof PaginatedPersonSchema>;
 
 export type PersonParams = z.infer<typeof PersonParamsSchema>;
