@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 
 import { DataType } from "../_shared/_shared.types";
 import { useTestClient } from "../_shared/_shared.util";
+import { VariantSchema, VariantsSchema } from "./variant.validators";
 
 describe.concurrent("Lemon Squeezy - Variant", () => {
   const client = useTestClient();
@@ -15,6 +16,8 @@ describe.concurrent("Lemon Squeezy - Variant", () => {
     expect(variants.data.at(0)).toBeDefined();
     expect(variants.data.at(0)?.type).toBe(DataType.variants);
     expect(variants.errors).toBeUndefined();
+
+    expect(VariantsSchema.safeParse(variants).success).toBe(true);
   });
 
   it("GET - /variants/:id", async () => {
@@ -27,5 +30,8 @@ describe.concurrent("Lemon Squeezy - Variant", () => {
     expect(variant.data).toBeDefined();
     expect(variant.data.type).toBe(DataType.variants);
     expect(variant.errors).toBeUndefined();
+
+    expect(VariantsSchema.safeParse(variants).success).toBe(true);
+    expect(VariantSchema.safeParse(variant).success).toBe(true);
   });
 });
