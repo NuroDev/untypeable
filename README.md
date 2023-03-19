@@ -35,4 +35,5 @@ The following are all currently supported untyped packages. Click on one below t
 
 - [🍋 Lemon Squeezy](packages/lemonsqueezy)
 - [🤏 lil APIs](packages/lil.apis)
+- [🚀 SpaceX](packages/spacex)
 - [🪐 SWAPI](packages/swapi)
