@@ -7,3 +7,4 @@ export * from "./licenseKeyInstance/licenseKeyInstance.validators";
 export * from "./order/order.validators";
 export * from "./orderItem/orderItem.validators";
 export * from "./product/product.validators";
+export * from "./store/store.validators";

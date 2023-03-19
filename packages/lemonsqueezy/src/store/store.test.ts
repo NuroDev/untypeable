@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 import { DataType } from "../_shared/_shared.types";
+import { StoreSchema, StoresSchema } from "./store.validators";
 import { useTestClient } from "../_shared/_shared.util";
 
 describe.concurrent("Lemon Squeezy - Store", () => {
@@ -15,6 +16,8 @@ describe.concurrent("Lemon Squeezy - Store", () => {
     expect(stores.data.at(0)).toBeDefined();
     expect(stores.data.at(0)?.type).toBe(DataType.stores);
     expect(stores.errors).toBeUndefined();
+
+    expect(StoresSchema.safeParse(stores).success).toBe(true);
   });
 
   it("GET - /stores/:id", async () => {
@@ -27,5 +30,8 @@ describe.concurrent("Lemon Squeezy - Store", () => {
     expect(store.data).toBeDefined();
     expect(store.data.type).toBe(DataType.stores);
     expect(store.errors).toBeUndefined();
+
+    expect(StoresSchema.safeParse(stores).success).toBe(true);
+    expect(StoreSchema.safeParse(store).success).toBe(true);
   });
 });
