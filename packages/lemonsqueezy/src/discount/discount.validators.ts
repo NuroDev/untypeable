@@ -1,9 +1,6 @@
 import { z } from "zod";
 
-import {
-  DataType,
-  defineLemonSqueezySchema,
-} from "../_shared/_shared.validators";
+import { DataType, defineLemonSqueezySchema } from "../_shared.validators";
 
 /**
  * @docs https://docs.lemonsqueezy.com/api/discounts#the-discount-object

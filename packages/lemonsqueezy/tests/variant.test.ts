@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../src/_shared/_shared.validators";
-import { useTestClient } from "../src/_shared/_shared.util";
+import { DataType } from "../src/_shared.validators";
+import { useTestClient } from "./_client";
 import {
   VariantSchema,
   VariantsSchema,

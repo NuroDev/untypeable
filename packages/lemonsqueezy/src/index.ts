@@ -117,5 +117,5 @@ export type {
   CheckoutOptions,
   CheckoutPreview,
 } from "./checkout/checkout.types";
-export { DataType } from "./_shared/_shared.validators";
+export { DataType } from "./_shared.validators";
 export type { Interval } from "./variant/variant.types";

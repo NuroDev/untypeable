@@ -1,9 +1,6 @@
 import { z } from "zod";
 
-import {
-  DataType,
-  defineLemonSqueezySchema,
-} from "../_shared/_shared.validators";
+import { DataType, defineLemonSqueezySchema } from "../_shared.validators";
 
 export const SubscriptionPauseSchema = z.object({
   /**

@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 import { PlanetSchema, PlanetsSchema } from "../src/zod";
-import { useTestClient } from "../src/_shared/_shared.util";
+import { useTestClient } from "./_client";
 
 describe.concurrent("SWAPI - Planets", () => {
   const client = useTestClient();

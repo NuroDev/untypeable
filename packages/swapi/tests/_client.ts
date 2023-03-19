@@ -3,7 +3,7 @@ import { createTypeLevelClient } from "untypeable";
 import { fetch } from "undici";
 import { join } from "node:path";
 
-import type { SwapiRouter } from "..";
+import type { SwapiRouter } from "../src";
 
 export function useTestClient() {
   const client = createTypeLevelClient<SwapiRouter>(

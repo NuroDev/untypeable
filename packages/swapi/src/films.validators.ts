@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { defineSWAPIPaginatedSchema } from "./_shared/_shared.validators";
+import { defineSWAPIPaginatedSchema } from "./_shared.validators";
 
 /**
  * @docs https://swapi.dev/documentation#films

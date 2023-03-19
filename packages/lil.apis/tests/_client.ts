@@ -2,7 +2,7 @@ import { beforeAll } from "vitest";
 import { createTypeLevelClient } from "untypeable";
 import { fetch } from "undici";
 
-import type { LilRouter } from ".";
+import type { LilRouter } from "../src";
 
 export function useTestClient() {
   const client = createTypeLevelClient<LilRouter>(async (path, input = {}) => {

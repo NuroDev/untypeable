@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 import { WeatherSchema } from "../src/zod";
-import { useTestClient } from "../src/_shared.util";
+import { useTestClient } from "./_client";
 
 describe.concurrent("lil APIs - Weather", () => {
   const client = useTestClient();

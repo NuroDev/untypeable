@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 import { StarshipSchema, StarshipsSchema } from "../src/zod";
-import { useTestClient } from "../src/_shared/_shared.util";
+import { useTestClient } from "./_client";
 
 describe.concurrent("SWAPI - Starships", () => {
   const client = useTestClient();
