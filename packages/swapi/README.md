@@ -19,27 +19,18 @@ pnpm install @untyped/swapi
 
 ## 🦄 Usage
 
-Create a new client instance with the `LilRouter` & your desired fetch handler
+Create a new client instance with the `SwapiRouter` & your desired fetch handler
 
 ```typescript
 import { createTypeLevelClient } from "untypeable";
 
-import type { LilRouter } from "@untyped/swapi";
+import type { SwapiRouter } from "@untyped/swapi";
 
-const client = createTypeLevelClient<LilWeatherRouter>((path, input = {}) =>
+const client = createTypeLevelClient<SwapiRouter>((path, input = {}) =>
   fetch(`https://swapi.dev/api/${path}?${new URLSearchParams(input)}`).then(
     (res) => res.json()
   )
 );
 
-const weather = await client("/weather", {
-  latitude: 40.709335,
-  longitude: -73.956558,
-});
-
-const news = await client("/news");
-
-const stocks = await client("/stocks", {
-  symbol: "AAPL",
-});
+const people = await client("/people");
 ```
