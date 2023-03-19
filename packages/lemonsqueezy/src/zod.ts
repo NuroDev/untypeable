@@ -8,3 +8,4 @@ export * from "./order/order.validators";
 export * from "./orderItem/orderItem.validators";
 export * from "./product/product.validators";
 export * from "./store/store.validators";
+export * from "./subscription/subscription.validators";

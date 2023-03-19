@@ -1,6 +1,10 @@
 import { describe, it, expect } from "vitest";
 
 import { DataType } from "../_shared/_shared.types";
+import {
+  SubscriptionSchema,
+  SubscriptionsSchema,
+} from "./subscription.validators";
 import { useTestClient } from "../_shared/_shared.util";
 
 describe.concurrent("Lemon Squeezy - Subscription", () => {
@@ -16,6 +20,8 @@ describe.concurrent("Lemon Squeezy - Subscription", () => {
     // expect(subscriptions.data.at(0)?.type).toBe(DataType.subscriptions);
     // expect(subscriptions.errors).toBeUndefined();
 
+    // expect(SubscriptionsSchema.safeParse(subscriptions).success).toBe(true);
+
     expect(true).toBe(true);
   });
 
@@ -29,6 +35,9 @@ describe.concurrent("Lemon Squeezy - Subscription", () => {
     // expect(subscription.data).toBeDefined();
     // expect(subscription.data.type).toBe(DataType.subscriptions);
     // expect(subscription.errors).toBeUndefined();
+
+    // expect(SubscriptionsSchema.safeParse(subscriptions).success).toBe(true);
+    // expect(SubscriptionSchema.safeParse(subscription).success).toBe(true);
 
     expect(true).toBe(true);
   });
