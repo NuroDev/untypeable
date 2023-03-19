@@ -3,15 +3,17 @@ import { createTypeLevelClient } from "untypeable";
 import { fetch } from "undici";
 import { join } from "node:path";
 
-import type { SwapiRouter } from ".";
+import type { SwapiRouter } from "..";
 
 export function useTestClient() {
   const client = createTypeLevelClient<SwapiRouter>(
     async (path, input = {}) => {
-      const url = new URL(join("/api", path), "https://swapi.dev/");
-      Object.entries(input).forEach(([key, value]) =>
-        url.searchParams.append(key, value as string)
+      const pathWithParams = path.replace(
+        /:([a-zA-Z0-9_]+)/g,
+        (_, key) => input[key]
       );
+
+      const url = new URL(join("/api", pathWithParams), "https://swapi.dev/");
 
       const response = await fetch(url.href, {
         method: "GET",

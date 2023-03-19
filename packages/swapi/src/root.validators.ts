@@ -1,5 +1,8 @@
 import { z } from "zod";
 
+/**
+ * @docs https://swapi.dev/documentation#root
+ */
 export const RootSchema = z.object({
   /** The URL root for Film resources */
   films: z.literal("https://swapi.dev/api/films/"),
