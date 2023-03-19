@@ -12,6 +12,7 @@ export function useTestClient() {
     );
 
     const response = await fetch(url.href);
+    if (!response.ok) throw new Error(response.statusText);
 
     return await response.json();
   });

@@ -29,6 +29,7 @@ export function useTestClient() {
           Authorization: `Bearer ${apiKey}`,
         },
       });
+      if (!response.ok) throw new Error(response.statusText);
 
       return await response.json();
     }
