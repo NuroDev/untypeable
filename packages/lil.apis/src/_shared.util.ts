@@ -12,7 +12,10 @@ export function useTestClient() {
     );
 
     const response = await fetch(url.href);
-    if (!response.ok) throw new Error(response.statusText);
+    if (!response.ok)
+      throw new Error(response.statusText, {
+        cause: response.status,
+      });
 
     return await response.json();
   });
