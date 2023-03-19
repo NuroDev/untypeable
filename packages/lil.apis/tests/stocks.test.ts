@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
-import { StockSchema } from "./zod";
-import { useTestClient } from "./_shared.util";
+import { StockSchema } from "../src/zod";
+import { useTestClient } from "../src/_shared.util";
 
 describe.concurrent("lil APIs - Stocks", () => {
   const client = useTestClient();

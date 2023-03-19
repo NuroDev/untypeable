@@ -1,8 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.validators";
-import { useTestClient } from "../_shared/_shared.util";
-import { VariantSchema, VariantsSchema } from "./variant.validators";
+import { DataType } from "../src/_shared/_shared.validators";
+import { useTestClient } from "../src/_shared/_shared.util";
+import {
+  VariantSchema,
+  VariantsSchema,
+} from "../src/variant/variant.validators";
 
 describe.concurrent("Lemon Squeezy - Variant", () => {
   const client = useTestClient();

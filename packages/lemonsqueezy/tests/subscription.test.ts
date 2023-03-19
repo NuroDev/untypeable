@@ -1,11 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.validators";
+import { DataType } from "../src/_shared/_shared.validators";
 import {
   SubscriptionSchema,
   SubscriptionsSchema,
-} from "./subscription.validators";
-import { useTestClient } from "../_shared/_shared.util";
+} from "../src/subscription/subscription.validators";
+import { useTestClient } from "../src/_shared/_shared.util";
 
 describe.concurrent("Lemon Squeezy - Subscription", () => {
   const client = useTestClient();

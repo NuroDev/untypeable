@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
-import { PaginatedPersonSchema, PersonSchema } from "./zod";
-import { useTestClient } from "./_shared/_shared.util";
+import { PaginatedPersonSchema, PersonSchema } from "../src/zod";
+import { useTestClient } from "../src/_shared/_shared.util";
 
 describe.concurrent("SWAPI - People", () => {
   const client = useTestClient();

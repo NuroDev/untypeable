@@ -3,9 +3,9 @@ import { email, firstName, name, zipCode } from "minifaker";
 
 import "minifaker/locales/en";
 
-import { CheckoutsSchema } from "../zod";
-import { DataType } from "../_shared/_shared.validators";
-import { useTestClient } from "../_shared/_shared.util";
+import { CheckoutsSchema } from "../src/zod";
+import { DataType } from "../src/_shared/_shared.validators";
+import { useTestClient } from "../src/_shared/_shared.util";
 
 describe.concurrent("Lemon Squeezy - Checkout", () => {
   const client = useTestClient();

@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
-import { RootSchema } from "./zod";
-import { useTestClient } from "./_shared/_shared.util";
+import { RootSchema } from "../src/zod";
+import { useTestClient } from "../src/_shared/_shared.util";
 
 describe.concurrent("SWAPI - Root", () => {
   const client = useTestClient();

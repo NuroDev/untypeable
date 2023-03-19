@@ -1,8 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.validators";
-import { LicenseKeySchema, LicenseKeysSchema } from "./licenseKey.validators";
-import { useTestClient } from "../_shared/_shared.util";
+import { DataType } from "../src/_shared/_shared.validators";
+import {
+  LicenseKeySchema,
+  LicenseKeysSchema,
+} from "../src/licenseKey/licenseKey.validators";
+import { useTestClient } from "../src/_shared/_shared.util";
 
 describe.concurrent("Lemon Squeezy - License Key", () => {
   const client = useTestClient();

@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.validators";
-import { FileSchema, FilesSchema } from "../zod";
-import { useTestClient } from "../_shared/_shared.util";
+import { DataType } from "../src/_shared/_shared.validators";
+import { FileSchema, FilesSchema } from "../src/zod";
+import { useTestClient } from "../src/_shared/_shared.util";
 
 describe.concurrent("Lemon Squeezy - File", () => {
   const client = useTestClient();

@@ -12,5 +12,20 @@
     "strict": true,
     "target": "ESNext"
   },
-  "include": ["./src"]
+  "include": [
+    "./src",
+    "tests/variant.test.ts",
+    "tests/user.test.ts",
+    "tests/subscriptionInvoice.test.ts",
+    "tests/subscription.test.ts",
+    "tests/store.test.ts",
+    "tests/product.test.ts",
+    "tests/orderItem.test.ts",
+    "tests/order.test.ts",
+    "tests/licenseKeyInstance.test.ts",
+    "tests/licenseKey.test.ts",
+    "tests/file.test.ts",
+    "tests/discount.test.ts",
+    "tests/checkout.test.ts"
+  ]
 }

@@ -12,5 +12,5 @@
     "strict": true,
     "target": "ESNext"
   },
-  "include": ["./src"]
+  "include": ["./src", "tests/people.test.ts", "tests/root.test.ts"]
 }

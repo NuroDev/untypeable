@@ -1,11 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.validators";
+import { DataType } from "../src/_shared/_shared.validators";
 import {
   SubscriptionInvoiceSchema,
   SubscriptionInvoicesSchema,
-} from "./subscriptionInvoice.validators";
-import { useTestClient } from "../_shared/_shared.util";
+} from "../src/subscriptionInvoice/subscriptionInvoice.validators";
+import { useTestClient } from "../src/_shared/_shared.util";
 
 describe.concurrent("Lemon Squeezy - Subscription Invoice", () => {
   const client = useTestClient();

@@ -12,5 +12,10 @@
     "strict": true,
     "target": "ESNext"
   },
-  "include": ["./src"]
+  "include": [
+    "./src",
+    "tests/news.test.ts",
+    "tests/stocks.test.ts",
+    "tests/weather.test.ts"
+  ]
 }

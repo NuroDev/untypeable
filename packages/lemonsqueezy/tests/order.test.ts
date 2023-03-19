@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
 
-import { DataType } from "../_shared/_shared.validators";
-import { OrderSchema, OrdersSchema } from "./order.validators";
-import { useTestClient } from "../_shared/_shared.util";
+import { DataType } from "../src/_shared/_shared.validators";
+import { OrderSchema, OrdersSchema } from "../src/order/order.validators";
+import { useTestClient } from "../src/_shared/_shared.util";
 
 describe.concurrent("Lemon Squeezy - Order", () => {
   const client = useTestClient();
