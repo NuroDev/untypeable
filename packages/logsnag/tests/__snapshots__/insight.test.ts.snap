@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LogSnag - Insight > POST - /log 1`] = `
+{
+  "icon": "📈",
+  "project": "nuro",
+  "title": "Test",
+  "value": 100,
+}
+`;

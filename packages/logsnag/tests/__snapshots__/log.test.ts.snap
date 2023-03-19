@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LogSnag - Log > POST - /log 1`] = `
+{
+  "channel": "untyped",
+  "description": "A basic test event from the \`@untyped/logsnag\` package",
+  "event": "Test",
+  "icon": "👋",
+  "notify": false,
+  "parser": "text",
+  "project": "nuro",
+}
+`;
