@@ -10,3 +10,4 @@ export * from "./product/product.validators";
 export * from "./store/store.validators";
 export * from "./subscription/subscription.validators";
 export * from "./subscriptionInvoice/subscriptionInvoice.validators";
+export * from "./user/user.validators";
