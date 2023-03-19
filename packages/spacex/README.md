@@ -19,7 +19,7 @@ pnpm install @untyped/spacex
 
 ## 🦄 Usage
 
-Create a new client instance with the `SwapiRouter` & your desired fetch handler
+Create a new client instance with the `SpaceXRouter` & your desired fetch handler
 
 ```typescript
 import { createTypeLevelClient } from "untypeable";
