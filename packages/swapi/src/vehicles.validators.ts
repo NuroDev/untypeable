@@ -21,7 +21,7 @@ export const VehicleSchema = z.object({
   /**
    * The ISO 8601 date format of the time that this resource was created
    */
-  created: z.string(),
+  created: z.string().datetime(),
   /**
    * The number of personnel needed to run or pilot this vehicle
    */
@@ -29,7 +29,7 @@ export const VehicleSchema = z.object({
   /**
    * The ISO 8601 date format of the time that this resource was edited
    */
-  edited: z.string(),
+  edited: z.string().datetime(),
   /**
    * An array of Film URL Resources that this vehicle has appeared in
    */

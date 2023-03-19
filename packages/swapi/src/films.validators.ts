@@ -11,13 +11,13 @@ export const FilmSchema = z.object({
   characters: z.array(z.string().url()),
   /**
    * The ISO 8601 date format of the time that this resource was created */
-  created: z.string(),
+  created: z.string().datetime(),
   /**
    * The name of the director of this film */
   director: z.string(),
   /**
    * The ISO 8601 date format of the time that this resource was edited */
-  edited: z.string(),
+  edited: z.string().datetime(),
   /**
    * The episode number of this film */
   episode_id: z.number(),

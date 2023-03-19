@@ -21,7 +21,7 @@ export const SpeciesSchema = z.object({
   /**
    * The ISO 8601 date format of the time that this resource was created
    */
-  created: z.string(),
+  created: z.string().datetime(),
   /**
    * The designation of this species, such as "sentient"
    */
@@ -29,7 +29,7 @@ export const SpeciesSchema = z.object({
   /**
    * The ISO 8601 date format of the time that this resource was edited
    */
-  edited: z.string(),
+  edited: z.string().datetime(),
   /**
    * A comma-separated string of common eye colors for this species, "none" if this species does not typically have eyes
    */
