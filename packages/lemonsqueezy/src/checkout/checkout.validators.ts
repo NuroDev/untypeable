@@ -92,7 +92,7 @@ export const CheckoutPreviewSchema = z.object({
   total: z.number(),
 });
 
-export const ProductParamsSchema = z.object({
+export const CheckoutProductParamsSchema = z.object({
   /**
    * A custom description for the product
    */
@@ -166,7 +166,7 @@ export const CheckoutSchema = defineLemonSqueezySchema(
       /**
        * An object containing any overridden product options for this checkout
        */
-      product_options: ProductParamsSchema,
+      product_options: CheckoutProductParamsSchema,
       /**
        * The ID of the store this checkout belongs to
        */
@@ -244,7 +244,7 @@ export const CreateCheckoutParamsSchema = z.object({
   /**
    * An object containing any overridden product options for this checkout.
    */
-  product_options: ProductParamsSchema,
+  product_options: CheckoutProductParamsSchema,
   /**
    * The ID of the store this checkout belongs to.
    */
