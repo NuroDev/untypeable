@@ -10,6 +10,7 @@ on:
 
 env:
   LEMON_SQUEEZY_API_KEY: ${{ secrets.LEMON_SQUEEZY_API_KEY }}
+  LOGSNAG_API_KEY: ${{ secrets.LOGSNAG_API_KEY }}
 
 jobs:
   test:
