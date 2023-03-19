@@ -3,6 +3,7 @@ import { initUntypeable } from "untypeable";
 import type { Film, FilmParams, Films } from "./films.types";
 import type { People, Person, PersonParams } from "./people.types";
 import type { Root } from "./root.types";
+import type { Starship, StarshipParams, Starships } from "./starships.types";
 
 const u = initUntypeable();
 
@@ -16,6 +17,10 @@ const router = u.router({
   "/people": u.output<People>(),
   /** Get a specific people resource */
   "/people/:id": u.input<PersonParams>().output<Person>(),
+  /** Get all the starship resources */
+  "/starships": u.output<Starships>(),
+  /** Get a specific starship resource */
+  "/starships/:id": u.input<StarshipParams>().output<Starship>(),
 });
 
 export type SwapiRouter = typeof router;
