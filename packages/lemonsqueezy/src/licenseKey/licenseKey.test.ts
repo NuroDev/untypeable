@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 import { DataType } from "../_shared/_shared.types";
+import { LicenseKeySchema, LicenseKeysSchema } from "./licenseKey.validators";
 import { useTestClient } from "../_shared/_shared.util";
 
 describe.concurrent("Lemon Squeezy - License Key", () => {
@@ -16,6 +17,8 @@ describe.concurrent("Lemon Squeezy - License Key", () => {
     // expect(licenseKeys.data.at(0)?.type).toBe(DataType.license_keys);
     // expect(licenseKeys.errors).toBeUndefined();
 
+    // expect(LicenseKeysSchema.safeParse(licenseKeys).success).toBe(true);
+
     expect(true).toBe(true);
   });
 
@@ -29,6 +32,9 @@ describe.concurrent("Lemon Squeezy - License Key", () => {
     // expect(licenseKey.data).toBeDefined();
     // expect(licenseKey.data.type).toBe(DataType.license_keys);
     // expect(licenseKey.errors).toBeUndefined();
+
+    // expect(LicenseKeysSchema.safeParse(licenseKeys).success).toBe(true);
+    // expect(LicenseKeySchema.safeParse(licenseKey).success).toBe(true);
 
     expect(true).toBe(true);
   });
