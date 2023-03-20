@@ -1,8 +1,8 @@
 import { z } from "zod";
 
 export const GeoSchema = z.object({
-  lat: z.number(),
-  lng: z.number(),
+  lat: z.string().transform(Number),
+  lng: z.string().transform(Number),
 });
 
 export const AddressSchema = z.object({
@@ -27,7 +27,7 @@ export const UserSchema = z.object({
   name: z.string(),
   phone: z.string(),
   username: z.string(),
-  website: z.string().url(),
+  website: z.string(),
 });
 
 export const UsersSchema = z.array(UserSchema);
