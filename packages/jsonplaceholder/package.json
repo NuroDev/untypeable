@@ -1,0 +1,64 @@
+{
+  "name": "@untypeable/jsonplaceholder",
+  "version": "1.0.1",
+  "description": "Untypeable router type definitions & validators for the JSONPlaceholder API",
+  "repository": {
+    "directory": "packages/jsonplaceholder",
+    "type": "git",
+    "url": "https://github.com/nurodev/untypeable.git"
+  },
+  "homepage": "https://jsonplaceholder.typicode.com",
+  "bugs": "https://github.com/nurodev/untypeable/issues",
+  "author": {
+    "name": "nurodev",
+    "email": "me@nuro.dev",
+    "url": "https://nuro.dev"
+  },
+  "keywords": [
+    "api",
+    "json",
+    "jsonplaceholder",
+    "typescript",
+    "untypeable"
+  ],
+  "license": "MIT",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts",
+      "types": "./src/index.ts"
+    },
+    "./zod": {
+      "import": "./src/zod.ts",
+      "require": "./src/zod.ts",
+      "types": "./src/zod.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "zod": [
+        "./src/zod.ts"
+      ]
+    }
+  },
+  "files": [
+    "src/**/*",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "zod": "^3.21.4"
+  },
+  "peerDependencies": {
+    "zod": "^3.21.4"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
+  }
+}
