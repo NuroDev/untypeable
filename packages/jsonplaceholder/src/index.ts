@@ -34,7 +34,7 @@ const router = u.router({
   "/comments": { GET: u.input<CommentsParams>().output<Comments>() },
   "/comments/:id": { GET: u.input<CommentParams>().output<Comment>() },
   "/comments/:id/comments": {
-    GET: u.input<CommentsParams>().output<Comments>(),
+    GET: u.input<CommentParams>().output<Comments>(),
   },
 
   "/photos": { GET: u.input<PhotosParams>().output<Photos>() },
