@@ -1,4 +1,4 @@
-# ☀️ @untyped/spacex
+# 🚀 @untypeable/spacex
 
 Untyped API for open source SpaceX API
 

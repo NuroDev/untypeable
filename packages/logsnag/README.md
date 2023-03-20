@@ -1,4 +1,4 @@
-# ☀️ @untyped/logsnag
+# 📱 @untypeable/logsnag
 
 Untyped API for LogSnag
 

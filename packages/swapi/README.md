@@ -1,4 +1,4 @@
-# ☀️ @untyped/swapi
+# 🪐 @untypeable/swapi
 
 Untyped API for the swapi Star Wars API
 

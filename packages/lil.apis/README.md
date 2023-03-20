@@ -1,4 +1,4 @@
-# ☀️ @untyped/lil.apis
+# 🤏 @untypeable/lil.apis
 
 Untyped API for all lil API's
 
