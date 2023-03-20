@@ -45,4 +45,26 @@ describe.concurrent("JSONPlaceholder - Comment", () => {
 
     expect(CommentSchema.safeParse(comment).success).toBe(true);
   });
+
+  it("GET - /comments/:id/comments", async () => {
+    const comments = await client("/comments/:id/comments", "GET", {
+      id: 1,
+    });
+
+    expect(comments).toBeDefined();
+    expect(Array.isArray(comments)).toBe(true);
+    expect(comments.at(0)).toBeDefined();
+    expect(comments.at(0)?.body).toBeDefined();
+    expect(comments.at(0)?.body).toBeTypeOf("string");
+    expect(comments.at(0)?.email).toBeDefined();
+    expect(comments.at(0)?.email).toBeTypeOf("string");
+    expect(comments.at(0)?.id).toBeDefined();
+    expect(comments.at(0)?.id).toBeTypeOf("number");
+    expect(comments.at(0)?.name).toBeDefined();
+    expect(comments.at(0)?.name).toBeTypeOf("string");
+    expect(comments.at(0)?.postId).toBeDefined();
+    expect(comments.at(0)?.postId).toBeTypeOf("number");
+
+    expect(CommentsSchema.safeParse(comments).success).toBe(true);
+  });
 });
