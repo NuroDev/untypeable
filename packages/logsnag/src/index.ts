@@ -1,7 +1,7 @@
 import { initUntypeable } from "untypeable";
 
-import type { Insight } from "./insight.types";
-import type { Log } from "./log.types";
+import type { Insight } from "./insight/insight.types";
+import type { Log } from "./log/log.types";
 
 const u = initUntypeable();
 

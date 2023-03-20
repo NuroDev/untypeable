@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { SharedLogSnagParamsSchema } from "./_shared.validators";
+import { SharedLogSnagParamsSchema } from "../_shared.validators";
 
 export const LogSchema = SharedLogSnagParamsSchema.extend({
   /**

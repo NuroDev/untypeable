@@ -1,2 +1,2 @@
-export * from "./log.validators";
-export * from "./insight.validators";
+export * from "./log/log.validators";
+export * from "./insight/insight.validators";
