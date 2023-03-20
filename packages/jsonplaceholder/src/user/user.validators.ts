@@ -37,3 +37,11 @@ export const UserParamsSchema = z.object({
 });
 
 export const UsersParamsSchema = UserSchema.partial();
+
+export const CreatedUserSchema = UserSchema.omit({ id: true })
+  .partial()
+  .and(UserParamsSchema);
+
+export const CreatedUserParamsSchema = UserSchema.omit({
+  id: true,
+}).partial();

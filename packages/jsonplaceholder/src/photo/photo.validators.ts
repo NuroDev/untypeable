@@ -15,3 +15,11 @@ export const PhotoParamsSchema = z.object({
 });
 
 export const PhotosParamsSchema = PhotoSchema.partial();
+
+export const CreatedPhotoSchema = PhotoSchema.omit({ id: true })
+  .partial()
+  .and(PhotoParamsSchema);
+
+export const CreatedPhotoParamsSchema = PhotoSchema.omit({
+  id: true,
+}).partial();

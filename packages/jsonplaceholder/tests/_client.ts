@@ -18,6 +18,7 @@ export function useTestClient() {
       );
 
       const response = await fetch(url.href, {
+        body: method === "GET" ? undefined : JSON.stringify(input),
         method,
         headers: {
           "Content-Type": "application/json",

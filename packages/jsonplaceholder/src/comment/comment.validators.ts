@@ -15,3 +15,11 @@ export const CommentParamsSchema = z.object({
 });
 
 export const CommentsParamsSchema = CommentSchema.partial();
+
+export const CreatedCommentSchema = CommentSchema.omit({ id: true })
+  .partial()
+  .and(CommentParamsSchema);
+
+export const CreatedCommentParamsSchema = CommentSchema.omit({
+  id: true,
+}).partial();

@@ -3,6 +3,8 @@ import type { z } from "zod";
 import type {
   AddressSchema,
   CompanySchema,
+  CreatedUserParamsSchema,
+  CreatedUserSchema,
   GeoSchema,
   UserParamsSchema,
   UserSchema,
@@ -23,3 +25,7 @@ export type Users = z.infer<typeof UsersSchema>;
 export type UserParams = z.infer<typeof UserParamsSchema>;
 
 export type UsersParams = z.infer<typeof UsersParamsSchema>;
+
+export type CreatedUser = z.infer<typeof CreatedUserSchema>;
+
+export type CreatedUserParams = z.infer<typeof CreatedUserParamsSchema>;

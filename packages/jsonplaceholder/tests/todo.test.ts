@@ -1,6 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-import { CommentsSchema, TodoSchema, TodosSchema } from "../src/zod";
+import {
+  CommentsSchema,
+  CreatedTodoSchema,
+  TodoSchema,
+  TodosSchema,
+} from "../src/zod";
 import { useTestClient } from "./_client";
 
 describe.concurrent("JSONPlaceholder - Todo", () => {
@@ -22,6 +27,27 @@ describe.concurrent("JSONPlaceholder - Todo", () => {
     expect(todos.at(0)?.userId).toBeTypeOf("number");
 
     expect(TodosSchema.safeParse(todos).success).toBe(true);
+  });
+
+  it("POST - /todos", async () => {
+    const completed = true;
+    const title = "Hello todos";
+    const createdTodo = await client("/todos", "POST", {
+      completed,
+      title,
+    });
+
+    expect(createdTodo).toBeDefined();
+    expect(createdTodo.id).toBeDefined();
+    expect(createdTodo.id).toBeTypeOf("number");
+    expect(createdTodo.completed).toBeDefined();
+    expect(createdTodo.completed).toBeTypeOf("boolean");
+    expect(createdTodo.completed).toBe(completed);
+    expect(createdTodo.title).toBeDefined();
+    expect(createdTodo.title).toBeTypeOf("string");
+    expect(createdTodo.title).toBe(title);
+
+    expect(CreatedTodoSchema.safeParse(createdTodo).success).toBe(true);
   });
 
   it("GET - /todos/:id", async () => {

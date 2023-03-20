@@ -14,3 +14,11 @@ export const PostParamsSchema = z.object({
 });
 
 export const PostsParamsSchema = PostSchema.partial();
+
+export const CreatedPostSchema = PostSchema.omit({ id: true })
+  .partial()
+  .and(PostParamsSchema);
+
+export const CreatedPostParamsSchema = PostSchema.omit({
+  id: true,
+}).partial();

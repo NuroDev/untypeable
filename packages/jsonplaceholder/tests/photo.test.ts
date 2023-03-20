@@ -1,6 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-import { CommentsSchema, PhotoSchema, PhotosSchema } from "../src/zod";
+import {
+  CommentsSchema,
+  CreatedPhotoSchema,
+  PhotoSchema,
+  PhotosSchema,
+} from "../src/zod";
 import { useTestClient } from "./_client";
 
 describe.concurrent("JSONPlaceholder - Photo", () => {
@@ -24,6 +29,27 @@ describe.concurrent("JSONPlaceholder - Photo", () => {
     expect(photos.at(0)?.url).toBeTypeOf("string");
 
     expect(PhotosSchema.safeParse(photos).success).toBe(true);
+  });
+
+  it("POST - /photos", async () => {
+    const title = "Hello photos";
+    const albumId = 69;
+    const createdPhoto = await client("/photos", "POST", {
+      albumId,
+      title,
+    });
+
+    expect(createdPhoto).toBeDefined();
+    expect(createdPhoto.id).toBeDefined();
+    expect(createdPhoto.id).toBeTypeOf("number");
+    expect(createdPhoto.albumId).toBeDefined();
+    expect(createdPhoto.albumId).toBeTypeOf("number");
+    expect(createdPhoto.albumId).toBe(albumId);
+    expect(createdPhoto.title).toBeDefined();
+    expect(createdPhoto.title).toBeTypeOf("string");
+    expect(createdPhoto.title).toBe(title);
+
+    expect(CreatedPhotoSchema.safeParse(createdPhoto).success).toBe(true);
   });
 
   it("GET - /photos/:id", async () => {

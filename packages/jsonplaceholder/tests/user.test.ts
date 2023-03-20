@@ -1,6 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-import { CommentsSchema, UserSchema, UsersSchema } from "../src/zod";
+import {
+  CommentsSchema,
+  CreatedUserSchema,
+  UserSchema,
+  UsersSchema,
+} from "../src/zod";
 import { useTestClient } from "./_client";
 
 describe.concurrent("JSONPlaceholder - User", () => {
@@ -48,6 +53,32 @@ describe.concurrent("JSONPlaceholder - User", () => {
     expect(users.at(0)?.website).toBeTypeOf("string");
 
     expect(UsersSchema.safeParse(users).success).toBe(true);
+  });
+
+  it("POST - /users", async () => {
+    const email = "tim@apple.com";
+    const name = "Tim Apple";
+    const website = "https://www.apple.com";
+    const createdUser = await client("/users", "POST", {
+      email,
+      name,
+      website,
+    });
+
+    expect(createdUser).toBeDefined();
+    expect(createdUser.id).toBeDefined();
+    expect(createdUser.id).toBeTypeOf("number");
+    expect(createdUser.email).toBeDefined();
+    expect(createdUser.email).toBeTypeOf("string");
+    expect(createdUser.email).toBe(email);
+    expect(createdUser.name).toBeDefined();
+    expect(createdUser.name).toBeTypeOf("string");
+    expect(createdUser.name).toBe(name);
+    expect(createdUser.website).toBeDefined();
+    expect(createdUser.website).toBeTypeOf("string");
+    expect(createdUser.website).toBe(website);
+
+    expect(CreatedUserSchema.safeParse(createdUser).success).toBe(true);
   });
 
   it("GET - /users/:id", async () => {

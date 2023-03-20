@@ -1,6 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-import { PostSchema, PostsSchema, CommentsSchema } from "../src/zod";
+import {
+  CommentsSchema,
+  CreatedPostSchema,
+  PostSchema,
+  PostsSchema,
+} from "../src/zod";
 import { useTestClient } from "./_client";
 
 describe.concurrent("JSONPlaceholder - Post", () => {
@@ -22,6 +27,27 @@ describe.concurrent("JSONPlaceholder - Post", () => {
     expect(posts.at(0)?.userId).toBeTypeOf("number");
 
     expect(PostsSchema.safeParse(posts).success).toBe(true);
+  });
+
+  it("POST - /posts", async () => {
+    const title = "Hello posts";
+    const userId = 69;
+    const createdPost = await client("/posts", "POST", {
+      title,
+      userId,
+    });
+
+    expect(createdPost).toBeDefined();
+    expect(createdPost.id).toBeDefined();
+    expect(createdPost.id).toBeTypeOf("number");
+    expect(createdPost.title).toBeDefined();
+    expect(createdPost.title).toBeTypeOf("string");
+    expect(createdPost.title).toBe(title);
+    expect(createdPost.userId).toBeDefined();
+    expect(createdPost.userId).toBeTypeOf("number");
+    expect(createdPost.userId).toBe(userId);
+
+    expect(CreatedPostSchema.safeParse(createdPost).success).toBe(true);
   });
 
   it("GET - /posts/:id", async () => {

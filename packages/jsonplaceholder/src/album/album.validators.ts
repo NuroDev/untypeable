@@ -13,3 +13,11 @@ export const AlbumParamsSchema = z.object({
 });
 
 export const AlbumsParamsSchema = AlbumSchema.partial();
+
+export const CreatedAlbumSchema = AlbumSchema.omit({ id: true })
+  .partial()
+  .and(AlbumParamsSchema);
+
+export const CreatedAlbumParamsSchema = AlbumSchema.omit({
+  id: true,
+}).partial();

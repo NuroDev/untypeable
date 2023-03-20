@@ -14,3 +14,11 @@ export const TodoParamsSchema = z.object({
 });
 
 export const TodosParamsSchema = TodoSchema.partial();
+
+export const CreatedTodoSchema = TodoSchema.omit({ id: true })
+  .partial()
+  .and(TodoParamsSchema);
+
+export const CreatedTodoParamsSchema = TodoSchema.omit({
+  id: true,
+}).partial();

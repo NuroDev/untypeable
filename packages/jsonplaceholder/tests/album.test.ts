@@ -1,6 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-import { AlbumSchema, AlbumsSchema, CommentsSchema } from "../src/zod";
+import {
+  AlbumSchema,
+  AlbumsSchema,
+  CreatedAlbumSchema,
+  CommentsSchema,
+} from "../src/zod";
 import { useTestClient } from "./_client";
 
 describe.concurrent("JSONPlaceholder - Album", () => {
@@ -20,6 +25,27 @@ describe.concurrent("JSONPlaceholder - Album", () => {
     expect(albums.at(0)?.userId).toBeTypeOf("number");
 
     expect(AlbumsSchema.safeParse(albums).success).toBe(true);
+  });
+
+  it("POST - /albums", async () => {
+    const title = "Hello World";
+    const userId = 69;
+    const createdAlbum = await client("/albums", "POST", {
+      title,
+      userId,
+    });
+
+    expect(createdAlbum).toBeDefined();
+    expect(createdAlbum.id).toBeDefined();
+    expect(createdAlbum.id).toBeTypeOf("number");
+    expect(createdAlbum.title).toBeDefined();
+    expect(createdAlbum.title).toBeTypeOf("string");
+    expect(createdAlbum.title).toBe(title);
+    expect(createdAlbum.userId).toBeDefined();
+    expect(createdAlbum.userId).toBeTypeOf("number");
+    expect(createdAlbum.userId).toBe(userId);
+
+    expect(CreatedAlbumSchema.safeParse(createdAlbum).success).toBe(true);
   });
 
   it("GET - /albums/:id", async () => {

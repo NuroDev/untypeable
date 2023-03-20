@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { CommentSchema, CommentsSchema } from "../src/zod";
+import { CommentSchema, CommentsSchema, CreatedAlbumSchema } from "../src/zod";
 import { useTestClient } from "./_client";
 
 describe.concurrent("JSONPlaceholder - Comment", () => {
@@ -24,6 +24,27 @@ describe.concurrent("JSONPlaceholder - Comment", () => {
     expect(comments.at(0)?.postId).toBeTypeOf("number");
 
     expect(CommentsSchema.safeParse(comments).success).toBe(true);
+  });
+
+  it("POST - /comments", async () => {
+    const email = "tim@apple.com";
+    const postId = 69;
+    const createdComment = await client("/comments", "POST", {
+      email,
+      postId,
+    });
+
+    expect(createdComment).toBeDefined();
+    expect(createdComment.id).toBeDefined();
+    expect(createdComment.id).toBeTypeOf("number");
+    expect(createdComment.email).toBeDefined();
+    expect(createdComment.email).toBeTypeOf("string");
+    expect(createdComment.email).toBe(email);
+    expect(createdComment.postId).toBeDefined();
+    expect(createdComment.postId).toBeTypeOf("number");
+    expect(createdComment.postId).toBe(postId);
+
+    expect(CreatedAlbumSchema.safeParse(createdComment).success).toBe(true);
   });
 
   it("GET - /comments/:id", async () => {
