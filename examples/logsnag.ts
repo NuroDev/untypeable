@@ -27,9 +27,9 @@ export default async function main() {
 
   await client("/log", {
     project: "nuro",
-    channel: "untyped",
+    channel: "untypeable",
     event: "Test",
-    description: "A basic test event from the `@untyped/logsnag` package",
+    description: "A basic test event from the `@untypeable/logsnag` package",
     icon: "👋",
     notify: false,
   });

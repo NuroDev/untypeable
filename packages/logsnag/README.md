@@ -1,6 +1,6 @@
 # 📱 @untypeable/logsnag
 
-Untyped API for LogSnag
+Untypeable router type definitions & validators for the LogSnag API
 
 ## 🚀 Install
 
@@ -8,13 +8,13 @@ Install it locally in your project
 
 ```bash
 # npm
-npm install @untyped/logsnag
+npm install @untypeable/logsnag
 
 # yarn
-yarn add @untyped/logsnag
+yarn add @untypeable/logsnag
 
 # pnpm
-pnpm install @untyped/logsnag
+pnpm install @untypeable/logsnag
 ```
 
 ## 🦄 Usage
@@ -24,7 +24,7 @@ Create a new client instance with the `LogSnagRouter` & your desired fetch handl
 ```typescript
 import { createTypeLevelClient } from "untypeable";
 
-import type { LogSnagRouter } from "@untyped/spacex";
+import type { LogSnagRouter } from "@untypeable/spacex";
 
 const client = createTypeLevelClient<LogSnagRouter>(
   (path, { apiVersion = "v1", ...input }) =>

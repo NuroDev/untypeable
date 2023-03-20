@@ -1,14 +1,14 @@
 {
-  "name": "@untyped/swapi",
+  "name": "@untypeable/swapi",
   "version": "1.0.1",
-  "description": "Untyped API for the swapi Star Wars API",
+  "description": "Untypeable router type definitions & validators for the swapi Star Wars API",
   "repository": {
     "directory": "packages/swapi",
     "type": "git",
-    "url": "https://github.com/nurodev/untyped.git"
+    "url": "https://github.com/nurodev/untypeable.git"
   },
   "homepage": "https://swapi.dev/",
-  "bugs": "https://github.com/nurodev/untyped/issues",
+  "bugs": "https://github.com/nurodev/untypeable/issues",
   "author": {
     "name": "nurodev",
     "email": "me@nuro.dev",
@@ -19,7 +19,7 @@
     "swapi",
     "star wars",
     "typescript",
-    "untyped"
+    "untypeable"
   ],
   "license": "MIT",
   "main": "src/index.ts",

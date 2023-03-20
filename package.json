@@ -1,6 +1,5 @@
 {
   "private": true,
-  "name": "untyped",
   "version": "1.0.1",
   "workspaces": [
     "packages/*"

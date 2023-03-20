@@ -9,9 +9,9 @@ describe.concurrent("LogSnag - Log", () => {
   it("POST - /log", async () => {
     const log = await client("/log", {
       project: "nuro",
-      channel: "untyped",
+      channel: "untypeable",
       event: "Test",
-      description: "A basic test event from the `@untyped/logsnag` package",
+      description: "A basic test event from the `@untypeable/logsnag` package",
       icon: "👋",
       notify: false,
     });
@@ -19,9 +19,9 @@ describe.concurrent("LogSnag - Log", () => {
     expect(log).toBeDefined();
     expect(log).toMatchSnapshot({
       project: "nuro",
-      channel: "untyped",
+      channel: "untypeable",
       event: "Test",
-      description: "A basic test event from the `@untyped/logsnag` package",
+      description: "A basic test event from the `@untypeable/logsnag` package",
       icon: "👋",
       notify: false,
       parser: "text",

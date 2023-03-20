@@ -1,6 +1,6 @@
 # 🤏 @untypeable/lil.apis
 
-Untyped API for all lil API's
+Untypeable router type definitions & validators for the lil.apis API
 
 ## 🚀 Install
 
@@ -8,13 +8,13 @@ Install it locally in your project
 
 ```bash
 # npm
-npm install @untyped/lil.apis
+npm install @untypeable/lil.apis
 
 # yarn
-yarn add @untyped/lil.apis
+yarn add @untypeable/lil.apis
 
 # pnpm
-pnpm install @untyped/lil.apis
+pnpm install @untypeable/lil.apis
 ```
 
 ## 🦄 Usage
@@ -24,7 +24,7 @@ Create a new client instance with the `LilRouter` & your desired fetch handler
 ```typescript
 import { createTypeLevelClient } from "untypeable";
 
-import type { LilRouter } from "@untyped/lil.apis";
+import type { LilRouter } from "@untypeable/lil.apis";
 
 const client = createTypeLevelClient<LilWeatherRouter>((path, input = {}) =>
   fetch(`https://api.lil.software/${path}?${new URLSearchParams(input)}`).then(

@@ -1,6 +1,6 @@
-# 🍋 @untyped/lemonsqueezy
+# 🍋 @untypeable/lemonsqueezy
 
-Untyped API for the official Lemon Squeezy API
+Untypeable router type definitions & validators for the official Lemon Squeezy API
 
 ## 🚀 Install
 
@@ -8,13 +8,13 @@ Install it locally in your project
 
 ```bash
 # npm
-npm install @untyped/lemonsqueezy
+npm install @untypeable/lemonsqueezy
 
 # yarn
-yarn add @untyped/lemonsqueezy
+yarn add @untypeable/lemonsqueezy
 
 # pnpm
-pnpm install @untyped/lemonsqueezy
+pnpm install @untypeable/lemonsqueezy
 ```
 
 ## 🦄 Usage
@@ -24,7 +24,7 @@ Create a new client instance with your API key
 ```typescript
 import { createTypeLevelClient } from "untypeable";
 
-import type { LemonSqueezyRouter } from "@untyped/lemonsqueezy";
+import type { LemonSqueezyRouter } from "@untypeable/lemonsqueezy";
 
 const client = createTypeLevelClient<LemonSqueezyRouter>(
   (path, method, input = {}) =>

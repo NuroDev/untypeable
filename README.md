@@ -4,7 +4,7 @@
     <br/>
     ❗️
     <br />
-    untyped
+    untypeable
     <br />
     <br />
     <br />
@@ -16,25 +16,26 @@
     <br />
     <br />
   
-[![Tests status](https://img.shields.io/github/actions/workflow/status/nurodev/untyped/test.yml?branch=main&label=%20&logo=github&logoColor=white&style=for-the-badge)](https://github.com/nurodev/untyped/actions/workflows/test.yml)
+[![Tests status](https://img.shields.io/github/actions/workflow/status/nurodev/untypeable/test.yml?branch=main&label=%20&logo=github&logoColor=white&style=for-the-badge)](https://github.com/nurodev/untypeable/actions/workflows/test.yml)
 
   </sup>
   <br />
   <br />
 </div>
 
-## ❓ What is `untyped`?
+## ❓ What is `untypeable`?
 
-`untyped` is a collection of packages built around the [`untypeable`](https://github.com/total-typescript/untypeable) package, which allows you get type-safe access to any API.
+`untypeable` is a collection of packages built around the [`untypeable`](https://github.com/total-typescript/untypeable) package, which allows you get type-safe access to any API.
 
 In this case we are doing the heavy lifting by creating type definitions for all the most popular API's out there. This way you are able to use your favourite RESTful API's with complete type safety.
 
 ## 📦 Packages
 
-The following are all currently supported untyped packages. Click on one below to view it & read more on how to install & use it.
+The following are all currently supported `untypeable` packages. Click on one below to view it & read more on how to install & use it.
 
 - [🍋 Lemon Squeezy](packages/lemonsqueezy)
 - [📱 LogSnag](packages/logsnag)
 - [🤏 lil APIs](packages/lil.apis)
+- [🗿 JSONPlaceholder](packages/jsonplaceholder)
 - [🚀 SpaceX](packages/spacex)
 - [🪐 SWAPI](packages/swapi)

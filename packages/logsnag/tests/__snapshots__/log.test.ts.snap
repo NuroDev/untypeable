@@ -2,8 +2,8 @@
 
 exports[`LogSnag - Log > POST - /log 1`] = `
 {
-  "channel": "untyped",
-  "description": "A basic test event from the \`@untyped/logsnag\` package",
+  "channel": "untypeable",
+  "description": "A basic test event from the \`@untypeable/logsnag\` package",
   "event": "Test",
   "icon": "👋",
   "notify": false,

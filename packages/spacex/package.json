@@ -1,14 +1,14 @@
 {
-  "name": "@untyped/spacex",
+  "name": "@untypeable/spacex",
   "version": "1.0.1",
-  "description": "Untyped API for open source SpaceX API",
+  "description": "Untypeable router type definitions & validators for the open source SpaceX API",
   "repository": {
     "directory": "packages/spacex",
     "type": "git",
-    "url": "https://github.com/nurodev/untyped.git"
+    "url": "https://github.com/nurodev/untypeable.git"
   },
   "homepage": "https://github.com/r-spacex/SpaceX-API",
-  "bugs": "https://github.com/nurodev/untyped/issues",
+  "bugs": "https://github.com/nurodev/untypeable/issues",
   "author": {
     "name": "nurodev",
     "email": "me@nuro.dev",
@@ -19,7 +19,7 @@
     "space",
     "spacex",
     "typescript",
-    "untyped"
+    "untypeable"
   ],
   "license": "MIT",
   "main": "src/index.ts",

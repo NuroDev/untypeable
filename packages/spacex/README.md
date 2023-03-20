@@ -1,6 +1,6 @@
 # 🚀 @untypeable/spacex
 
-Untyped API for open source SpaceX API
+Untypeable router type definitions & validators for the open source SpaceX API
 
 ## 🚀 Install
 
@@ -8,13 +8,13 @@ Install it locally in your project
 
 ```bash
 # npm
-npm install @untyped/spacex
+npm install @untypeable/spacex
 
 # yarn
-yarn add @untyped/spacex
+yarn add @untypeable/spacex
 
 # pnpm
-pnpm install @untyped/spacex
+pnpm install @untypeable/spacex
 ```
 
 ## 🦄 Usage
@@ -24,7 +24,7 @@ Create a new client instance with the `SpaceXRouter` & your desired fetch handle
 ```typescript
 import { createTypeLevelClient } from "untypeable";
 
-import type { SpaceXRouter } from "@untyped/spacex";
+import type { SpaceXRouter } from "@untypeable/spacex";
 
 const client = createTypeLevelClient<SpaceXRouter>((path, input = {}) =>
   fetch(`https://api.spacexdata.com/${path}?${new URLSearchParams(input)}`, {
