@@ -4,7 +4,7 @@
     <br/>
     ❗️
     <br />
-    untypeable
+    @untypeable
     <br />
     <br />
     <br />
@@ -23,15 +23,15 @@
   <br />
 </div>
 
-## ❓ What is `untypeable`?
+## ❓ What is `@untypeable`?
 
-`untypeable` is a collection of packages built around the [`untypeable`](https://github.com/total-typescript/untypeable) package, which allows you get type-safe access to any API.
+`@untypeable` is a collection of packages built around the [`untypeable`](https://github.com/total-typescript/untypeable) package, which allows you get type-safe access to any API.
 
 In this case we are doing the heavy lifting by creating type definitions for all the most popular API's out there. This way you are able to use your favourite RESTful API's with complete type safety.
 
 ## 📦 Packages
 
-The following are all currently supported `untypeable` packages. Click on one below to view it & read more on how to install & use it.
+The following are all currently supported `@untypeable` packages. Click on one below to view it & read more on how to install & use it.
 
 - [🍋 Lemon Squeezy](packages/lemonsqueezy)
 - [📱 LogSnag](packages/logsnag)
