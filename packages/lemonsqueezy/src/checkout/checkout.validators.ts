@@ -16,7 +16,7 @@ export const BillingAddressSchema = z.object({
 });
 
 export const CheckoutDataSchema = z.object({
-  billing_address: BillingAddressSchema,
+  billing_address: BillingAddressSchema.or(z.tuple([])),
   /**
    * An object containing any custom data to be passed to the checkout
    */
