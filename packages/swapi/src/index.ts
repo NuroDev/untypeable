@@ -1,12 +1,24 @@
 import { initUntypeable } from "untypeable";
 
-import type { Film, FilmParams, Films } from "./films.types";
-import type { People, Person, PersonParams } from "./people.types";
-import type { Planet, PlanetParams, Planets } from "./planets.types";
-import type { Root } from "./root.types";
-import type { AllSpecies, Species, SpeciesParams } from "./species.types";
-import type { Starship, StarshipParams, Starships } from "./starships.types";
-import type { Vehicle, VehicleParams, Vehicles } from "./vehicles.types";
+import type { Film, FilmParams, Films } from "./films/films.types";
+import type { People, Person, PersonParams } from "./people/people.types";
+import type { Planet, PlanetParams, Planets } from "./planets/planets.types";
+import type { Root } from "./root/root.types";
+import type {
+  AllSpecies,
+  Species,
+  SpeciesParams,
+} from "./species/species.types";
+import type {
+  Starship,
+  StarshipParams,
+  Starships,
+} from "./starships/starships.types";
+import type {
+  Vehicle,
+  VehicleParams,
+  Vehicles,
+} from "./vehicles/vehicles.types";
 
 const u = initUntypeable();
 
