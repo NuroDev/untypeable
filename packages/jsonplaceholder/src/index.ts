@@ -24,38 +24,73 @@ import type { User, UserParams, Users, UsersParams } from "./user/user.types";
 
 const u = initUntypeable();
 
-const allResourcesRouter = u.pushArg<"GET" | "POST">().router({
-  "/albums": { GET: u.input<AlbumsParams>().output<Albums>() },
-  "/comments": { GET: u.input<CommentsParams>().output<Comments>() },
-  "/photos": { GET: u.input<PhotosParams>().output<Photos>() },
-  "/posts": { GET: u.input<PostsParams>().output<Posts>() },
-  "/todos": { GET: u.input<TodosParams>().output<Todos>() },
-  "/users": { GET: u.input<UsersParams>().output<Users>() },
+const allResources = u.pushArg<"GET" | "POST">();
+const allResourcesRouter = allResources.router({
+  "/albums": {
+    GET: allResources.input<AlbumsParams>().output<Albums>(),
+    POST: allResources.input().output(),
+  },
+  "/comments": {
+    GET: allResources.input<CommentsParams>().output<Comments>(),
+    POST: allResources.input().output(),
+  },
+  "/photos": {
+    GET: allResources.input<PhotosParams>().output<Photos>(),
+    POST: allResources.input().output(),
+  },
+  "/posts": {
+    GET: allResources.input<PostsParams>().output<Posts>(),
+    POST: allResources.input().output(),
+  },
+  "/todos": {
+    GET: allResources.input<TodosParams>().output<Todos>(),
+    POST: allResources.input().output(),
+  },
+  "/users": {
+    GET: allResources.input<UsersParams>().output<Users>(),
+    POST: allResources.input().output(),
+  },
 });
 
-const singleResourceRouter = u
-  .pushArg<"GET" | "PUT" | "PATCH" | "DELETE">()
-  .router({
-    "/albums/:id": { GET: u.input<AlbumParams>().output<Album>() },
-    "/albums/:id/comments": { GET: u.input<AlbumParams>().output<Comments>() },
-
-    "/comments/:id": { GET: u.input<CommentParams>().output<Comment>() },
-    "/comments/:id/comments": {
-      GET: u.input<CommentParams>().output<Comments>(),
-    },
-
-    "/photos/:id": { GET: u.input<PhotoParams>().output<Photo>() },
-    "/photos/:id/comments": { GET: u.input<PhotoParams>().output<Comments>() },
-
-    "/posts/:id": { GET: u.input<PostParams>().output<Post>() },
-    "/posts/:id/comments": { GET: u.input<PostParams>().output<Comments>() },
-
-    "/todos/:id": { GET: u.input<TodoParams>().output<Todo>() },
-    "/todos/:id/comments": { GET: u.input<TodoParams>().output<Comments>() },
-
-    "/users/:id": { GET: u.input<UserParams>().output<User>() },
-    "/users/:id/comments": { GET: u.input<UserParams>().output<Comments>() },
-  });
+const singleResource = u.pushArg<"GET" | "PUT" | "PATCH" | "DELETE">();
+const singleResourceRouter = singleResource.router({
+  "/albums/:id": {
+    GET: singleResource.input<AlbumParams>().output<Album>(),
+  },
+  "/albums/:id/comments": {
+    GET: singleResource.input<AlbumParams>().output<Comments>(),
+  },
+  "/comments/:id": {
+    GET: singleResource.input<CommentParams>().output<Comment>(),
+  },
+  "/comments/:id/comments": {
+    GET: singleResource.input<CommentParams>().output<Comments>(),
+  },
+  "/photos/:id": {
+    GET: singleResource.input<PhotoParams>().output<Photo>(),
+  },
+  "/photos/:id/comments": {
+    GET: singleResource.input<PhotoParams>().output<Comments>(),
+  },
+  "/posts/:id": {
+    GET: singleResource.input<PostParams>().output<Post>(),
+  },
+  "/posts/:id/comments": {
+    GET: singleResource.input<PostParams>().output<Comments>(),
+  },
+  "/todos/:id": {
+    GET: singleResource.input<TodoParams>().output<Todo>(),
+  },
+  "/todos/:id/comments": {
+    GET: singleResource.input<TodoParams>().output<Comments>(),
+  },
+  "/users/:id": {
+    GET: singleResource.input<UserParams>().output<User>(),
+  },
+  "/users/:id/comments": {
+    GET: singleResource.input<UserParams>().output<Comments>(),
+  },
+});
 
 const router = allResourcesRouter.merge(singleResourceRouter);
 
