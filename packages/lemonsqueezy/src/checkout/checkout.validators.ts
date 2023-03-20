@@ -210,7 +210,7 @@ export const CreateCheckoutParamsSchema = z.object({
    * @docs https://docs.lemonsqueezy.com/help/checkout/prefilling-checkout-fields
    * @docs https://docs.lemonsqueezy.com/help/checkout/passing-custom-data
    */
-  checkout_data: CheckoutDataSchema,
+  checkout_data: CheckoutDataSchema.optional(),
   /**
    * An object containing checkout options for this checkout
    */
@@ -241,7 +241,7 @@ export const CreateCheckoutParamsSchema = z.object({
   /**
    * An object containing any overridden product options for this checkout.
    */
-  product_options: CheckoutProductParamsSchema,
+  product_options: CheckoutProductParamsSchema.optional(),
   /**
    * The ID of the store this checkout belongs to.
    */
