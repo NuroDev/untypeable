@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
 
 import { PeopleSchema, PersonSchema } from "../src/zod";
 import { useTestClient } from "./_client";
@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SWAPI - People", () => {
   const client = useTestClient();
 
-  it("GET - /people", async () => {
+  it("GET - /people", async ({ expect }) => {
     const people = await client("/people");
 
     expect(people).toBeDefined();
@@ -21,7 +21,7 @@ describe.concurrent("SWAPI - People", () => {
     expect(PeopleSchema.safeParse(people).success).toBe(true);
   });
 
-  it("GET - /people/:id", async () => {
+  it("GET - /people/:id", async ({ expect }) => {
     const person = await client("/people/:id", {
       id: 1,
     });

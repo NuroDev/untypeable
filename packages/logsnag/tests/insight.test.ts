@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
 
 import { InsightSchema } from "../src/zod";
 import { useTestClient } from "./_client";
@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("LogSnag - Insight", () => {
   const client = useTestClient();
 
-  it("POST - /log", async () => {
+  it("POST - /log", async ({ expect }) => {
     const insight = await client("/insight", {
       project: "nuro",
       icon: "📈",

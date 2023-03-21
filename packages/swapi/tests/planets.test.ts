@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
 
 import { PlanetSchema, PlanetsSchema } from "../src/zod";
 import { useTestClient } from "./_client";
@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SWAPI - Planets", () => {
   const client = useTestClient();
 
-  it("GET - /planets", async () => {
+  it("GET - /planets", async ({ expect }) => {
     const planets = await client("/planets");
 
     expect(planets).toBeDefined();
@@ -20,7 +20,7 @@ describe.concurrent("SWAPI - Planets", () => {
     expect(PlanetsSchema.safeParse(planets).success).toBe(true);
   });
 
-  it("GET - /planets/:id", async () => {
+  it("GET - /planets/:id", async ({ expect }) => {
     const planet = await client("/planets/:id", {
       id: 1,
     });

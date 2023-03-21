@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
 
 import { AllSpeciesSchema, SpeciesSchema } from "../src/zod";
 import { useTestClient } from "./_client";
@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SWAPI - Species", () => {
   const client = useTestClient();
 
-  it("GET - /species", async () => {
+  it("GET - /species", async ({ expect }) => {
     const allSpecies = await client("/species");
 
     expect(allSpecies).toBeDefined();
@@ -20,7 +20,7 @@ describe.concurrent("SWAPI - Species", () => {
     expect(AllSpeciesSchema.safeParse(allSpecies).success).toBe(true);
   });
 
-  it("GET - /species/:id", async () => {
+  it("GET - /species/:id", async ({ expect }) => {
     const species = await client("/species/:id", {
       id: 3,
     });

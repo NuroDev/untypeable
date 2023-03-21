@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
 
 import { RootSchema } from "../src/zod";
 import { useTestClient } from "./_client";
@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SWAPI - Root", () => {
   const client = useTestClient();
 
-  it("GET - /", async () => {
+  it("GET - /", async ({ expect }) => {
     const root = await client("/");
 
     expect(root).toBeDefined();

@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
 
 import { FilmSchema, FilmsSchema } from "../src/zod";
 import { useTestClient } from "./_client";
@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SWAPI - Films", () => {
   const client = useTestClient();
 
-  it("GET - /films", async () => {
+  it("GET - /films", async ({ expect }) => {
     const films = await client("/films");
 
     expect(films).toBeDefined();
@@ -20,7 +20,7 @@ describe.concurrent("SWAPI - Films", () => {
     expect(FilmsSchema.safeParse(films).success).toBe(true);
   });
 
-  it("GET - /films/:id", async () => {
+  it("GET - /films/:id", async ({ expect }) => {
     const film = await client("/films/:id", {
       id: 1,
     });
