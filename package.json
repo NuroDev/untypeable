@@ -6,10 +6,12 @@
   ],
   "scripts": {
     "example": "rexample",
-    "format": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\""
+    "format": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "prettier": "^2.8.4",
-    "rexample": "^1.0.3"
+    "rexample": "^1.0.3",
+    "turbo": "^1.8.5"
   }
 }
