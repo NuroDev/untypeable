@@ -7,6 +7,10 @@
   "scripts": {
     "example": "rexample",
     "format": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
+    "release:version": "changeset version",
+    "release:status": "changeset status --verbose",
+    "release:publish": "changeset publish",
+    "release": "yarn release:version && yarn release:publish",
     "test": "turbo run test"
   },
   "devDependencies": {
