@@ -7,7 +7,7 @@ describe.concurrent("SpaceX - Company", () => {
   const client = useTestClient();
 
   it("GET - /company", async ({ expect }) => {
-    const company = await client("/company");
+    const company = await client("/v4/company");
 
     expect(company).toBeDefined();
     expect(company).toMatchSnapshot({

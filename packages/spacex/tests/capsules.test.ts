@@ -7,7 +7,7 @@ describe.concurrent("SpaceX - Capsules", () => {
   const client = useTestClient();
 
   it("GET - /capsules", async ({ expect }) => {
-    const capsules = await client("/capsules");
+    const capsules = await client("/v4/capsules");
 
     expect(capsules).toBeDefined();
     expect(Array.isArray(capsules)).toBe(true);
@@ -28,7 +28,7 @@ describe.concurrent("SpaceX - Capsules", () => {
   });
 
   it("GET - /capsules/:id", async ({ expect }) => {
-    const capsule = await client("/capsules/:id", {
+    const capsule = await client("/v4/capsules/:id", {
       id: "5e9e2c5bf35918ed873b2664",
     });
 

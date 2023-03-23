@@ -10,9 +10,9 @@ import type { Company } from "./company/company.types";
 const u = initUntypeable();
 
 const router = u.router({
-  "/capsules": u.output<Capsules>(),
-  "/capsules/:id": u.input<CapsuleParams>().output<Capsule>(),
-  "/company": u.output<Company>(),
+  "/v4/capsules": u.output<Capsules>(),
+  "/v4/capsules/:id": u.input<CapsuleParams>().output<Capsule>(),
+  "/v4/company": u.output<Company>(),
 });
 
 export type SpaceXRouter = typeof router;

@@ -3,7 +3,6 @@ import { createTypeLevelClient } from "untypeable";
 import { fetch } from "undici";
 
 import type { SpaceXRouter } from "../src";
-import { join } from "path";
 
 export function useTestClient() {
   const client = createTypeLevelClient<SpaceXRouter>(
@@ -13,10 +12,7 @@ export function useTestClient() {
         (_, key) => input[key]
       );
 
-      const url = new URL(
-        join(input.version || "v4", pathWithParams),
-        "https://api.spacexdata.com"
-      );
+      const url = new URL(pathWithParams, "https://api.spacexdata.com");
 
       const response = await fetch(url.href, {
         method: "GET",
