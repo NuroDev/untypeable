@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SpaceX - Capsules", () => {
   const client = useTestClient();
 
-  it("GET - /capsules", async ({ expect }) => {
+  it("GET - /v4/capsules", async ({ expect }) => {
     const capsules = await client("/v4/capsules");
 
     expect(capsules).toBeDefined();
@@ -27,7 +27,7 @@ describe.concurrent("SpaceX - Capsules", () => {
     expect(CapsulesSchema.safeParse(capsules).success).toBe(true);
   });
 
-  it("GET - /capsules/:id", async ({ expect }) => {
+  it("GET - /v4/capsules/:id", async ({ expect }) => {
     const capsule = await client("/v4/capsules/:id", {
       id: "5e9e2c5bf35918ed873b2664",
     });

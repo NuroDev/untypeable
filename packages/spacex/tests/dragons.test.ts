@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SpaceX - Dragons", () => {
   const client = useTestClient();
 
-  it("GET - /dragons", async ({ expect }) => {
+  it("GET - /v4/dragons", async ({ expect }) => {
     const dragons = await client("/v4/dragons");
 
     expect(dragons).toBeDefined();
@@ -91,7 +91,7 @@ describe.concurrent("SpaceX - Dragons", () => {
     expect(DragonsSchema.safeParse(dragons).success).toBe(true);
   });
 
-  it("GET - /capsules/:id", async ({ expect }) => {
+  it("GET - /v4/capsules/:id", async ({ expect }) => {
     const dragon = await client("/v4/dragons/:id", {
       id: "5e9d058759b1ff74a7ad5f8f",
     });

@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SpaceX - Landpads", () => {
   const client = useTestClient();
 
-  it("GET - /landpads", async ({ expect }) => {
+  it("GET - /v4/landpads", async ({ expect }) => {
     const landPads = await client("/v4/landpads");
 
     expect(landPads).toBeDefined();
@@ -58,7 +58,7 @@ describe.concurrent("SpaceX - Landpads", () => {
     expect(LandPadsSchema.safeParse(landPads).success).toBe(true);
   });
 
-  it("GET - /landpads/:id", async ({ expect }) => {
+  it("GET - /v4/landpads/:id", async ({ expect }) => {
     const landPad = await client("/v4/landpads/:id", {
       id: "5e9e3032383ecb267a34e7c7",
     });

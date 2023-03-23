@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SpaceX - Crew", () => {
   const client = useTestClient();
 
-  it("GET - /crew", async ({ expect }) => {
+  it("GET - /v4/crew", async ({ expect }) => {
     const crew = await client("/v4/crew");
 
     expect(crew).toBeDefined();
@@ -25,7 +25,7 @@ describe.concurrent("SpaceX - Crew", () => {
     expect(CrewSchema.safeParse(crew).success).toBe(true);
   });
 
-  it("GET - /crew/:id", async ({ expect }) => {
+  it("GET - /v4/crew/:id", async ({ expect }) => {
     const crewMember = await client("/v4/crew/:id", {
       id: "5ebf1a6e23a9a60006e03a7a",
     });

@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SpaceX - Company", () => {
   const client = useTestClient();
 
-  it("GET - /company", async ({ expect }) => {
+  it("GET - /v4/company", async ({ expect }) => {
     const company = await client("/v4/company");
 
     expect(company).toBeDefined();

@@ -6,7 +6,7 @@ import { useTestClient } from "./_client";
 describe.concurrent("SpaceX - Cores", () => {
   const client = useTestClient();
 
-  it("GET - /cores", async ({ expect }) => {
+  it("GET - /v4/cores", async ({ expect }) => {
     const cores = await client("/v4/cores");
 
     expect(cores).toBeDefined();
@@ -29,7 +29,7 @@ describe.concurrent("SpaceX - Cores", () => {
     expect(CoresSchema.safeParse(cores).success).toBe(true);
   });
 
-  it("GET - /capsules/:id", async ({ expect }) => {
+  it("GET - /v4/cores/:id", async ({ expect }) => {
     const core = await client("/v4/cores/:id", {
       id: "5e9e289df35918033d3b2623",
     });
