@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SpaceX - Dragons > GET - /capsules/:id 1`] = `
+exports[`SpaceX - Dragons > GET - /v4/capsules/:id 1`] = `
 {
   "active": true,
   "crew_capacity": 0,
@@ -83,7 +83,7 @@ exports[`SpaceX - Dragons > GET - /capsules/:id 1`] = `
 }
 `;
 
-exports[`SpaceX - Dragons > GET - /dragons 1`] = `
+exports[`SpaceX - Dragons > GET - /v4/dragons 1`] = `
 {
   "active": true,
   "crew_capacity": 0,

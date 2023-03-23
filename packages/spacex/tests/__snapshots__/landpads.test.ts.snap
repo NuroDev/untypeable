@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SpaceX - Landpads > GET - /landpads 1`] = `
+exports[`SpaceX - Landpads > GET - /v4/landpads 1`] = `
 {
   "details": "SpaceX's first east coast landing pad is Landing Zone 1, where the historic first Falcon 9 landing occurred in December 2015. LC-13 was originally used as a launch pad for early Atlas missiles and rockets from Lockheed Martin. LC-1 was later expanded to include Landing Zone 2 for side booster RTLS Falcon Heavy missions, and it was first used in February 2018 for that purpose.",
   "full_name": "Landing Zone 1",
@@ -46,7 +46,7 @@ exports[`SpaceX - Landpads > GET - /landpads 1`] = `
 }
 `;
 
-exports[`SpaceX - Landpads > GET - /landpads/:id 1`] = `
+exports[`SpaceX - Landpads > GET - /v4/landpads/:id 1`] = `
 {
   "details": "SpaceX's first east coast landing pad is Landing Zone 1, where the historic first Falcon 9 landing occurred in December 2015. LC-13 was originally used as a launch pad for early Atlas missiles and rockets from Lockheed Martin. LC-1 was later expanded to include Landing Zone 2 for side booster RTLS Falcon Heavy missions, and it was first used in February 2018 for that purpose.",
   "full_name": "Landing Zone 1",

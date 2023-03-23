@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SpaceX - Crew > GET - /crew 1`] = `
+exports[`SpaceX - Crew > GET - /v4/crew 1`] = `
 {
   "agency": "NASA",
   "id": "5ebf1a6e23a9a60006e03a7a",
@@ -14,7 +14,7 @@ exports[`SpaceX - Crew > GET - /crew 1`] = `
 }
 `;
 
-exports[`SpaceX - Crew > GET - /crew/:id 1`] = `
+exports[`SpaceX - Crew > GET - /v4/crew/:id 1`] = `
 {
   "agency": "NASA",
   "id": "5ebf1a6e23a9a60006e03a7a",

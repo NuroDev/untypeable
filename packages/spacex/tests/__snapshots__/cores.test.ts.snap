@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SpaceX - Cores > GET - /capsules/:id 1`] = `
+exports[`SpaceX - Cores > GET - /v4/cores 1`] = `
 {
   "asds_attempts": 0,
   "asds_landings": 0,
@@ -18,7 +18,7 @@ exports[`SpaceX - Cores > GET - /capsules/:id 1`] = `
 }
 `;
 
-exports[`SpaceX - Cores > GET - /cores 1`] = `
+exports[`SpaceX - Cores > GET - /v4/cores/:id 1`] = `
 {
   "asds_attempts": 0,
   "asds_landings": 0,
