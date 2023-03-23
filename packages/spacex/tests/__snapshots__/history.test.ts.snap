@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SpaceX - History > GET - /v4/history 1`] = `
+{
+  "details": "Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit.",
+  "event_date_unix": 1222643700,
+  "event_date_utc": "2008-09-28T23:15:00Z",
+  "id": "5f6fb2cfdcfdf403df37971e",
+  "links": {
+    "article": "http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0",
+  },
+  "title": "Falcon reaches Earth orbit",
+}
+`;
+
+exports[`SpaceX - History > GET - /v4/history/:id 1`] = `
+{
+  "details": "Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit.",
+  "event_date_unix": 1222643700,
+  "event_date_utc": "2008-09-28T23:15:00Z",
+  "id": "5f6fb2cfdcfdf403df37971e",
+  "links": {
+    "article": "http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0",
+  },
+  "title": "Falcon reaches Earth orbit",
+}
+`;
