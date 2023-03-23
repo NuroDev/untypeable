@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SpaceX - Crew > GET - /crew 1`] = `
+{
+  "agency": "NASA",
+  "id": "5ebf1a6e23a9a60006e03a7a",
+  "image": "https://imgur.com/0smMgMH.png",
+  "launches": [
+    "5eb87d46ffd86e000604b388",
+  ],
+  "name": "Robert Behnken",
+  "status": "active",
+  "wikipedia": "https://en.wikipedia.org/wiki/Robert_L._Behnken",
+}
+`;
+
+exports[`SpaceX - Crew > GET - /crew/:id 1`] = `
+{
+  "agency": "NASA",
+  "id": "5ebf1a6e23a9a60006e03a7a",
+  "image": "https://imgur.com/0smMgMH.png",
+  "launches": [
+    "5eb87d46ffd86e000604b388",
+  ],
+  "name": "Robert Behnken",
+  "status": "active",
+  "wikipedia": "https://en.wikipedia.org/wiki/Robert_L._Behnken",
+}
+`;

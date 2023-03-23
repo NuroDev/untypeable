@@ -7,6 +7,7 @@ import type {
 } from "./capsules/capsules.types";
 import type { Company } from "./company/company.types";
 import type { Core, CoreParams, Cores } from "./cores/cores.types";
+import type { Crew, CrewMember, CrewMemberParams } from "./crew/crew.types";
 
 const u = initUntypeable();
 
@@ -16,6 +17,8 @@ const router = u.router({
   "/v4/company": u.output<Company>(),
   "/v4/cores": u.output<Cores>(),
   "/v4/cores/:id": u.input<CoreParams>().output<Core>(),
+  "/v4/crew": u.output<Crew>(),
+  "/v4/crew/:id": u.input<CrewMemberParams>().output<CrewMember>(),
 });
 
 export type SpaceXRouter = typeof router;
