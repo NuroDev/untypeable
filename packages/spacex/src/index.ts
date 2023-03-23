@@ -14,6 +14,11 @@ import type {
   LandPadParams,
   LandPads,
 } from "./landpads/landpads.types";
+import type {
+  StarlinkSatellite,
+  StarlinkSatelliteParams,
+  StarlinkSatellites,
+} from "./starlink/starlink.types";
 
 const u = initUntypeable();
 
@@ -29,6 +34,10 @@ const router = u.router({
   "/v4/dragons/:id": u.input<DragonParams>().output<Dragon>(),
   "/v4/landpads": u.output<LandPads>(),
   "/v4/landpads/:id": u.input<LandPadParams>().output<LandPad>(),
+  "/v4/starlink": u.output<StarlinkSatellites>(),
+  "/v4/starlink/:id": u
+    .input<StarlinkSatelliteParams>()
+    .output<StarlinkSatellite>(),
 });
 
 export type SpaceXRouter = typeof router;
