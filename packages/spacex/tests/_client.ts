@@ -3,10 +3,9 @@ import { createTypeLevelClient } from "untypeable";
 import { fetch } from "undici";
 
 import type { SpaceXRouter } from "../src";
+import { join } from "path";
 
 export function useTestClient() {
-  const apiKey = process.env.SPACEX_API_KEY;
-
   const client = createTypeLevelClient<SpaceXRouter>(
     async (path, input = {}) => {
       const pathWithParams = path.replace(
@@ -14,22 +13,25 @@ export function useTestClient() {
         (_, key) => input[key]
       );
 
-      const url = new URL(pathWithParams, "https://api.spacexdata.com");
+      const url = new URL(
+        join(input.version || "v4", pathWithParams),
+        "https://api.spacexdata.com"
+      );
 
       const response = await fetch(url.href, {
         method: "GET",
         headers: {
-          Authorization: `Bearer ${apiKey}`,
           "Content-Type": "application/json",
         },
       });
+      if (!response.ok)
+        throw new Error(`[${response.status}]${response.statusText}`);
 
       return await response.json();
     }
   );
 
   beforeAll(() => {
-    if (!apiKey) throw "No SPACEX_API_KEY environment variable found.";
     if (!client) throw "Failed to initialise untypeable client instance.";
   });
 
