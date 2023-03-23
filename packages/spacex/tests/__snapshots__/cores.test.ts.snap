@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SpaceX - Cores > GET - /capsules/:id 1`] = `
+{
+  "asds_attempts": 0,
+  "asds_landings": 0,
+  "block": null,
+  "id": "5e9e289df35918033d3b2623",
+  "last_update": "Engine failure at T+33 seconds resulted in loss of vehicle",
+  "launches": [
+    "5eb87cd9ffd86e000604b32a",
+  ],
+  "reuse_count": 0,
+  "rtls_attempts": 0,
+  "rtls_landings": 0,
+  "serial": "Merlin1A",
+  "status": "lost",
+}
+`;
+
+exports[`SpaceX - Cores > GET - /cores 1`] = `
+{
+  "asds_attempts": 0,
+  "asds_landings": 0,
+  "block": null,
+  "id": "5e9e289df35918033d3b2623",
+  "last_update": "Engine failure at T+33 seconds resulted in loss of vehicle",
+  "launches": [
+    "5eb87cd9ffd86e000604b32a",
+  ],
+  "reuse_count": 0,
+  "rtls_attempts": 0,
+  "rtls_landings": 0,
+  "serial": "Merlin1A",
+  "status": "lost",
+}
+`;
