@@ -10,6 +10,7 @@
     "test": "turbo run test"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "prettier": "^2.8.4",
     "rexample": "^1.0.3",
     "turbo": "^1.8.5"
