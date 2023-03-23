@@ -1,6 +1,22 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SpaceX -  > GET - /capsules/:id 1`] = `
+exports[`SpaceX - Capsules > GET - /capsules 1`] = `
+{
+  "id": "62615d180ec008379be596f1",
+  "land_landings": 0,
+  "last_update": null,
+  "launches": [
+    "6243ade2af52800c6e919255",
+  ],
+  "reuse_count": 0,
+  "serial": "C212",
+  "status": "active",
+  "type": "Dragon 2.0",
+  "water_landings": 0,
+}
+`;
+
+exports[`SpaceX - Capsules > GET - /capsules/:id 1`] = `
 {
   "id": "5e9e2c5bf35918ed873b2664",
   "land_landings": 0,
