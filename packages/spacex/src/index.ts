@@ -19,6 +19,11 @@ import type {
   LandPadParams,
   LandPads,
 } from "./landpads/landpads.types";
+import type {
+  Payload,
+  PayloadParams,
+  Payloads,
+} from "./payloads/payloads.types";
 import type { Roadster } from "./roadster/roadster.types";
 import type { Rocket, RocketParams, Rockets } from "./rockets/rockets.types";
 import type { Ship, ShipParams, Ships } from "./ships/ships.types";
@@ -44,6 +49,8 @@ const router = u.router({
   "/v4/history/:id": u.input<HistoryEventParams>().output<HistoryEvent>(),
   "/v4/landpads": u.output<LandPads>(),
   "/v4/landpads/:id": u.input<LandPadParams>().output<LandPad>(),
+  "/v4/payloads": u.output<Payloads>(),
+  "/v4/payloads/:id": u.input<PayloadParams>().output<Payload>(),
   "/v4/roadster": u.output<Roadster>(),
   "/v4/rockets": u.output<Rockets>(),
   "/v4/rockets/:id": u.input<RocketParams>().output<Rocket>(),
