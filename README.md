@@ -33,9 +33,10 @@ In this case we are doing the heavy lifting by creating type definitions for all
 
 The following are all currently supported `@untypeable` packages. Click on one below to view it & read more on how to install & use it.
 
+- [🗿 JSONPlaceholder](packages/jsonplaceholder)
 - [🍋 Lemon Squeezy](packages/lemonsqueezy)
-- [📱 LogSnag](packages/logsnag)
 - [🤏 lil APIs](packages/lil.apis)
+- [📱 LogSnag](packages/logsnag)
 - [🗿 JSONPlaceholder](packages/jsonplaceholder)
 - [🚀 SpaceX](packages/spacex)
 - [🪐 SWAPI](packages/swapi)
