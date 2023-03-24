@@ -20,6 +20,13 @@ import type {
   LandPads,
 } from "./landpads/landpads.types";
 import type {
+  LaunchesV4,
+  LaunchesV5,
+  LaunchParams,
+  LaunchV4,
+  LaunchV5,
+} from "./launches/launches.types";
+import type {
   LaunchPad,
   LaunchPadParams,
   LaunchPads,
@@ -54,6 +61,10 @@ const router = u.router({
   "/v4/history/:id": u.input<HistoryEventParams>().output<HistoryEvent>(),
   "/v4/landpads": u.output<LandPads>(),
   "/v4/landpads/:id": u.input<LandPadParams>().output<LandPad>(),
+  "/v4/launches": u.output<LaunchesV4>(),
+  "/v4/launches/:id": u.input<LaunchParams>().output<LaunchV4>(),
+  "/v5/launches": u.output<LaunchesV5>(),
+  "/v5/launches/:id": u.input<LaunchParams>().output<LaunchV5>(),
   "/v4/launchpads": u.output<LaunchPads>(),
   "/v4/launchpads/:id": u.input<LaunchPadParams>().output<LaunchPad>(),
   "/v4/payloads": u.output<Payloads>(),
