@@ -3,7 +3,7 @@ import { describe, it } from "vitest";
 import { LandPadSchema, LandPadsSchema } from "../src/zod";
 import { useTestClient } from "./_client";
 
-describe.concurrent("SpaceX - Landpads", () => {
+describe.concurrent("SpaceX - Land Pads", () => {
   const client = useTestClient();
 
   it("GET - /v4/landpads", async ({ expect }) => {
