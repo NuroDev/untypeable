@@ -1,15 +1,12 @@
 import { z } from "zod";
 
+import { DiameterSchema, MassSchema } from "../_shared/_shared.validators";
+
 export const HeatShieldSchema = z.object({
   dev_partner: z.string(),
   material: z.string(),
   size_meters: z.number(),
   temp_degrees: z.number(),
-});
-
-export const MassSchema = z.object({
-  kg: z.number(),
-  lb: z.number(),
 });
 
 export const VolumeSchema = z.object({
@@ -27,11 +24,6 @@ export const TrunkSchema = z.object({
     solar_array: z.number(),
     unpressurized_cargo: z.boolean(),
   }),
-});
-
-export const DiameterSchema = z.object({
-  meters: z.number(),
-  feet: z.number(),
 });
 
 export const DragonSchema = z.object({
