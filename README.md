@@ -40,3 +40,20 @@ The following are all currently supported `@untypeable` packages. Click on one b
 - [🗿 JSONPlaceholder](packages/jsonplaceholder)
 - [🚀 SpaceX](packages/spacex)
 - [🪐 SWAPI](packages/swapi)
+
+## 🏃‍♂️ Examples
+
+If you want to see an example of any of the packages in action & being used, have a look in the `examples/` directory to view a simple script that uses [`untypeable`](https://github.com/total-typescript/untypeable) & whatever package we've built to see what it looks like.
+
+If however you want to actually run any of those examples to prove they work, simply run the following command & select the example you want to run:
+
+```bash
+# npm
+npm run example
+
+# yarn
+yarn run example
+
+# pnpm
+pnpm run example
+```
