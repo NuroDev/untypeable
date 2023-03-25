@@ -27,13 +27,22 @@ import { createTypeLevelClient } from "untypeable";
 import type { JSONPlaceholderRouter } from "@untypeable/jsonplaceholder";
 
 const client = createTypeLevelClient<JSONPlaceholderRouter>(
-  (path, input = {}) =>
-    fetch(
-      `https://jsonplaceholder.typicode.com/${path}?${new URLSearchParams(
-        input
-      )}`
-    ).then((res) => res.json())
+  async (path, method, input = {}) => {
+    const pathWithParams = path.replace(
+      /:([a-zA-Z0-9_]+)/g,
+      (_, key) => input[key]
+    );
+
+    const url = new URL(pathWithParams, "https://jsonplaceholder.typicode.com");
+
+    const response = await fetch(url.href, {
+      body: method === "GET" ? undefined : JSON.stringify(input),
+      method,
+    });
+
+    return await response.json();
+  }
 );
 
-const todos = await client("/todos");
+const todos = await client("/todos", "GET");
 ```

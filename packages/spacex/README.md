@@ -26,15 +26,16 @@ import { createTypeLevelClient } from "untypeable";
 
 import type { SpaceXRouter } from "@untypeable/spacex";
 
-const client = createTypeLevelClient<SpaceXRouter>((path, input = {}) =>
-  fetch(`https://api.spacexdata.com/${path}?${new URLSearchParams(input)}`, {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer ${process.env.SPACEX_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-  }).then((res) => res.json())
-);
+const client = createTypeLevelClient<SpaceXRouter>(async (path, input = {}) => {
+  const pathWithParams = path.replace(
+    /:([a-zA-Z0-9_]+)/g,
+    (_, key) => input[key]
+  );
 
-const capsules = await client("/capsules");
+  const url = new URL(pathWithParams, "https://api.spacexdata.com");
+
+  return fetch(url.href).then((response) => response.json());
+});
+
+const capsules = await client("/v4/capsules");
 ```

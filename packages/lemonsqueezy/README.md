@@ -27,16 +27,29 @@ import { createTypeLevelClient } from "untypeable";
 import type { LemonSqueezyRouter } from "@untypeable/lemonsqueezy";
 
 const client = createTypeLevelClient<LemonSqueezyRouter>(
-  (path, method, input = {}) =>
-    fetch(`https://api.lemonsqueezy.com/v1/${path}`, {
+  async (path, method, input = {}) => {
+    const pathWithParams = path.replace(
+      /:([a-zA-Z0-9_]+)/g,
+      (_, key) => input[key]
+    );
+
+    const url = new URL(
+      join("v1", pathWithParams),
+      "https://api.lemonsqueezy.com"
+    );
+
+    const response = await fetch(url.href, {
       body: ["DELETE", "POST", "PUT"].includes(method)
         ? JSON.stringify(input)
         : undefined,
       method,
       headers: {
-        Authorization: `Bearer ${process.env.LEMON_SQUEEZY_API_KEY}`,
+        Authorization: `Bearer ${apiKey}`,
       },
-    }).then((res) => res.json())
+    });
+
+    return await response.json();
+  }
 );
 
 const stores = await client("/stores", "GET");
