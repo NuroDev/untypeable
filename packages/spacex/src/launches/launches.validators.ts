@@ -1,21 +1,21 @@
 import { z } from "zod";
 
-export const CoreSchema = z.object({
-  core: z.string().nullable().default(null),
-  flight: z.number().nullable().default(null),
-  gridfins: z.boolean().nullable().default(null),
-  landing_attempt: z.boolean().nullable().default(null),
-  landing_success: z.boolean().nullable().default(null),
-  landing_type: z.string().nullable().default(null),
-  landpad: z.string().nullable().default(null),
-  legs: z.boolean().nullable().default(null),
-  reused: z.boolean().nullable().default(null),
-});
-
 const SharedLaunchSchema = z.object({
   auto_update: z.boolean(),
   capsules: z.array(z.string()),
-  cores: z.array(CoreSchema),
+  cores: z.array(
+    z.object({
+      core: z.string().nullable().default(null),
+      flight: z.number().nullable().default(null),
+      gridfins: z.boolean().nullable().default(null),
+      landing_attempt: z.boolean().nullable().default(null),
+      landing_success: z.boolean().nullable().default(null),
+      landing_type: z.string().nullable().default(null),
+      landpad: z.string().nullable().default(null),
+      legs: z.boolean().nullable().default(null),
+      reused: z.boolean().nullable().default(null),
+    })
+  ),
   date_local: z.string(),
   date_precision: z.enum(["half", "quarter", "year", "month", "day", "hour"]),
   date_unix: z.number(),

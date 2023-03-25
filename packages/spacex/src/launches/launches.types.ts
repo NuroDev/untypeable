@@ -1,15 +1,12 @@
 import type { z } from "zod";
 
 import type {
-  CoreSchema,
   LaunchesV4Schema,
   LaunchesV5Schema,
   LaunchParamsSchema,
   LaunchV4Schema,
   LaunchV5Schema,
 } from "./launches.validators";
-
-export type Core = z.infer<typeof CoreSchema>;
 
 export type LaunchV4 = z.infer<typeof LaunchV4Schema>;
 
