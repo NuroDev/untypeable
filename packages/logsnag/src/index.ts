@@ -12,5 +12,5 @@ const router = u.router({
 
 export type LogSnagRouter = typeof router;
 
-export type { Log } from "./log/log.types";
-export type { Insight } from "./insight/insight.types";
+export * from "./log/log.types";
+export * from "./insight/insight.types";

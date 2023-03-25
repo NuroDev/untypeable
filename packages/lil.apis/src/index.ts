@@ -14,6 +14,6 @@ const router = u.router({
 
 export type LilRouter = typeof router;
 
-export type { Article, News } from "./news/news.types";
-export type { Stock, StocksParams } from "./stocks/stocks.types";
-export type { Forecast, Weather, WeatherParams } from "./weather/weather.types";
+export * from "./news/news.types";
+export * from "./stocks/stocks.types";
+export * from "./weather/weather.types";
