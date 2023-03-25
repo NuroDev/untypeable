@@ -2,6 +2,9 @@
   "name": "@untypeable/jsonplaceholder",
   "version": "1.0.1",
   "description": "Untypeable router type definitions & validators for the JSONPlaceholder API",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "directory": "packages/jsonplaceholder",
     "type": "git",

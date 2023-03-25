@@ -2,6 +2,9 @@
   "name": "@untypeable/spacex",
   "version": "1.0.1",
   "description": "Untypeable router type definitions & validators for the open source SpaceX API",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "directory": "packages/spacex",
     "type": "git",

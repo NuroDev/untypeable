@@ -2,6 +2,9 @@
   "name": "@untypeable/logsnag",
   "version": "1.0.1",
   "description": "Untypeable router type definitions & validators for the LogSnag API",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "directory": "packages/logsnag",
     "type": "git",
