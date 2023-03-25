@@ -18,7 +18,7 @@ export type BillingAddress = z.infer<typeof BillingAddressSchema>;
 export type CheckoutData = z.infer<typeof CheckoutDataSchema>;
 export type CheckoutOptions = z.infer<typeof CheckoutOptionsSchema>;
 export type CheckoutPreview = z.infer<typeof CheckoutPreviewSchema>;
-export type ProductParams = z.infer<typeof CheckoutProductParamsSchema>;
+export type CheckoutProductParams = z.infer<typeof CheckoutProductParamsSchema>;
 /**
  * @docs https://docs.lemonsqueezy.com/api/checkouts#the-checkout-object
  */
