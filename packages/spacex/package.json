@@ -25,35 +25,28 @@
     "untypeable"
   ],
   "license": "MIT",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "import": "./src/index.ts",
-      "require": "./src/index.ts",
-      "types": "./src/index.ts"
-    },
-    "./zod": {
-      "import": "./src/zod.ts",
-      "require": "./src/zod.ts",
-      "types": "./src/zod.ts"
-    },
+    ".": "./dist/index",
+    "./zod": "./dist/zod",
     "./package.json": "./package.json"
   },
   "typesVersions": {
     "*": {
       "zod": [
-        "./src/zod.ts"
+        "./dist/zod.d.ts"
       ]
     }
   },
   "files": [
-    "src/**/*",
+    "dist/**/*",
     "LICENSE",
     "README.md"
   ],
   "scripts": {
+    "build": "tsup",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "test:ui": "vitest watch --ui"
