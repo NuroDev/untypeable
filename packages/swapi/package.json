@@ -12,6 +12,7 @@
   },
   "homepage": "https://swapi.dev/",
   "bugs": "https://github.com/nurodev/untypeable/issues",
+  "readme": "README.md",
   "author": {
     "name": "nurodev",
     "email": "me@nuro.dev",
