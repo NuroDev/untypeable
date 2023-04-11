@@ -34,7 +34,7 @@ const client = createTypeLevelClient<HackerNewsRouter>((path, input = {}) => {
 
   const url = new URL(pathWithParams, "https://hacker-news.firebaseio.com");
 
-  const response = fetch(url.href);
+  const response = await fetch(url.href);
 
   return await response.json();
 });
