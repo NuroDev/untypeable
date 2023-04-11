@@ -1,6 +1,6 @@
 {
   "name": "@untypeable/lemonsqueezy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Untypeable router type definitions & validators for the official Lemon Squeezy API",
   "publishConfig": {
     "access": "public"
