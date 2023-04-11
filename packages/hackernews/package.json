@@ -42,7 +42,7 @@
     }
   },
   "files": [
-    "src/**/*",
+    "dist/**/*",
     "LICENSE",
     "README.md"
   ],
