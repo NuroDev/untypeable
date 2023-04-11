@@ -5,6 +5,7 @@ import type {
   AskStories,
   BestStories,
   JobStories,
+  LiveDataParams,
   MaxItemId,
   NewStories,
   ShowStories,
@@ -16,15 +17,15 @@ import type { User, UserParams } from "./users/users.types";
 const u = initUntypeable();
 
 const router = u.router({
-  "/v0/askstories.json": u.output<AskStories>(),
-  "/v0/beststories.json": u.output<BestStories>(),
+  "/v0/askstories.json": u.input<LiveDataParams>().output<AskStories>(),
+  "/v0/beststories.json": u.input<LiveDataParams>().output<BestStories>(),
   "/v0/item/:id.json": u.input<ItemParams>().output<Item>(),
-  "/v0/jobstories.json": u.output<JobStories>(),
-  "/v0/maxitem.json": u.output<MaxItemId>(),
-  "/v0/newstories.json": u.output<NewStories>(),
-  "/v0/showstories.json": u.output<ShowStories>(),
-  "/v0/topstories.json": u.output<TopStories>(),
-  "/v0/updates.json": u.output<Updates>(),
+  "/v0/jobstories.json": u.input<LiveDataParams>().output<JobStories>(),
+  "/v0/maxitem.json": u.input<LiveDataParams>().output<MaxItemId>(),
+  "/v0/newstories.json": u.input<LiveDataParams>().output<NewStories>(),
+  "/v0/showstories.json": u.input<LiveDataParams>().output<ShowStories>(),
+  "/v0/topstories.json": u.input<LiveDataParams>().output<TopStories>(),
+  "/v0/updates.json": u.input<LiveDataParams>().output<Updates>(),
   "/v0/user/:id.json": u.input<UserParams>().output<User>(),
 });
 

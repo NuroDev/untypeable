@@ -1,10 +1,11 @@
 import type { z } from "zod";
 
 import type {
-  MaxItemIdSchema,
   AskStoriesSchema,
   BestStoriesSchema,
   JobStoriesSchema,
+  LiveDataParamsSchema,
+  MaxItemIdSchema,
   NewStoriesSchema,
   ShowStoriesSchema,
   TopStoriesSchema,
@@ -26,3 +27,5 @@ export type ShowStories = z.infer<typeof ShowStoriesSchema>;
 export type TopStories = z.infer<typeof TopStoriesSchema>;
 
 export type Updates = z.infer<typeof UpdatesSchema>;
+
+export type LiveDataParams = z.infer<typeof LiveDataParamsSchema>;
