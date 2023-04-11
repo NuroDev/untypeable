@@ -1,6 +1,6 @@
 {
   "name": "@untypeable/swapi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Untypeable router type definitions & validators for the swapi Star Wars API",
   "publishConfig": {
     "access": "public"
