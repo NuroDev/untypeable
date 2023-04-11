@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "turbo run build",
     "example": "rexample",
     "format": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "release:version": "changeset version",
