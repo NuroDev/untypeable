@@ -1,4 +1,4 @@
-# 🪐 @untypeable/hackernews
+# 🗞️ @untypeable/hackernews
 
 Untypeable router type definitions & validators for the Hacker News API
 
