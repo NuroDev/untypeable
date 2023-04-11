@@ -1,6 +1,6 @@
 {
   "name": "@untypeable/hackernews",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Untypeable router type definitions & validators for the Hacker News API",
   "publishConfig": {
     "access": "public"
