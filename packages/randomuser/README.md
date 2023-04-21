@@ -26,9 +26,18 @@ import { createTypeLevelClient } from "untypeable";
 
 import type { RandomUserRouter } from "@untypeable/randomuser";
 
-const client = createTypeLevelClient<RandomUserRouter>(async (path) =>
-  fetch(`https://randomuser.me/${path}`).then((response) => response.json())
-);
+const client = createTypeLevelClient<RandomUserRouter>(async (path) => {
+  const url = new URL(path, "https://randomuser.me/");
+  Object.entries(input).forEach(([key, value]) =>
+    url.searchParams.append(key, value as string)
+  );
+
+  const response = await fetch(url.href);
+
+  return await response.json();
+});
 
 const randomUser = await client("/api");
+
+const femaleUser = await client("/api", { gender: "female" });
 ```
