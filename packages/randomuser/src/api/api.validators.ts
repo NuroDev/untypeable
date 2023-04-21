@@ -1,5 +1,46 @@
 import { z } from "zod";
 
+export const GenderSchema = z.enum(["male", "female"]);
+
+export const FieldSchema = z.enum([
+  "cell",
+  "dob",
+  "email",
+  "gender",
+  "id",
+  "location",
+  "login",
+  "name",
+  "nat",
+  "phone",
+  "picture",
+  "registered",
+]);
+
+export const NationalitySchema = z.enum([
+  "AU",
+  "BR",
+  "CA",
+  "CH",
+  "DE",
+  "DK",
+  "ES",
+  "FI",
+  "FR",
+  "GB",
+  "IE",
+  "IN",
+  "IR",
+  "MX",
+  "NL",
+  "NO",
+  "NZ",
+  "RS",
+  "TR",
+  "UA",
+  "US",
+]);
+
 export const UserSchema = z.object({
   cell: z.string(),
   dob: z.object({
@@ -7,7 +48,7 @@ export const UserSchema = z.object({
     date: z.string().datetime(),
   }),
   email: z.string().email(),
-  gender: z.enum(["male", "female"]),
+  gender: GenderSchema,
   id: z.object({
     name: z.string(),
     value: z.string().nullable(),
@@ -44,7 +85,7 @@ export const UserSchema = z.object({
     last: z.string(),
     title: z.string(),
   }),
-  nat: z.string().min(2).max(2),
+  nat: NationalitySchema,
   phone: z.string(),
   picture: z.object({
     large: z.string().url(),
@@ -66,3 +107,19 @@ export const ApiSchema = z.object({
   }),
   results: z.array(UserSchema),
 });
+
+export const ApiInputSchema = z
+  .object({
+    exc: z.array(FieldSchema),
+    format: z.enum(["csv", "json", "prettyjson", "xml", "yaml"]),
+    gender: GenderSchema,
+    inc: z.array(FieldSchema),
+    nat: NationalitySchema,
+    noinfo: z.boolean(),
+    page: z.number(),
+    password: z.array(z.string()),
+    results: z.number(),
+    seed: z.string(),
+    version: z.enum(["1.0", "1.1", "1.2", "1.3", "1.4"]),
+  })
+  .partial();
