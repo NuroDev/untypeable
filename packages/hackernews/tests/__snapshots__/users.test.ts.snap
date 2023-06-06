@@ -5,8 +5,10 @@ exports[`Hacker News - Users > GET - User - /v0/user/jl.json 1`] = `
   "about": "This is a test",
   "created": 1173923446,
   "id": "jl",
-  "karma": 4245,
+  "karma": 4307,
   "submitted": [
+    35686379,
+    35675818,
     25172559,
     25172553,
     19464269,

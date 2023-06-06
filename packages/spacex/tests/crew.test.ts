@@ -12,15 +12,7 @@ describe.concurrent("SpaceX - Crew", () => {
     expect(crew).toBeDefined();
     expect(Array.isArray(crew)).toBe(true);
     expect(crew.at(0)).toBeDefined();
-    expect(crew.at(0)).toMatchSnapshot({
-      agency: "NASA",
-      id: "5ebf1a6e23a9a60006e03a7a",
-      image: "https://imgur.com/0smMgMH.png",
-      launches: ["5eb87d46ffd86e000604b388"],
-      name: "Robert Behnken",
-      status: "active",
-      wikipedia: "https://en.wikipedia.org/wiki/Robert_L._Behnken",
-    });
+    expect(crew.at(0)).toMatchSnapshot();
 
     expect(CrewSchema.safeParse(crew).success).toBe(true);
   });
@@ -31,15 +23,7 @@ describe.concurrent("SpaceX - Crew", () => {
     });
 
     expect(crewMember).toBeDefined();
-    expect(crewMember).toMatchSnapshot({
-      agency: "NASA",
-      id: "5ebf1a6e23a9a60006e03a7a",
-      image: "https://imgur.com/0smMgMH.png",
-      launches: ["5eb87d46ffd86e000604b388"],
-      name: "Robert Behnken",
-      status: "active",
-      wikipedia: "https://en.wikipedia.org/wiki/Robert_L._Behnken",
-    });
+    expect(crewMember).toMatchSnapshot();
 
     expect(CrewMemberSchema.safeParse(crewMember).success).toBe(true);
   });

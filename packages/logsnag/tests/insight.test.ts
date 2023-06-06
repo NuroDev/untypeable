@@ -15,12 +15,7 @@ describe.concurrent("LogSnag - Insight", () => {
     });
 
     expect(insight).toBeDefined();
-    expect(insight).toMatchSnapshot({
-      project: "nuro",
-      title: "Test",
-      value: 100,
-      icon: "📈",
-    });
+    expect(insight).toMatchSnapshot();
 
     expect(InsightSchema.safeParse(insight).success).toBe(true);
   });

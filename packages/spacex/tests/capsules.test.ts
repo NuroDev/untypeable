@@ -12,17 +12,7 @@ describe.concurrent("SpaceX - Capsules", () => {
     expect(capsules).toBeDefined();
     expect(Array.isArray(capsules)).toBe(true);
     expect(capsules.at(0)).toBeDefined();
-    expect(capsules.at(0)).toMatchSnapshot({
-      id: "5e9e2c5bf35918ed873b2664",
-      land_landings: 0,
-      last_update: "Hanging in atrium at SpaceX HQ in Hawthorne ",
-      launches: ["5eb87cdeffd86e000604b330"],
-      reuse_count: 0,
-      serial: "C101",
-      status: "retired",
-      type: "Dragon 1.0",
-      water_landings: 1,
-    });
+    expect(capsules.at(0)).toMatchSnapshot();
 
     expect(CapsulesSchema.safeParse(capsules).success).toBe(true);
   });
@@ -33,17 +23,7 @@ describe.concurrent("SpaceX - Capsules", () => {
     });
 
     expect(capsule).toBeDefined();
-    expect(capsule).toMatchSnapshot({
-      id: "5e9e2c5bf35918ed873b2664",
-      land_landings: 0,
-      last_update: "Hanging in atrium at SpaceX HQ in Hawthorne ",
-      launches: ["5eb87cdeffd86e000604b330"],
-      reuse_count: 0,
-      serial: "C101",
-      status: "retired",
-      type: "Dragon 1.0",
-      water_landings: 1,
-    });
+    expect(capsule).toMatchSnapshot();
 
     expect(CapsuleSchema.safeParse(capsule).success).toBe(true);
   });

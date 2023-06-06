@@ -17,15 +17,7 @@ describe.concurrent("LogSnag - Log", () => {
     });
 
     expect(log).toBeDefined();
-    expect(log).toMatchSnapshot({
-      project: "nuro",
-      channel: "untypeable",
-      event: "Test",
-      description: "A basic test event from the `@untypeable/logsnag` package",
-      icon: "👋",
-      notify: false,
-      parser: "text",
-    });
+    expect(log).toMatchSnapshot();
 
     expect(LogSchema.safeParse(log).success).toBe(true);
   });

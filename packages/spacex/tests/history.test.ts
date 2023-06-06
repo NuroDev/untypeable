@@ -12,18 +12,7 @@ describe.concurrent("SpaceX - History", () => {
     expect(historyEvents).toBeDefined();
     expect(Array.isArray(historyEvents)).toBe(true);
     expect(historyEvents.at(0)).toBeDefined();
-    expect(historyEvents.at(0)).toMatchSnapshot({
-      details:
-        "Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit.",
-      event_date_unix: 1222643700,
-      event_date_utc: "2008-09-28T23:15:00Z",
-      id: "5f6fb2cfdcfdf403df37971e",
-      links: {
-        article:
-          "http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0",
-      },
-      title: "Falcon reaches Earth orbit",
-    });
+    expect(historyEvents.at(0)).toMatchSnapshot();
 
     expect(HistoryEventsSchema.safeParse(historyEvents).success).toBe(true);
   });
@@ -34,18 +23,7 @@ describe.concurrent("SpaceX - History", () => {
     });
 
     expect(historyEvent).toBeDefined();
-    expect(historyEvent).toMatchSnapshot({
-      details:
-        "Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit.",
-      event_date_unix: 1222643700,
-      event_date_utc: "2008-09-28T23:15:00Z",
-      id: "5f6fb2cfdcfdf403df37971e",
-      links: {
-        article:
-          "http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0",
-      },
-      title: "Falcon reaches Earth orbit",
-    });
+    expect(historyEvent).toMatchSnapshot();
 
     expect(HistoryEventSchema.safeParse(historyEvent).success).toBe(true);
   });
