@@ -55,10 +55,10 @@
     "untypeable": "^0.2.1"
   },
   "devDependencies": {
-    "@types/node": "^18.19.18",
-    "tsup": "^6.7.0",
-    "typescript": "^4.9.5",
-    "undici": "^5.28.3",
+    "@types/node": "^20.11.20",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3",
+    "undici": "^6.6.2",
     "zod": "^3.22.4"
   },
   "peerDependencies": {
