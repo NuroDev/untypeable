@@ -49,16 +49,13 @@
   ],
   "scripts": {
     "build": "tsup",
-    "test": "vitest run",
-    "test:watch": "vitest watch",
-    "test:ui": "vitest watch --ui"
+    "test": "vitest run"
   },
   "dependencies": {
     "untypeable": "^0.2.1"
   },
   "devDependencies": {
     "@types/node": "^18.19.18",
-    "@vitest/ui": "^0.29.8",
     "dotenv": "^16.4.5",
     "tsup": "^6.7.0",
     "typescript": "^4.9.5",
