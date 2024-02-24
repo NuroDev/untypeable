@@ -1,9 +1,1 @@
-/// <reference types="vitest" />
-
-import { defineConfig } from "vitest/config";
-
-export default defineConfig({
-  test: {
-    setupFiles: ["dotenv/config"],
-  },
-});
+export { default } from "../../vitest.config";

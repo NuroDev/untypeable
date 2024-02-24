@@ -9,12 +9,14 @@
     "release:status": "changeset status --verbose",
     "release:publish": "changeset publish",
     "release": "$npm_execpath release:version && $npm_execpath release:publish",
-    "test": "turbo run test"
+    "test": "vitest run"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "dotenv": "^16.4.5",
     "prettier": "^2.8.8",
     "rexample": "^1.0.3",
-    "turbo": "^1.12.4"
+    "turbo": "^1.12.4",
+    "vitest": "^0.29.8"
   }
 }
