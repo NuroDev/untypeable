@@ -57,17 +57,17 @@
     "untypeable": "^0.2.1"
   },
   "devDependencies": {
-    "@types/node": "^18.15.3",
-    "@vitest/ui": "^0.29.7",
-    "dotenv": "^16.0.3",
+    "@types/node": "^18.19.18",
+    "@vitest/ui": "^0.29.8",
+    "dotenv": "^16.4.5",
     "tsup": "^6.7.0",
     "typescript": "^4.9.5",
-    "undici": "^5.21.0",
-    "vitest": "^0.29.7",
-    "zod": "^3.21.4"
+    "undici": "^5.28.3",
+    "vitest": "^0.29.8",
+    "zod": "^3.22.4"
   },
   "peerDependencies": {
-    "zod": "^3.21.4"
+    "zod": "^3.22.4"
   },
   "peerDependenciesMeta": {
     "zod": {
