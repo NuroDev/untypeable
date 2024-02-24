@@ -30,7 +30,3 @@ const router = u.router({
 });
 
 export type HackerNewsRouter = typeof router;
-
-export * from "./items/items.types";
-export * from "./liveData/liveData.types";
-export * from "./users/users.types";

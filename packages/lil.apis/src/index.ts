@@ -13,7 +13,3 @@ const router = u.router({
 });
 
 export type LilRouter = typeof router;
-
-export * from "./news/news.types";
-export * from "./stocks/stocks.types";
-export * from "./weather/weather.types";

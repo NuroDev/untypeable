@@ -89,19 +89,3 @@ const router = u.router({
 });
 
 export type SpaceXRouter = typeof router;
-
-export * from "./_shared/_shared.types";
-export * from "./capsules/capsules.types";
-export * from "./company/company.types";
-export * from "./cores/cores.types";
-export * from "./crew/crew.types";
-export * from "./dragons/dragons.types";
-export * from "./history/history.types";
-export * from "./landpads/landpads.types";
-export * from "./launches/launches.types";
-export * from "./launchpads/launchpads.types";
-export * from "./payloads/payloads.types";
-export * from "./roadster/roadster.types";
-export * from "./rockets/rockets.types";
-export * from "./ships/ships.types";
-export * from "./starlink/starlink.types";

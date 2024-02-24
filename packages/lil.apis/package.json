@@ -34,11 +34,15 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index",
-    "./zod": "./dist/zod",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./types": "./dist/types",
+    "./zod": "./dist/zod"
   },
   "typesVersions": {
     "*": {
+      "types": [
+        "./dist/types.d.ts"
+      ],
       "zod": [
         "./dist/zod.d.ts"
       ]

@@ -7,6 +7,7 @@ export default defineConfig(({ watch = false }) => ({
   },
   entry: {
     index: "src/index.ts",
+    types: "src/types.ts",
     zod: "src/zod.ts",
   },
   format: ["cjs", "esm"],
