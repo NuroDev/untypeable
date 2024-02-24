@@ -7,8 +7,9 @@ import type {
   JsonBulkParams,
   JsonMap,
   JsonMapParams,
+  JsonParams,
 } from "./json/json.types";
-import type { NanoID } from "./nanoid/nanoid.types";
+import type { NanoID, NanoIDParams } from "./nanoid/nanoid.types";
 import type {
   Plain,
   PlainBulk,
@@ -17,6 +18,7 @@ import type {
   PlainMapParams,
   PlainNamespaceMap,
   PlainNamespaceMapParams,
+  PlainParams,
 } from "./plain/plain.types";
 import type { Stats } from "./stats/stats.types";
 
@@ -24,7 +26,7 @@ const u = initUntypeable();
 
 const router = u.router({
   /** Gets single uuid with JSON output */
-  "/json": u.input<GlobalParams>().output<Json>(),
+  "/json": u.input<JsonParams>().output<Json>(),
 
   /** Gets uuids in bulk (up to 20k) with JSON output */
   "/json/bulk": u.input<JsonBulkParams>().output<JsonBulk>(),
@@ -33,10 +35,10 @@ const router = u.router({
   "/json/map/:key": u.input<JsonMapParams>().output<JsonMap>(),
 
   /** Gets single NANOID in plaintext */
-  "/nanoid": u.input<GlobalParams>().output<NanoID>(),
+  "/nanoid": u.input<NanoIDParams>().output<NanoID>(),
 
   /** Gets single UUID in plaintext */
-  "/plain": u.input<GlobalParams>().output<Plain>(),
+  "/plain": u.input<PlainParams>().output<Plain>(),
 
   /** Gets uuids in bulk (up to 20k) in plaintext */
   "/plain/bulk": u.input<PlainBulkParams>().output<PlainBulk>(),
