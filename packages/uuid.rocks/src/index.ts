@@ -56,7 +56,7 @@ const router = u.router({
   "/short": u.input<GlobalParams>().output<string>(),
 
   /** Gets some stats about service usage, tracked via [countapi.xyz](https://countapi.xyz/) */
-  "/stats": u.input<GlobalParams>().output<Stats>(),
+  "/stats": u.output<Stats>(),
 
   /** Gets single ULID in plaintext */
   "/ulid": u.input<GlobalParams>().output<string>(),

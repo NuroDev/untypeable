@@ -2,6 +2,13 @@ import { z } from "zod";
 
 import { GlobalParamsSchema, UUIDSchema } from "../_shared/_shared.validators";
 
+export const JsonParamsSchema = GlobalParamsSchema.pick({
+  nanoid: true,
+  readable: true,
+  short: true,
+  ulid: true,
+});
+
 export const JsonSchema = z.object({
   apiVersion: z.string(),
   is_readable_uuid: z.boolean(),
@@ -11,7 +18,9 @@ export const JsonSchema = z.object({
   uuid: UUIDSchema,
 });
 
-export const JsonBulkParamsSchema = GlobalParamsSchema.extend({
+export const JsonBulkParamsSchema = GlobalParamsSchema.pick({
+  readable: true,
+}).extend({
   count: z.number().int().positive().max(20000),
 });
 
