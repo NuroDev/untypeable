@@ -35,11 +35,15 @@
   "exports": {
     ".": "./dist/index",
     "./package.json": "./package.json",
+    "./runtime-safe": "./dist/runtime-safe",
     "./types": "./dist/types",
     "./zod": "./dist/zod"
   },
   "typesVersions": {
     "*": {
+      "runtime-safe": [
+        "./dist/runtime-safe.d.ts"
+      ],
       "types": [
         "./dist/types.d.ts"
       ],
