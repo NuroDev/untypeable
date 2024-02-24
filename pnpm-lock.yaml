@@ -83,40 +83,6 @@ importers:
         specifier: ^3.21.4
         version: 3.21.4
 
-  packages/lemonsqueezy:
-    dependencies:
-      untypeable:
-        specifier: ^0.2.1
-        version: 0.2.1
-    devDependencies:
-      '@types/node':
-        specifier: ^18.15.3
-        version: 18.15.3
-      '@vitest/ui':
-        specifier: ^0.29.7
-        version: 0.29.7
-      dotenv:
-        specifier: ^16.0.3
-        version: 16.0.3
-      minifaker:
-        specifier: ^1.34.1
-        version: 1.34.1
-      tsup:
-        specifier: ^6.7.0
-        version: 6.7.0(typescript@4.9.5)
-      typescript:
-        specifier: ^4.9.5
-        version: 4.9.5
-      undici:
-        specifier: ^5.21.0
-        version: 5.21.0
-      vitest:
-        specifier: ^0.29.7
-        version: 0.29.7(@vitest/ui@0.29.7)
-      zod:
-        specifier: ^3.21.4
-        version: 3.21.4
-
   packages/lil.apis:
     dependencies:
       untypeable:
@@ -760,10 +726,6 @@ packages:
 
   /@types/semver@7.5.7:
     resolution: {integrity: sha512-/wdoPq1QqkSj9/QOeKkFquEuPzQbHTWAMPH/PaUMB+JuR31lXhlWXRZ52IpfDYVlDOUBvX09uBrPwxGT1hjNBg==}
-    dev: true
-
-  /@types/uuid@8.3.4:
-    resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
     dev: true
 
   /@vitest/expect@0.29.7:
@@ -2051,14 +2013,6 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /minifaker@1.34.1:
-    resolution: {integrity: sha512-O9+c6GaUETgtKe65bJkpDTJxGcAALiUPqJtDv97dT3o0uP2HmyUVEguEGm6PLKuoSzZUmHqSTZ4cS7m8xKFEAg==}
-    dependencies:
-      '@types/uuid': 8.3.4
-      nanoid: 3.3.6
-      uuid: 8.3.2
-    dev: true
-
   /minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
@@ -3110,11 +3064,6 @@ packages:
   /untypeable@0.2.1:
     resolution: {integrity: sha512-W+OJ8Ms6O27n6g/UjiZMtxEffC4j5xGwyCLu0p0gZoKQWFMwofbL3wKQC16fOQWv6BMNZRQ0my0+BegkyjurtQ==}
     dev: false
-
-  /uuid@8.3.2:
-    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
-    hasBin: true
-    dev: true
 
   /validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
