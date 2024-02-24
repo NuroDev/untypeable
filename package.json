@@ -8,7 +8,7 @@
     "release:version": "changeset version",
     "release:status": "changeset status --verbose",
     "release:publish": "changeset publish",
-    "release": "yarn release:version && yarn release:publish",
+    "release": "$npm_execpath release:version && $npm_execpath release:publish",
     "test": "turbo run test"
   },
   "devDependencies": {
