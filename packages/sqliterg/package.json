@@ -1,6 +1,6 @@
 {
   "name": "@untypeable/sqliterg",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "Untypeable router type definitions & validators for the sqliterg API",
   "publishConfig": {
     "access": "public"
