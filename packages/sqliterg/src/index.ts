@@ -6,6 +6,8 @@ const u = initUntypeable();
 
 const router = u.router({
   "/:id": u.input<QueryParams>().output<QueryResponse>(),
+  "/:id/backup": u.output<unknown>(),
+  "/:id/macro/:macroId": u.output<unknown>(),
 });
 
 export type SqlitergRouter = typeof router;
