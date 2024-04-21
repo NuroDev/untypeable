@@ -1,0 +1,79 @@
+{
+  "name": "@untypeable/sqliterg",
+  "version": "1.0.2",
+  "description": "Untypeable router type definitions & validators for the sqliterg API",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/sqliterg",
+    "type": "git",
+    "url": "https://github.com/nurodev/untypeable.git"
+  },
+  "homepage": "https://docs.sqliterg.dev/",
+  "bugs": "https://github.com/nurodev/untypeable/issues",
+  "readme": "README.md",
+  "author": {
+    "name": "nurodev",
+    "email": "ben@nuro.dev",
+    "url": "https://nuro.dev"
+  },
+  "keywords": [
+    "api",
+    "sqlite",
+    "sqliterg",
+    "typescript",
+    "untypeable"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index",
+    "./package.json": "./package.json",
+    "./runtime-safe": "./dist/runtime-safe",
+    "./types": "./dist/types",
+    "./zod": "./dist/zod"
+  },
+  "typesVersions": {
+    "*": {
+      "runtime-safe": [
+        "./dist/runtime-safe.d.ts"
+      ],
+      "types": [
+        "./dist/types.d.ts"
+      ],
+      "zod": [
+        "./dist/zod.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "untypeable": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3",
+    "undici": "^6.6.2",
+    "zod": "^3.22.4"
+  },
+  "peerDependencies": {
+    "zod": "^3.22.4"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
+  }
+}
