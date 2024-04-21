@@ -13,5 +13,6 @@ export default defineConfig(({ watch = false }) => ({
   },
   format: ["cjs", "esm"],
   minify: true,
+  splitting: false,
   watch,
 }));
