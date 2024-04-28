@@ -1,6 +1,6 @@
 import { createTypeLevelClient } from "../packages/uuid.rocks/node_modules/untypeable";
 
-import type { UUIDRocksRouter } from "../packages/uuid.rocks";
+import type { UUIDRocksRouter } from "../packages/uuid.rocks/src";
 
 export default async function main() {
   const client = createTypeLevelClient<UUIDRocksRouter>(
