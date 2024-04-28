@@ -1,0 +1,595 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`fakestoreapi.com - user > DELETE > /users/:id 1`] = `
+{
+  "__v": 0,
+  "address": {
+    "city": "kilcoole",
+    "geolocation": {
+      "lat": "-37.3159",
+      "long": "81.1496",
+    },
+    "number": 7682,
+    "street": "new road",
+    "zipcode": "12926-3874",
+  },
+  "email": "john@gmail.com",
+  "id": 1,
+  "name": {
+    "firstname": "john",
+    "lastname": "doe",
+  },
+  "password": "m38rmF$",
+  "phone": "1-570-236-7033",
+  "username": "johnd",
+}
+`;
+
+exports[`fakestoreapi.com - user > GET > /users 1`] = `
+[
+  {
+    "__v": 0,
+    "address": {
+      "city": "kilcoole",
+      "geolocation": {
+        "lat": "-37.3159",
+        "long": "81.1496",
+      },
+      "number": 7682,
+      "street": "new road",
+      "zipcode": "12926-3874",
+    },
+    "email": "john@gmail.com",
+    "id": 1,
+    "name": {
+      "firstname": "john",
+      "lastname": "doe",
+    },
+    "password": "m38rmF$",
+    "phone": "1-570-236-7033",
+    "username": "johnd",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "kilcoole",
+      "geolocation": {
+        "lat": "-37.3159",
+        "long": "81.1496",
+      },
+      "number": 7267,
+      "street": "Lovers Ln",
+      "zipcode": "12926-3874",
+    },
+    "email": "morrison@gmail.com",
+    "id": 2,
+    "name": {
+      "firstname": "david",
+      "lastname": "morrison",
+    },
+    "password": "83r5^_",
+    "phone": "1-570-236-7033",
+    "username": "mor_2314",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "Cullman",
+      "geolocation": {
+        "lat": "40.3467",
+        "long": "-30.1310",
+      },
+      "number": 86,
+      "street": "Frances Ct",
+      "zipcode": "29567-1452",
+    },
+    "email": "kevin@gmail.com",
+    "id": 3,
+    "name": {
+      "firstname": "kevin",
+      "lastname": "ryan",
+    },
+    "password": "kev02937@",
+    "phone": "1-567-094-1345",
+    "username": "kevinryan",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "San Antonio",
+      "geolocation": {
+        "lat": "50.3467",
+        "long": "-20.1310",
+      },
+      "number": 6454,
+      "street": "Hunters Creek Dr",
+      "zipcode": "98234-1734",
+    },
+    "email": "don@gmail.com",
+    "id": 4,
+    "name": {
+      "firstname": "don",
+      "lastname": "romer",
+    },
+    "password": "ewedon",
+    "phone": "1-765-789-6734",
+    "username": "donero",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "san Antonio",
+      "geolocation": {
+        "lat": "40.3467",
+        "long": "-40.1310",
+      },
+      "number": 245,
+      "street": "adams St",
+      "zipcode": "80796-1234",
+    },
+    "email": "derek@gmail.com",
+    "id": 5,
+    "name": {
+      "firstname": "derek",
+      "lastname": "powell",
+    },
+    "password": "jklg*_56",
+    "phone": "1-956-001-1945",
+    "username": "derek",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "el paso",
+      "geolocation": {
+        "lat": "20.1677",
+        "long": "-10.6789",
+      },
+      "number": 124,
+      "street": "prospect st",
+      "zipcode": "12346-0456",
+    },
+    "email": "david_r@gmail.com",
+    "id": 6,
+    "name": {
+      "firstname": "david",
+      "lastname": "russell",
+    },
+    "password": "3478*#54",
+    "phone": "1-678-345-9856",
+    "username": "david_r",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "fresno",
+      "geolocation": {
+        "lat": "10.3456",
+        "long": "20.6419",
+      },
+      "number": 1342,
+      "street": "saddle st",
+      "zipcode": "96378-0245",
+    },
+    "email": "miriam@gmail.com",
+    "id": 7,
+    "name": {
+      "firstname": "miriam",
+      "lastname": "snyder",
+    },
+    "password": "f238&@*$",
+    "phone": "1-123-943-0563",
+    "username": "snyder",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "mesa",
+      "geolocation": {
+        "lat": "50.3456",
+        "long": "10.6419",
+      },
+      "number": 1342,
+      "street": "vally view ln",
+      "zipcode": "96378-0245",
+    },
+    "email": "william@gmail.com",
+    "id": 8,
+    "name": {
+      "firstname": "william",
+      "lastname": "hopkins",
+    },
+    "password": "William56$hj",
+    "phone": "1-478-001-0890",
+    "username": "hopkins",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "miami",
+      "geolocation": {
+        "lat": "40.12456",
+        "long": "20.5419",
+      },
+      "number": 345,
+      "street": "avondale ave",
+      "zipcode": "96378-0245",
+    },
+    "email": "kate@gmail.com",
+    "id": 9,
+    "name": {
+      "firstname": "kate",
+      "lastname": "hale",
+    },
+    "password": "kfejk@*_",
+    "phone": "1-678-456-1934",
+    "username": "kate_h",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "fort wayne",
+      "geolocation": {
+        "lat": "30.24788",
+        "long": "-20.545419",
+      },
+      "number": 526,
+      "street": "oak lawn ave",
+      "zipcode": "10256-4532",
+    },
+    "email": "jimmie@gmail.com",
+    "id": 10,
+    "name": {
+      "firstname": "jimmie",
+      "lastname": "klein",
+    },
+    "password": "klein*#%*",
+    "phone": "1-104-001-4567",
+    "username": "jimmie_k",
+  },
+]
+`;
+
+exports[`fakestoreapi.com - user > GET > /users/:id 1`] = `
+{
+  "__v": 0,
+  "address": {
+    "city": "kilcoole",
+    "geolocation": {
+      "lat": "-37.3159",
+      "long": "81.1496",
+    },
+    "number": 7682,
+    "street": "new road",
+    "zipcode": "12926-3874",
+  },
+  "email": "john@gmail.com",
+  "id": 1,
+  "name": {
+    "firstname": "john",
+    "lastname": "doe",
+  },
+  "password": "m38rmF$",
+  "phone": "1-570-236-7033",
+  "username": "johnd",
+}
+`;
+
+exports[`fakestoreapi.com - user > GET > /users?limit=1&order=desc 1`] = `
+[
+  {
+    "__v": 0,
+    "address": {
+      "city": "kilcoole",
+      "geolocation": {
+        "lat": "-37.3159",
+        "long": "81.1496",
+      },
+      "number": 7682,
+      "street": "new road",
+      "zipcode": "12926-3874",
+    },
+    "email": "john@gmail.com",
+    "id": 1,
+    "name": {
+      "firstname": "john",
+      "lastname": "doe",
+    },
+    "password": "m38rmF$",
+    "phone": "1-570-236-7033",
+    "username": "johnd",
+  },
+]
+`;
+
+exports[`fakestoreapi.com - user > GET > /users?limit=2 1`] = `
+[
+  {
+    "__v": 0,
+    "address": {
+      "city": "kilcoole",
+      "geolocation": {
+        "lat": "-37.3159",
+        "long": "81.1496",
+      },
+      "number": 7682,
+      "street": "new road",
+      "zipcode": "12926-3874",
+    },
+    "email": "john@gmail.com",
+    "id": 1,
+    "name": {
+      "firstname": "john",
+      "lastname": "doe",
+    },
+    "password": "m38rmF$",
+    "phone": "1-570-236-7033",
+    "username": "johnd",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "kilcoole",
+      "geolocation": {
+        "lat": "-37.3159",
+        "long": "81.1496",
+      },
+      "number": 7267,
+      "street": "Lovers Ln",
+      "zipcode": "12926-3874",
+    },
+    "email": "morrison@gmail.com",
+    "id": 2,
+    "name": {
+      "firstname": "david",
+      "lastname": "morrison",
+    },
+    "password": "83r5^_",
+    "phone": "1-570-236-7033",
+    "username": "mor_2314",
+  },
+]
+`;
+
+exports[`fakestoreapi.com - user > GET > /users?order=desc 1`] = `
+[
+  {
+    "__v": 0,
+    "address": {
+      "city": "kilcoole",
+      "geolocation": {
+        "lat": "-37.3159",
+        "long": "81.1496",
+      },
+      "number": 7682,
+      "street": "new road",
+      "zipcode": "12926-3874",
+    },
+    "email": "john@gmail.com",
+    "id": 1,
+    "name": {
+      "firstname": "john",
+      "lastname": "doe",
+    },
+    "password": "m38rmF$",
+    "phone": "1-570-236-7033",
+    "username": "johnd",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "kilcoole",
+      "geolocation": {
+        "lat": "-37.3159",
+        "long": "81.1496",
+      },
+      "number": 7267,
+      "street": "Lovers Ln",
+      "zipcode": "12926-3874",
+    },
+    "email": "morrison@gmail.com",
+    "id": 2,
+    "name": {
+      "firstname": "david",
+      "lastname": "morrison",
+    },
+    "password": "83r5^_",
+    "phone": "1-570-236-7033",
+    "username": "mor_2314",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "Cullman",
+      "geolocation": {
+        "lat": "40.3467",
+        "long": "-30.1310",
+      },
+      "number": 86,
+      "street": "Frances Ct",
+      "zipcode": "29567-1452",
+    },
+    "email": "kevin@gmail.com",
+    "id": 3,
+    "name": {
+      "firstname": "kevin",
+      "lastname": "ryan",
+    },
+    "password": "kev02937@",
+    "phone": "1-567-094-1345",
+    "username": "kevinryan",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "San Antonio",
+      "geolocation": {
+        "lat": "50.3467",
+        "long": "-20.1310",
+      },
+      "number": 6454,
+      "street": "Hunters Creek Dr",
+      "zipcode": "98234-1734",
+    },
+    "email": "don@gmail.com",
+    "id": 4,
+    "name": {
+      "firstname": "don",
+      "lastname": "romer",
+    },
+    "password": "ewedon",
+    "phone": "1-765-789-6734",
+    "username": "donero",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "san Antonio",
+      "geolocation": {
+        "lat": "40.3467",
+        "long": "-40.1310",
+      },
+      "number": 245,
+      "street": "adams St",
+      "zipcode": "80796-1234",
+    },
+    "email": "derek@gmail.com",
+    "id": 5,
+    "name": {
+      "firstname": "derek",
+      "lastname": "powell",
+    },
+    "password": "jklg*_56",
+    "phone": "1-956-001-1945",
+    "username": "derek",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "el paso",
+      "geolocation": {
+        "lat": "20.1677",
+        "long": "-10.6789",
+      },
+      "number": 124,
+      "street": "prospect st",
+      "zipcode": "12346-0456",
+    },
+    "email": "david_r@gmail.com",
+    "id": 6,
+    "name": {
+      "firstname": "david",
+      "lastname": "russell",
+    },
+    "password": "3478*#54",
+    "phone": "1-678-345-9856",
+    "username": "david_r",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "fresno",
+      "geolocation": {
+        "lat": "10.3456",
+        "long": "20.6419",
+      },
+      "number": 1342,
+      "street": "saddle st",
+      "zipcode": "96378-0245",
+    },
+    "email": "miriam@gmail.com",
+    "id": 7,
+    "name": {
+      "firstname": "miriam",
+      "lastname": "snyder",
+    },
+    "password": "f238&@*$",
+    "phone": "1-123-943-0563",
+    "username": "snyder",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "mesa",
+      "geolocation": {
+        "lat": "50.3456",
+        "long": "10.6419",
+      },
+      "number": 1342,
+      "street": "vally view ln",
+      "zipcode": "96378-0245",
+    },
+    "email": "william@gmail.com",
+    "id": 8,
+    "name": {
+      "firstname": "william",
+      "lastname": "hopkins",
+    },
+    "password": "William56$hj",
+    "phone": "1-478-001-0890",
+    "username": "hopkins",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "miami",
+      "geolocation": {
+        "lat": "40.12456",
+        "long": "20.5419",
+      },
+      "number": 345,
+      "street": "avondale ave",
+      "zipcode": "96378-0245",
+    },
+    "email": "kate@gmail.com",
+    "id": 9,
+    "name": {
+      "firstname": "kate",
+      "lastname": "hale",
+    },
+    "password": "kfejk@*_",
+    "phone": "1-678-456-1934",
+    "username": "kate_h",
+  },
+  {
+    "__v": 0,
+    "address": {
+      "city": "fort wayne",
+      "geolocation": {
+        "lat": "30.24788",
+        "long": "-20.545419",
+      },
+      "number": 526,
+      "street": "oak lawn ave",
+      "zipcode": "10256-4532",
+    },
+    "email": "jimmie@gmail.com",
+    "id": 10,
+    "name": {
+      "firstname": "jimmie",
+      "lastname": "klein",
+    },
+    "password": "klein*#%*",
+    "phone": "1-104-001-4567",
+    "username": "jimmie_k",
+  },
+]
+`;
+
+exports[`fakestoreapi.com - user > PATCH > /users/:id 1`] = `
+{
+  "id": 2,
+}
+`;
+
+exports[`fakestoreapi.com - user > POST > /users 1`] = `
+{
+  "id": 11,
+}
+`;
+
+exports[`fakestoreapi.com - user > PUT > /users/:id 1`] = `
+{
+  "id": 1,
+}
+`;
