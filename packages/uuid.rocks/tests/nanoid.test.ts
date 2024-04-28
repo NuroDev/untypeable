@@ -14,6 +14,4 @@ describe.concurrent("uuid.rocks - nanoid", () => {
 
     expect(NanoIDSchema.safeParse(nanoid).success).toBe(true);
   });
-
-  // TODO: Add tests to check global parameters work as intended
 });

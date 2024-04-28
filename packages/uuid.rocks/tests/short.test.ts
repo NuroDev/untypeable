@@ -23,6 +23,4 @@ describe.concurrent("uuid.rocks - short", () => {
 
     expect(ShortUUIDSchema.safeParse(short).success).toBe(true);
   });
-
-  // TODO: Add tests to check global parameters work as intended
 });

@@ -61,6 +61,4 @@ describe.concurrent("uuid.rocks - json", () => {
 
     expect(JsonMapSchema.safeParse(jsonMap).success).toBe(true);
   });
-
-  // TODO: Add tests to check global parameters work as intended
 });

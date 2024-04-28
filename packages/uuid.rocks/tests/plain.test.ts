@@ -38,6 +38,4 @@ describe.concurrent("uuid.rocks - plain", () => {
 
     expect(PlainMapSchema.safeParse(plainMap).success).toBe(true);
   });
-
-  // TODO: Add tests to check global parameters work as intended
 });
