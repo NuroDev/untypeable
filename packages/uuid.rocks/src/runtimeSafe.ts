@@ -1,6 +1,7 @@
 import { initUntypeable } from "untypeable";
 
 import { GlobalParamsSchema } from "./_shared/_shared.validators";
+import { EmojiSchema, EmojiJsonSchema } from "./emoji/emoji.validators";
 import {
   JsonBulkParamsSchema,
   JsonBulkSchema,
@@ -23,6 +24,12 @@ import { StatsSchema } from "./stats/stats.validators";
 const u = initUntypeable();
 
 export const uuidRocksSafeRouter = u.router({
+  /** Gets a uuid as plain text */
+  "/api/uuid/emoji": u.output(EmojiSchema),
+
+  /** Gets single uuid with JSON output */
+  "/api/uuid/emoji?json": u.output(EmojiJsonSchema),
+
   /** Gets single uuid with JSON output */
   "/json": u.input(GlobalParamsSchema).output(JsonSchema),
 

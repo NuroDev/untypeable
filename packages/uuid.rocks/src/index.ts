@@ -1,6 +1,7 @@
 import { initUntypeable } from "untypeable";
 
 import type { GlobalParams } from "./types";
+import type { Emoji, EmojiJson } from "./emoji/emoji.types";
 import type {
   Json,
   JsonBulk,
@@ -23,6 +24,12 @@ import type { Stats } from "./stats/stats.types";
 const u = initUntypeable();
 
 const router = u.router({
+  /** Gets a uuid as plain text */
+  "/api/uuid/emoji": u.output<Emoji>(),
+
+  /** Gets single uuid with JSON output */
+  "/api/uuid/emoji?json": u.output<EmojiJson>(),
+
   /** Gets single uuid with JSON output */
   "/json": u.input<GlobalParams>().output<Json>(),
 
