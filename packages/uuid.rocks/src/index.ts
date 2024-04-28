@@ -2,6 +2,7 @@ import { initUntypeable } from "untypeable";
 
 import type { GlobalParams } from "./types";
 import type { Emoji, EmojiJson } from "./emoji/emoji.types";
+import type { Hash, HashParams } from "./hash/hash.types";
 import type {
   Json,
   JsonBulk,
@@ -30,6 +31,9 @@ const router = u.router({
 
   /** Gets single uuid with JSON output */
   "/api/uuid/emoji?json": u.output<EmojiJson>(),
+
+  /** This api will hash data in the url or the body. */
+  "/api/hash/:algo/:data": u.input<HashParams>().output<Hash>(),
 
   /** Responds with ‘pong’ or ‘ping’ */
   "/api/ping": u.output<PingPong>(),
