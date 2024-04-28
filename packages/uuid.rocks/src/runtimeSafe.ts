@@ -3,6 +3,7 @@ import { initUntypeable } from "untypeable";
 import { GlobalParamsSchema } from "./_shared/_shared.validators";
 import { EmojiSchema, EmojiJsonSchema } from "./emoji/emoji.validators";
 import { HashParamsSchema, HashSchema } from "./hash/hash.validators";
+import { IpSchema, IpJsonSchema } from "./ip/ip.validators";
 import {
   JsonBulkParamsSchema,
   JsonBulkSchema,
@@ -35,8 +36,14 @@ export const uuidRocksSafeRouter = u.router({
   /** Gets single uuid with JSON output */
   "/api/uuid/emoji?json": u.output(EmojiJsonSchema),
 
-  /** This api will hash data in the url or the body. */
+  /** This api will hash data in the url or the body */
   "/api/hash/:algo/:data": u.input(HashParamsSchema).output(HashSchema),
+
+  /** This api will return what IP you’re connecting from */
+  "/api/ip": u.output(IpSchema),
+
+  /** This api will return what IP you’re connecting from in JSON format with additional information */
+  "/api/ip?json": u.output(IpJsonSchema),
 
   /** Responds with ‘pong’ or ‘ping’ */
   "/api/ping": u.output(PingPongSchema),

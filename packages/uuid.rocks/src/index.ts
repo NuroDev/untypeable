@@ -3,6 +3,7 @@ import { initUntypeable } from "untypeable";
 import type { GlobalParams } from "./types";
 import type { Emoji, EmojiJson } from "./emoji/emoji.types";
 import type { Hash, HashParams } from "./hash/hash.types";
+import type { Ip, IpJson } from "./ip/ip.types";
 import type {
   Json,
   JsonBulk,
@@ -34,6 +35,12 @@ const router = u.router({
 
   /** This api will hash data in the url or the body. */
   "/api/hash/:algo/:data": u.input<HashParams>().output<Hash>(),
+
+  /** This api will return what IP you’re connecting from */
+  "/api/ip": u.output<Ip>(),
+
+  /** This api will return what IP you’re connecting from in JSON format with additional information */
+  "/api/ip?json": u.output<IpJson>(),
 
   /** Responds with ‘pong’ or ‘ping’ */
   "/api/ping": u.output<PingPong>(),
