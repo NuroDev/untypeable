@@ -1,7 +1,7 @@
-export * from "./films/films.types";
-export * from "./people/people.types";
-export * from "./planets/planets.types";
-export * from "./root/root.types";
-export * from "./species/species.types";
-export * from "./starships/starships.types";
-export * from "./vehicles/vehicles.types";
+export type * from "./films/films.types";
+export type * from "./people/people.types";
+export type * from "./planets/planets.types";
+export type * from "./root/root.types";
+export type * from "./species/species.types";
+export type * from "./starships/starships.types";
+export type * from "./vehicles/vehicles.types";

@@ -1,6 +1,6 @@
-export * from "./album/album.types";
-export * from "./comment/comment.types";
-export * from "./photo/photo.types";
-export * from "./post/post.types";
-export * from "./todo/todo.types";
-export * from "./user/user.types";
+export type * from "./album/album.types";
+export type * from "./comment/comment.types";
+export type * from "./photo/photo.types";
+export type * from "./post/post.types";
+export type * from "./todo/todo.types";
+export type * from "./user/user.types";

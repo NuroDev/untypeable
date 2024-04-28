@@ -1,9 +1,9 @@
-export * from "./_shared/_shared.types";
-export * from "./emoji/emoji.types";
-export * from "./hash/hash.types";
-export * from "./ip/ip.types";
-export * from "./json/json.types";
-export * from "./nanoid/nanoid.types";
-export * from "./ping-pong/ping-pong.types";
-export * from "./plain/plain.types";
-export * from "./stats/stats.types";
+export type * from "./_shared/_shared.types";
+export type * from "./emoji/emoji.types";
+export type * from "./hash/hash.types";
+export type * from "./ip/ip.types";
+export type * from "./json/json.types";
+export type * from "./nanoid/nanoid.types";
+export type * from "./ping-pong/ping-pong.types";
+export type * from "./plain/plain.types";
+export type * from "./stats/stats.types";

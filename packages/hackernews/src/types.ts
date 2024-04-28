@@ -1,3 +1,3 @@
-export * from "./items/items.types";
-export * from "./liveData/liveData.types";
-export * from "./users/users.types";
+export type * from "./items/items.types";
+export type * from "./liveData/liveData.types";
+export type * from "./users/users.types";

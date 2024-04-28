@@ -1,2 +1,2 @@
-export * from "./log/log.types";
-export * from "./insight/insight.types";
+export type * from "./log/log.types";
+export type * from "./insight/insight.types";
