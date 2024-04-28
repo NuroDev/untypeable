@@ -25,6 +25,16 @@ import type {
   UpdateProduct,
   CreateProduct,
 } from "./products/products.types";
+import type {
+  CreateUserParams,
+  DeleteUserParams,
+  UpdateUser,
+  UpdateUserParams,
+  User,
+  UserParams,
+  Users,
+  UsersParams,
+} from "./user/user.types";
 
 const u = initUntypeable().args<
   "GET" | "POST" | "PUT" | "PATCH" | "DELETE",
@@ -102,25 +112,25 @@ const productRouter = u.router({
 const userRouter = u.router({
   DELETE: {
     /** Delete a user */
-    "/users/:id": u.input<unknown>().output<unknown>(),
+    "/users/:id": u.input<DeleteUserParams>().output<User>(),
   },
   GET: {
     /** Get all users */
-    "/users": u.input<unknown>().output<unknown>(),
+    "/users": u.input<UsersParams>().output<Users>(),
     /** Get a single user */
-    "/users/:id": u.input<unknown>().output<unknown>(),
+    "/users/:id": u.input<UserParams>().output<User>(),
   },
   PATCH: {
     /** Update a users */
-    "/users/:id": u.input<unknown>().output<unknown>(),
+    "/users/:id": u.input<UpdateUserParams>().output<UpdateUser>(),
   },
   POST: {
     /** Add a new user */
-    "/users": u.input<unknown>().output<unknown>(),
+    "/users": u.input<CreateUserParams>().output<User>(),
   },
   PUT: {
     /** Update a users */
-    "/users/:id": u.input<unknown>().output<unknown>(),
+    "/users/:id": u.input<UpdateUserParams>().output<UpdateUser>(),
   },
 });
 
