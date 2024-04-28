@@ -10,6 +10,7 @@ import {
   UpdateCartParamsSchema,
   UserCartsParamsSchema,
 } from "./cart/cart.validators";
+import { LoginParamsSchema, LoginSchema } from "./login/login.validators";
 import {
   CreateProductParamsSchema,
   CreateProductSchema,
@@ -72,11 +73,9 @@ const cartRouter = u.router({
 });
 
 const loginRouter = u.router({
-  DELETE: {},
-  GET: {},
-  PATCH: {},
-  POST: {},
-  PUT: {},
+  POST: {
+    "/auth/login": u.input(LoginParamsSchema).output(LoginSchema),
+  },
 });
 
 const productRouter = u.router({

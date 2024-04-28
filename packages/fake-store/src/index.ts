@@ -10,6 +10,7 @@ import type {
   UpdateCartParams,
   UserCartsParams,
 } from "./cart/cart.types";
+import type { Login, LoginParams } from "./login/login.types";
 import type {
   Product,
   ProductsParams,
@@ -70,11 +71,9 @@ const cartRouter = u.router({
 });
 
 const loginRouter = u.router({
-  DELETE: {},
-  GET: {},
-  PATCH: {},
-  POST: {},
-  PUT: {},
+  POST: {
+    "/auth/login": u.input<LoginParams>().output<Login>(),
+  },
 });
 
 const productRouter = u.router({
