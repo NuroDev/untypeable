@@ -22,11 +22,30 @@ const u = initUntypeable().args<
 >();
 
 const cartRouter = u.router({
-  DELETE: {},
-  GET: {},
-  PATCH: {},
-  POST: {},
-  PUT: {},
+  DELETE: {
+    /** Delete a cart */
+    "/carts/:id": u.input().output(),
+  },
+  GET: {
+    /** Get all carts */
+    "/carts": u.input().output(),
+    /** Get a single cart */
+    "/carts/:id": u.input().output(),
+    /** Get user carts */
+    "/carts/user/:userId": u.input().output(),
+  },
+  PATCH: {
+    /** Update a product */
+    "/carts/:id": u.input().output(),
+  },
+  POST: {
+    /** Add a new product */
+    "/carts": u.input().output(),
+  },
+  PUT: {
+    /** Update a product */
+    "/carts/:id": u.input().output(),
+  },
 });
 
 const loginRouter = u.router({
