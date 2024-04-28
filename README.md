@@ -40,6 +40,7 @@ The following are all currently supported `@untypeable` packages. Click on one b
 - [🗿 JSONPlaceholder](packages/jsonplaceholder)
 - [🚀 SpaceX](packages/spacex)
 - [🪐 SWAPI](packages/swapi)
+- [🔢 UUID.rocks](packages/uuid.rocks)
 
 ## 🏃‍♂️ Examples
 
