@@ -14,45 +14,42 @@ export default async function main() {
     }
   );
 
-  const [
-    json,
-    bulkJson,
-    jsonMap,
-    nanoId,
-    plain,
-    plainBulk,
-    plainMap,
-    plainNamespaceMap,
-    s,
-    short,
-    stats,
-    ulid,
-  ] = await Promise.all([
-    client("/json"),
-    client("/json/bulk", { count: 2 }),
-    client("/json/map/:key", { key: "foobar" }),
-    client("/nanoid"),
-    client("/plain"),
-    client("/plain/bulk", { count: 2 }),
-    client("/plain/map/:key", { key: "foobar" }),
-    client("/plain/map/:namespace/:key", { namespace: "foo", key: "bar" }),
-    client("/s"),
-    client("/short"),
-    client("/stats"),
-    client("/ulid"),
-  ]);
-  console.log({
-    json,
-    bulkJson,
-    jsonMap,
-    nanoId,
-    plain,
-    plainBulk,
-    plainMap,
-    plainNamespaceMap,
-    s,
-    short,
-    stats,
-    ulid,
+  const json = await client("/json");
+  console.log({ json });
+
+  const bulkJson = await client("/json/bulk", { count: 2 });
+  console.log({ bulkJson });
+
+  const jsonMap = await client("/json/map/:key", { key: "foobar" });
+  console.log({ jsonMap });
+
+  const nanoId = await client("/nanoid");
+  console.log({ nanoId });
+
+  const plain = await client("/plain");
+  console.log({ plain });
+
+  const plainBulk = await client("/plain/bulk", { count: 2 });
+  console.log({ plainBulk });
+
+  const plainMap = await client("/plain/map/:key", { key: "foobar" });
+  console.log({ plainMap });
+
+  const plainNamespaceMap = await client("/plain/map/:namespace/:key", {
+    namespace: "foo",
+    key: "bar",
   });
+  console.log({ plainNamespaceMap });
+
+  const s = await client("/s");
+  console.log({ s });
+
+  const short = await client("/short");
+  console.log({ short });
+
+  const stats = await client("/stats");
+  console.log({ stats });
+
+  const ulid = await client("/ulid");
+  console.log({ ulid });
 }
