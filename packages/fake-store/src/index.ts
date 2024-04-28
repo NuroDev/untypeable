@@ -1,6 +1,13 @@
 import { initUntypeable } from "untypeable";
 
 import type {
+  Cart,
+  CartParams,
+  Carts,
+  CartsParams,
+  UserCartsParams,
+} from "./cart/cart.types";
+import type {
   Product,
   ProductsParams,
   Products,
@@ -28,11 +35,11 @@ const cartRouter = u.router({
   },
   GET: {
     /** Get all carts */
-    "/carts": u.input<unknown>().output<unknown>(),
+    "/carts": u.input<CartsParams>().output<Carts>(),
     /** Get a single cart */
-    "/carts/:id": u.input<unknown>().output<unknown>(),
+    "/carts/:id": u.input<CartParams>().output<Cart>(),
     /** Get user carts */
-    "/carts/user/:userId": u.input<unknown>().output<unknown>(),
+    "/carts/user/:userId": u.input<UserCartsParams>().output<UserCartsParams>(),
   },
   PATCH: {
     /** Update a product */
