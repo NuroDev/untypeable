@@ -29,8 +29,9 @@
     "weather"
   ],
   "license": "MIT",
+  "type": "module",
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index",
@@ -59,6 +60,7 @@
   ],
   "scripts": {
     "build": "tsup",
+    "dev": "tsup --watch",
     "test": "vitest run"
   },
   "dependencies": {

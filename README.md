@@ -35,7 +35,6 @@ The following are all currently supported `@untypeable` packages. Click on one b
 
 - [🗞️ Hacker News](packages/hackernews)
 - [🗿 JSONPlaceholder](packages/jsonplaceholder)
-- [🍋 Lemon Squeezy](packages/lemonsqueezy)
 - [🤏 lil APIs](packages/lil.apis)
 - [📱 LogSnag](packages/logsnag)
 - [🗿 JSONPlaceholder](packages/jsonplaceholder)
