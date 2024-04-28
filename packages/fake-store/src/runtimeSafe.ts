@@ -25,6 +25,17 @@ import {
   UpdateProductParamsSchema,
   UpdateProductSchema,
 } from "./products/products.validators";
+import {
+  CreateUserSchema,
+  CreateUserParamsSchema,
+  DeleteUserParamsSchema,
+  UpdateUserSchema,
+  UpdateUserParamsSchema,
+  UserSchema,
+  UserParamsSchema,
+  UsersSchema,
+  UsersParamsSchema,
+} from "./user/user.validators";
 
 const u = initUntypeable().args<
   "GET" | "POST" | "PUT" | "PATCH" | "DELETE",
@@ -108,25 +119,25 @@ const productRouter = u.router({
 const userRouter = u.router({
   DELETE: {
     /** Delete a user */
-    "/users/:id": u.input().output(),
+    "/users/:id": u.input(DeleteUserParamsSchema).output(UserSchema),
   },
   GET: {
     /** Get all users */
-    "/users": u.input().output(),
+    "/users": u.input(UsersParamsSchema).output(UsersSchema),
     /** Get a single user */
-    "/users/:id": u.input().output(),
+    "/users/:id": u.input(UserParamsSchema).output(UserSchema),
   },
   PATCH: {
     /** Update a users */
-    "/users/:id": u.input().output(),
+    "/users/:id": u.input(UpdateUserParamsSchema).output(UpdateUserSchema),
   },
   POST: {
     /** Add a new user */
-    "/users": u.input().output(),
+    "/users": u.input(CreateUserParamsSchema).output(CreateUserSchema),
   },
   PUT: {
     /** Update a users */
-    "/users/:id": u.input().output(),
+    "/users/:id": u.input(UpdateUserParamsSchema).output(UpdateUserSchema),
   },
 });
 

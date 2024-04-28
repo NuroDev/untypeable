@@ -26,6 +26,7 @@ import type {
   CreateProduct,
 } from "./products/products.types";
 import type {
+  CreateUser,
   CreateUserParams,
   DeleteUserParams,
   UpdateUser,
@@ -126,7 +127,7 @@ const userRouter = u.router({
   },
   POST: {
     /** Add a new user */
-    "/users": u.input<CreateUserParams>().output<User>(),
+    "/users": u.input<CreateUserParams>().output<CreateUser>(),
   },
   PUT: {
     /** Update a users */
