@@ -5,6 +5,9 @@ import type {
   CartParams,
   Carts,
   CartsParams,
+  CreateCartParams,
+  DeleteCartParams,
+  UpdateCartParams,
   UserCartsParams,
 } from "./cart/cart.types";
 import type {
@@ -31,7 +34,7 @@ const u = initUntypeable().args<
 const cartRouter = u.router({
   DELETE: {
     /** Delete a cart */
-    "/carts/:id": u.input<unknown>().output<unknown>(),
+    "/carts/:id": u.input<DeleteCartParams>().output<Cart>(),
   },
   GET: {
     /** Get all carts */
@@ -43,15 +46,15 @@ const cartRouter = u.router({
   },
   PATCH: {
     /** Update a product */
-    "/carts/:id": u.input<unknown>().output<unknown>(),
+    "/carts/:id": u.input<UpdateCartParams>().output<Cart>(),
   },
   POST: {
     /** Add a new product */
-    "/carts": u.input<unknown>().output<unknown>(),
+    "/carts": u.input<CreateCartParams>().output<Cart>(),
   },
   PUT: {
     /** Update a product */
-    "/carts/:id": u.input<unknown>().output<unknown>(),
+    "/carts/:id": u.input<UpdateCartParams>().output<Cart>(),
   },
 });
 

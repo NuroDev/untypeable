@@ -5,12 +5,21 @@ import type {
   CartSchema,
   CartsParamsSchema,
   CartsSchema,
+  CreateCartParamsSchema,
+  DeleteCartParamsSchema,
+  UpdateCartParamsSchema,
   UserCartsParamsSchema,
   UserCartsSchema,
 } from "./cart.validators";
 
 export type CartParams = z.infer<typeof CartParamsSchema>;
 export type Cart = z.infer<typeof CartSchema>;
+
+export type CreateCartParams = z.infer<typeof CreateCartParamsSchema>;
+
+export type UpdateCartParams = z.infer<typeof UpdateCartParamsSchema>;
+
+export type DeleteCartParams = z.infer<typeof DeleteCartParamsSchema>;
 
 // ------------------------------------------------------------------------
 

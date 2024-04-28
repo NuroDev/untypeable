@@ -1,6 +1,16 @@
 import { initUntypeable } from "untypeable";
 
 import {
+  CartSchema,
+  CartParamsSchema,
+  CartsSchema,
+  CartsParamsSchema,
+  CreateCartParamsSchema,
+  DeleteCartParamsSchema,
+  UpdateCartParamsSchema,
+  UserCartsParamsSchema,
+} from "./cart/cart.validators";
+import {
   CreateProductParamsSchema,
   CreateProductSchema,
   DeleteProductParamsSchema,
@@ -24,27 +34,29 @@ const u = initUntypeable().args<
 const cartRouter = u.router({
   DELETE: {
     /** Delete a cart */
-    "/carts/:id": u.input().output(),
+    "/carts/:id": u.input(DeleteCartParamsSchema).output(CartSchema),
   },
   GET: {
     /** Get all carts */
-    "/carts": u.input().output(),
+    "/carts": u.input(CartsParamsSchema).output(CartsSchema),
     /** Get a single cart */
-    "/carts/:id": u.input().output(),
+    "/carts/:id": u.input(CartParamsSchema).output(CartSchema),
     /** Get user carts */
-    "/carts/user/:userId": u.input().output(),
+    "/carts/user/:userId": u
+      .input(UserCartsParamsSchema)
+      .output(UserCartsParamsSchema),
   },
   PATCH: {
     /** Update a product */
-    "/carts/:id": u.input().output(),
+    "/carts/:id": u.input(UpdateCartParamsSchema).output(CartSchema),
   },
   POST: {
     /** Add a new product */
-    "/carts": u.input().output(),
+    "/carts": u.input(CreateCartParamsSchema).output(CartSchema),
   },
   PUT: {
     /** Update a product */
-    "/carts/:id": u.input().output(),
+    "/carts/:id": u.input(UpdateCartParamsSchema).output(CartSchema),
   },
 });
 
