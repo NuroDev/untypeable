@@ -1,7 +1,88 @@
 import { initUntypeable } from "untypeable";
 
-const u = initUntypeable();
+import type {
+  Product,
+  ProductsParams,
+  Products,
+  CreateProductParams,
+  UpdateProductParams,
+  ProductParams,
+  ProductsCategories,
+  ProductsCategoriesParams,
+  ProductsCategoryParams,
+  ProductsCategory,
+  DeleteProductParams,
+  UpdateProduct,
+  CreateProduct,
+} from "./products/products.types";
 
-const router = u.router({});
+const u = initUntypeable().args<
+  "GET" | "POST" | "PUT" | "PATCH" | "DELETE",
+  string
+>();
+
+const cartRouter = u.router({
+  DELETE: {},
+  GET: {},
+  PATCH: {},
+  POST: {},
+  PUT: {},
+});
+
+const loginRouter = u.router({
+  DELETE: {},
+  GET: {},
+  PATCH: {},
+  POST: {},
+  PUT: {},
+});
+
+const productRouter = u.router({
+  DELETE: {
+    /** Delete a product */
+    "/products/:id": u.input<DeleteProductParams>().output<Product>(),
+  },
+  GET: {
+    /** Get all products */
+    "/products": u.input<ProductsParams>().output<Products>(),
+    /** Get a single product */
+    "/products/:id": u.input<ProductParams>().output<Product>(),
+    /** Get all categories */
+    "/products/categories": u
+      .input<ProductsCategoriesParams>()
+      .output<ProductsCategories>(),
+    /** Get products in a specific category */
+    "/products/category/:category": u
+      .input<ProductsCategoryParams>()
+      .output<ProductsCategory>(),
+  },
+  PATCH: {
+    /** Update a product */
+    "/products/:id": u.input<UpdateProductParams>().output<UpdateProduct>(),
+  },
+  POST: {
+    /** Add a new product */
+    "/products": u.input<CreateProductParams>().output<CreateProduct>(),
+  },
+  PUT: {
+    /** Update a product */
+    "/products/:id": u.input<UpdateProductParams>().output<UpdateProduct>(),
+  },
+});
+
+const userRouter = u.router({
+  DELETE: {},
+  GET: {},
+  PATCH: {},
+  POST: {},
+  PUT: {},
+});
+
+const router = u
+  .router({})
+  .merge(productRouter)
+  .merge(cartRouter)
+  .merge(userRouter)
+  .merge(loginRouter);
 
 export type FakeStoreRouter = typeof router;
