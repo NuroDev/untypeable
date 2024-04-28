@@ -11,7 +11,7 @@ export default defineConfig(({ watch = false }) => ({
     types: "src/types.ts",
     zod: "src/zod.ts",
   },
-  format: ["cjs", "esm"],
+  format: "esm",
   minify: true,
   watch,
 }));
