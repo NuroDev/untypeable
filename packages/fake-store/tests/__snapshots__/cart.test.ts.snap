@@ -1,0 +1,515 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`fakestoreapi.com - cart > DELETE > /carts/:id 1`] = `
+{
+  "__v": 0,
+  "date": "2020-03-02T00:00:00.000Z",
+  "id": 1,
+  "products": [
+    {
+      "productId": 1,
+      "quantity": 4,
+    },
+    {
+      "productId": 2,
+      "quantity": 1,
+    },
+    {
+      "productId": 3,
+      "quantity": 6,
+    },
+  ],
+  "userId": 1,
+}
+`;
+
+exports[`fakestoreapi.com - cart > GET > /carts 1`] = `
+[
+  {
+    "__v": 0,
+    "date": "2020-03-02T00:00:00.000Z",
+    "id": 1,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 4,
+      },
+      {
+        "productId": 2,
+        "quantity": 1,
+      },
+      {
+        "productId": 3,
+        "quantity": 6,
+      },
+    ],
+    "userId": 1,
+  },
+  {
+    "__v": 0,
+    "date": "2020-01-02T00:00:00.000Z",
+    "id": 2,
+    "products": [
+      {
+        "productId": 2,
+        "quantity": 4,
+      },
+      {
+        "productId": 1,
+        "quantity": 10,
+      },
+      {
+        "productId": 5,
+        "quantity": 2,
+      },
+    ],
+    "userId": 1,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 3,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 2,
+      },
+      {
+        "productId": 9,
+        "quantity": 1,
+      },
+    ],
+    "userId": 2,
+  },
+  {
+    "__v": 0,
+    "date": "2020-01-01T00:00:00.000Z",
+    "id": 4,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 4,
+      },
+    ],
+    "userId": 3,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 5,
+    "products": [
+      {
+        "productId": 7,
+        "quantity": 1,
+      },
+      {
+        "productId": 8,
+        "quantity": 1,
+      },
+    ],
+    "userId": 3,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 6,
+    "products": [
+      {
+        "productId": 10,
+        "quantity": 2,
+      },
+      {
+        "productId": 12,
+        "quantity": 3,
+      },
+    ],
+    "userId": 4,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 7,
+    "products": [
+      {
+        "productId": 18,
+        "quantity": 1,
+      },
+    ],
+    "userId": 8,
+  },
+]
+`;
+
+exports[`fakestoreapi.com - cart > GET > /carts/:id 1`] = `
+{
+  "__v": 0,
+  "date": "2020-03-02T00:00:00.000Z",
+  "id": 1,
+  "products": [
+    {
+      "productId": 1,
+      "quantity": 4,
+    },
+    {
+      "productId": 2,
+      "quantity": 1,
+    },
+    {
+      "productId": 3,
+      "quantity": 6,
+    },
+  ],
+  "userId": 1,
+}
+`;
+
+exports[`fakestoreapi.com - cart > GET > /carts/user/:userId 1`] = `
+[
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 3,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 2,
+      },
+      {
+        "productId": 9,
+        "quantity": 1,
+      },
+    ],
+    "userId": 2,
+  },
+]
+`;
+
+exports[`fakestoreapi.com - cart > GET > /carts?limit=1&order=desc 1`] = `
+[
+  {
+    "__v": 0,
+    "date": "2020-03-02T00:00:00.000Z",
+    "id": 1,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 4,
+      },
+      {
+        "productId": 2,
+        "quantity": 1,
+      },
+      {
+        "productId": 3,
+        "quantity": 6,
+      },
+    ],
+    "userId": 1,
+  },
+]
+`;
+
+exports[`fakestoreapi.com - cart > GET > /carts?limit=2 1`] = `
+[
+  {
+    "__v": 0,
+    "date": "2020-03-02T00:00:00.000Z",
+    "id": 1,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 4,
+      },
+      {
+        "productId": 2,
+        "quantity": 1,
+      },
+      {
+        "productId": 3,
+        "quantity": 6,
+      },
+    ],
+    "userId": 1,
+  },
+  {
+    "__v": 0,
+    "date": "2020-01-02T00:00:00.000Z",
+    "id": 2,
+    "products": [
+      {
+        "productId": 2,
+        "quantity": 4,
+      },
+      {
+        "productId": 1,
+        "quantity": 10,
+      },
+      {
+        "productId": 5,
+        "quantity": 2,
+      },
+    ],
+    "userId": 1,
+  },
+]
+`;
+
+exports[`fakestoreapi.com - cart > GET > /carts?order=desc 1`] = `
+[
+  {
+    "__v": 0,
+    "date": "2020-03-02T00:00:00.000Z",
+    "id": 1,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 4,
+      },
+      {
+        "productId": 2,
+        "quantity": 1,
+      },
+      {
+        "productId": 3,
+        "quantity": 6,
+      },
+    ],
+    "userId": 1,
+  },
+  {
+    "__v": 0,
+    "date": "2020-01-02T00:00:00.000Z",
+    "id": 2,
+    "products": [
+      {
+        "productId": 2,
+        "quantity": 4,
+      },
+      {
+        "productId": 1,
+        "quantity": 10,
+      },
+      {
+        "productId": 5,
+        "quantity": 2,
+      },
+    ],
+    "userId": 1,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 3,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 2,
+      },
+      {
+        "productId": 9,
+        "quantity": 1,
+      },
+    ],
+    "userId": 2,
+  },
+  {
+    "__v": 0,
+    "date": "2020-01-01T00:00:00.000Z",
+    "id": 4,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 4,
+      },
+    ],
+    "userId": 3,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 5,
+    "products": [
+      {
+        "productId": 7,
+        "quantity": 1,
+      },
+      {
+        "productId": 8,
+        "quantity": 1,
+      },
+    ],
+    "userId": 3,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 6,
+    "products": [
+      {
+        "productId": 10,
+        "quantity": 2,
+      },
+      {
+        "productId": 12,
+        "quantity": 3,
+      },
+    ],
+    "userId": 4,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 7,
+    "products": [
+      {
+        "productId": 18,
+        "quantity": 1,
+      },
+    ],
+    "userId": 8,
+  },
+]
+`;
+
+exports[`fakestoreapi.com - cart > GET > /carts?startdate=2019-12-10&enddate=2020-10-10 1`] = `
+[
+  {
+    "__v": 0,
+    "date": "2020-03-02T00:00:00.000Z",
+    "id": 1,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 4,
+      },
+      {
+        "productId": 2,
+        "quantity": 1,
+      },
+      {
+        "productId": 3,
+        "quantity": 6,
+      },
+    ],
+    "userId": 1,
+  },
+  {
+    "__v": 0,
+    "date": "2020-01-02T00:00:00.000Z",
+    "id": 2,
+    "products": [
+      {
+        "productId": 2,
+        "quantity": 4,
+      },
+      {
+        "productId": 1,
+        "quantity": 10,
+      },
+      {
+        "productId": 5,
+        "quantity": 2,
+      },
+    ],
+    "userId": 1,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 3,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 2,
+      },
+      {
+        "productId": 9,
+        "quantity": 1,
+      },
+    ],
+    "userId": 2,
+  },
+  {
+    "__v": 0,
+    "date": "2020-01-01T00:00:00.000Z",
+    "id": 4,
+    "products": [
+      {
+        "productId": 1,
+        "quantity": 4,
+      },
+    ],
+    "userId": 3,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 5,
+    "products": [
+      {
+        "productId": 7,
+        "quantity": 1,
+      },
+      {
+        "productId": 8,
+        "quantity": 1,
+      },
+    ],
+    "userId": 3,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 6,
+    "products": [
+      {
+        "productId": 10,
+        "quantity": 2,
+      },
+      {
+        "productId": 12,
+        "quantity": 3,
+      },
+    ],
+    "userId": 4,
+  },
+  {
+    "__v": 0,
+    "date": "2020-03-01T00:00:00.000Z",
+    "id": 7,
+    "products": [
+      {
+        "productId": 18,
+        "quantity": 1,
+      },
+    ],
+    "userId": 8,
+  },
+]
+`;
+
+exports[`fakestoreapi.com - cart > PATCH > /carts/:id 1`] = `
+{
+  "date": "1970-01-01T00:00:00.000Z",
+  "id": 1,
+  "products": [],
+  "userId": 3,
+}
+`;
+
+exports[`fakestoreapi.com - cart > POST > /carts 1`] = `
+{
+  "date": "1970-01-01T00:00:00.000Z",
+  "id": 11,
+  "products": [],
+  "userId": 3,
+}
+`;
+
+exports[`fakestoreapi.com - cart > PUT > /carts/:id 1`] = `
+{
+  "id": 1,
+  "products": [],
+  "userId": 3,
+}
+`;
