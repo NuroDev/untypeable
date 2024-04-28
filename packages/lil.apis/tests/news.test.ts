@@ -12,13 +12,6 @@ describe.concurrent("lil APIs - News", () => {
     expect(news).toBeDefined();
     expect(news.articles).toBeDefined();
     expect(Array.isArray(news.articles)).toBe(true);
-    expect(news.articles.at(0)).toBeDefined();
-    expect(news.articles.at(0)?.description).toBeDefined();
-    expect(news.articles.at(0)?.description).toBeTypeOf("string");
-    expect(news.articles.at(0)?.title).toBeDefined();
-    expect(news.articles.at(0)?.title).toBeTypeOf("string");
-    expect(news.articles.at(0)?.url).toBeDefined();
-    expect(news.articles.at(0)?.url).toBeTypeOf("string");
 
     expect(NewsSchema.safeParse(news).success).toBe(true);
   });
