@@ -497,25 +497,7 @@ exports[`fakestoreapi.com - cart > PATCH > /carts/:id 1`] = `
 }
 `;
 
-exports[`fakestoreapi.com - cart > PATCH > /products/:id 1`] = `
-{
-  "date": "1970-01-01T00:00:00.000Z",
-  "id": 1,
-  "products": [],
-  "userId": 3,
-}
-`;
-
 exports[`fakestoreapi.com - cart > POST > /carts 1`] = `
-{
-  "date": "1970-01-01T00:00:00.000Z",
-  "id": 11,
-  "products": [],
-  "userId": 3,
-}
-`;
-
-exports[`fakestoreapi.com - cart > POST > /products 1`] = `
 {
   "date": "1970-01-01T00:00:00.000Z",
   "id": 11,
