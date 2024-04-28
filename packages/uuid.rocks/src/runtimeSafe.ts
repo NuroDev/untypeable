@@ -11,6 +11,10 @@ import {
 } from "./json/json.validators";
 import { NanoIDSchema, NanoIdParamsSchema } from "./nanoid/nanoid.validators";
 import {
+  PingPongJsonSchema,
+  PingPongSchema,
+} from "./ping-pong/ping-pong.validators";
+import {
   PlainSchema,
   PlainBulkParamsSchema,
   PlainBulkSchema,
@@ -29,6 +33,12 @@ export const uuidRocksSafeRouter = u.router({
 
   /** Gets single uuid with JSON output */
   "/api/uuid/emoji?json": u.output(EmojiJsonSchema),
+
+  /** Responds with ‘pong’ or ‘ping’ */
+  "/api/ping": u.output(PingPongSchema),
+
+  /** Responds with ‘pong’ or ‘ping’ in JSON format with some info about your request */
+  "/api/ping?json": u.output(PingPongJsonSchema),
 
   /** Gets single uuid with JSON output */
   "/json": u.input(GlobalParamsSchema).output(JsonSchema),

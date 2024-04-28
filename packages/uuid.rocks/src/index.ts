@@ -10,6 +10,7 @@ import type {
   JsonMapParams,
 } from "./json/json.types";
 import type { NanoID, NanoIDParams } from "./nanoid/nanoid.types";
+import type { PingPong, PingPongJson } from "./ping-pong/ping-pong.types";
 import type {
   Plain,
   PlainBulk,
@@ -29,6 +30,12 @@ const router = u.router({
 
   /** Gets single uuid with JSON output */
   "/api/uuid/emoji?json": u.output<EmojiJson>(),
+
+  /** Responds with ‘pong’ or ‘ping’ */
+  "/api/ping": u.output<PingPong>(),
+
+  /** Responds with ‘pong’ or ‘ping’ in JSON format with some info about your request */
+  "/api/ping?json": u.output<PingPongJson>(),
 
   /** Gets single uuid with JSON output */
   "/json": u.input<GlobalParams>().output<Json>(),
