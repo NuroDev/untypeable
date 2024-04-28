@@ -106,11 +106,28 @@ const productRouter = u.router({
 });
 
 const userRouter = u.router({
-  DELETE: {},
-  GET: {},
-  PATCH: {},
-  POST: {},
-  PUT: {},
+  DELETE: {
+    /** Delete a user */
+    "/users/:id": u.input().output(),
+  },
+  GET: {
+    /** Get all users */
+    "/users": u.input().output(),
+    /** Get a single user */
+    "/users/:id": u.input().output(),
+  },
+  PATCH: {
+    /** Update a users */
+    "/users/:id": u.input().output(),
+  },
+  POST: {
+    /** Add a new user */
+    "/users": u.input().output(),
+  },
+  PUT: {
+    /** Update a users */
+    "/users/:id": u.input().output(),
+  },
 });
 
 export const fakeStoreSafeRouter = u

@@ -100,11 +100,28 @@ const productRouter = u.router({
 });
 
 const userRouter = u.router({
-  DELETE: {},
-  GET: {},
-  PATCH: {},
-  POST: {},
-  PUT: {},
+  DELETE: {
+    /** Delete a user */
+    "/users/:id": u.input<unknown>().output<unknown>(),
+  },
+  GET: {
+    /** Get all users */
+    "/users": u.input<unknown>().output<unknown>(),
+    /** Get a single user */
+    "/users/:id": u.input<unknown>().output<unknown>(),
+  },
+  PATCH: {
+    /** Update a users */
+    "/users/:id": u.input<unknown>().output<unknown>(),
+  },
+  POST: {
+    /** Add a new user */
+    "/users": u.input<unknown>().output<unknown>(),
+  },
+  PUT: {
+    /** Update a users */
+    "/users/:id": u.input<unknown>().output<unknown>(),
+  },
 });
 
 const router = u
