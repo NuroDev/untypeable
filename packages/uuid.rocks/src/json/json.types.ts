@@ -5,11 +5,9 @@ import type {
   JsonBulkSchema,
   JsonMapParamsSchema,
   JsonMapSchema,
-  JsonParamsSchema,
   JsonSchema,
 } from "./json.validators";
 
-export type JsonParams = z.infer<typeof JsonParamsSchema>;
 export type Json = z.infer<typeof JsonSchema>;
 
 export type JsonBulkParams = z.infer<typeof JsonBulkParamsSchema>;

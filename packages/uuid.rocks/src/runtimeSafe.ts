@@ -6,7 +6,6 @@ import {
   JsonBulkSchema,
   JsonMapParamsSchema,
   JsonMapSchema,
-  JsonParamsSchema,
   JsonSchema,
 } from "./json/json.validators";
 import { NanoIDSchema, NanoIdParamsSchema } from "./nanoid/nanoid.validators";
@@ -18,7 +17,6 @@ import {
   PlainNamespaceMapSchema,
   PlainMapParamsSchema,
   PlainMapSchema,
-  PlainParamsSchema,
 } from "./plain/plain.validators";
 import { StatsSchema } from "./stats/stats.validators";
 
@@ -26,7 +24,7 @@ const u = initUntypeable();
 
 export const uuidRocksSafeRouter = u.router({
   /** Gets single uuid with JSON output */
-  "/json": u.input(JsonParamsSchema).output(JsonSchema),
+  "/json": u.input(GlobalParamsSchema).output(JsonSchema),
 
   /** Gets uuids in bulk (up to 20k) with JSON output */
   "/json/bulk": u.input(JsonBulkParamsSchema).output(JsonBulkSchema),
@@ -38,7 +36,7 @@ export const uuidRocksSafeRouter = u.router({
   "/nanoid": u.input(NanoIdParamsSchema).output(NanoIDSchema),
 
   /** Gets single UUID in plaintext */
-  "/plain": u.input(PlainParamsSchema).output(PlainSchema),
+  "/plain": u.input(GlobalParamsSchema).output(PlainSchema),
 
   /** Gets uuids in bulk (up to 20k) in plaintext */
   "/plain/bulk": u.input(PlainBulkParamsSchema).output(PlainBulkSchema),

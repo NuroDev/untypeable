@@ -7,11 +7,9 @@ import type {
   PlainMapSchema,
   PlainNamespaceMapParamsSchema,
   PlainNamespaceMapSchema,
-  PlainParamsSchema,
   PlainSchema,
 } from "./plain.validators";
 
-export type PlainParams = z.infer<typeof PlainParamsSchema>;
 export type Plain = z.infer<typeof PlainSchema>;
 
 export type PlainBulkParams = z.infer<typeof PlainBulkParamsSchema>;
