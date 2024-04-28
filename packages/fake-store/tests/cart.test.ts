@@ -88,7 +88,7 @@ describe("fakestoreapi.com - cart", () => {
   });
 
   describe("PATCH", () => {
-    it("/products/:id", async () => {
+    it("/carts/:id", async () => {
       const updatedCart = await client("PATCH", "/carts/:id", {
         date: new Date(0),
         id: 1,
@@ -102,7 +102,7 @@ describe("fakestoreapi.com - cart", () => {
   });
 
   describe("POST", () => {
-    it("/products", async () => {
+    it("/carts", async () => {
       const newCart = await client("POST", "/carts", {
         date: new Date(0),
         products: [],
