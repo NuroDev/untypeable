@@ -28,7 +28,15 @@ import type { FakeStoreRouter } from "@untypeable/fake-store";
 
 const client = createTypeLevelClient<FakeStoreRouter>(
   async (method, path, input = {}) => {
-    const url = new URL(path, "https://fakestoreapi.com/");
+    const pathWithParams = path.replace(
+      /:([a-zA-Z0-9_]+)/g,
+      (_, key) => input[key]
+    );
+
+    const url = new URL(pathWithParams, "https://fakestoreapi.com/");
+    Object.entries(input).forEach(([key, value]) =>
+      url.searchParams.append(key, value as string)
+    );
 
     const response = await fetch(url.href, {
       body: ["POST", "PATCH", "PUT"].includes(method)
